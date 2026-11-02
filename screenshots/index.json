@@ -1,0 +1,4098 @@
+{
+  "scope": "Historical TCL reference, Nokia port, and synthetic interface captures. Not a full-parity claim.",
+  "privacy_review": "Local OCR followed by visual review; incidental photos, identifying screens, and private branding withheld. PNG metadata removed without changing decoded pixels.",
+  "screenshots": [
+    {
+      "path": "2026-10-23-dialog-probe/01-long-dialog.png",
+      "sha256": "0e54dd124eca61b251477d44de160b5d52cd9adee5fe3783e284be21fd25d292",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-23-image14/01-home.png",
+      "sha256": "e9688866a4b80ac670ab76428c8f236b1fa3226afa287503ce7ea54af5f8de08",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-23-image14/03-about.png",
+      "sha256": "3727e4b06f12a459eda26807b0c37eeadeb1a0c44ff4225711c00fcec3931b18",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-23-image14/04-display.png",
+      "sha256": "906c5b72c3c9908ae11daf37a702b49710cc460163447f99584592eed187c58f",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-23-image14/05-storage.png",
+      "sha256": "e0a0f5044ca55f24aa0f93ebd33344e0f8ac3783f2c4cafb088584a2456432d9",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-23-image14/06-battery.png",
+      "sha256": "ce7d568ff35d8bdbef0f32d43dc69db7ef3024779fe3f79b031c7a58203636c7",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-23-image14/07-connected-devices.png",
+      "sha256": "f727ad5fd35e64bafcbabf3ad55b26806235135d6c95ea5ef69ede201c35b4eb",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-23-image15-window/01-window-bar.png",
+      "sha256": "bfc74e18e1b95d403739143aa547e556b75e81027d78385ccced137d6092ca82",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-23-image16/01-home.png",
+      "sha256": "4d55381dc4d03d37eb21a68dd2a786af4c5c15f04ebb023ab003f61df1b15944",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-23-image16/02-app-grid.png",
+      "sha256": "df1f91687fe1519de227b34053f9aec78b8b3cb638d065095b14a53a3ac22089",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-23-image18-ime/packaged-numeric.png",
+      "sha256": "61c07be6f9fa6988460c65c198f3c01d26f26ed87162bd04f44e39626996b3e4",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-23-image18/installed-light-bar.png",
+      "sha256": "c5b6623e7921e8c0a400dcbb72fdcfea2be3854be6395c8a2d5feaa4c7651697",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-23-image19-t9/committed.png",
+      "sha256": "8488e92115b7dfc187de495bc583ef7537896d3a9aaf62581e39693957a6c6c5",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-23-image19-t9/composing.png",
+      "sha256": "64b1bcfa76e9c75c5874d1b2f795c9500f689d5b9d60b6d84aff8905051299cb",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-23-image19-t9/deleted.png",
+      "sha256": "9f1569ac722d99931c910e368e7665394db08c71f9642a26cc06c0652515a377",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-23-image19-t9/selected.png",
+      "sha256": "29ae24488401a484be47a1b09378528fff9b5138f1bf9d30534ad4b050a9118a",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-23-image19/launcher-accessibility.png",
+      "sha256": "b68ab54b04228ef552602a9be290c0b47f3f467a89c83be1cc65a31c9b32ff60",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-23-image21-ime/mode-validated.png",
+      "sha256": "4e95ed7ae436c3ef0e0ae8025848a07c8200a7928dbad1bba1a6fa4c4aeac354",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-23-image21-ime/mode.png",
+      "sha256": "4d2de5e393071f9a915defbe93d0629c9c2f4fac760df1387419074ee7b5715f",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-23-image21-ime/numeric.png",
+      "sha256": "10d728f59a44e1228b21b945334dd2bc4334930c740d7214e78f97bb702dc716",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-23-image21-ime/picker-settled.png",
+      "sha256": "fee5352fe1a3adf1a460d173cc99897a9d4ceb07f87c5cc34d6f228ba9485aca",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-23-image21-ime/picker.png",
+      "sha256": "9eae5e742633719de25d45f9c6131d065f5614ecf421393bece3bfa25409fe40",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-23-image21-ime/rerun-mode.png",
+      "sha256": "1700ffe36d856cf5b243e9d1efeccd57753de6f589758664b3e1fe53965e85b1",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-23-image21-ime/restored-early-trial07.png",
+      "sha256": "5a61ba1094eb400c7fe0403ee15e58ac8ade9581dc150e63f9a3209662120289",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-23-image21-ime/restored-late-trial07.png",
+      "sha256": "5a61ba1094eb400c7fe0403ee15e58ac8ade9581dc150e63f9a3209662120289",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-23-image21-ime/restored-settled.png",
+      "sha256": "a05122d819c6a5fade08b719777445d79ac7c4fa5596cb3aed44b49b668fe96a",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-23-image21-ime/restored.png",
+      "sha256": "10d728f59a44e1228b21b945334dd2bc4334930c740d7214e78f97bb702dc716",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-23-image22-ime/cancelled-trial04.png",
+      "sha256": "60f8bf242478e00aa12423c93801efc486aa73a059d8ef8a10006fc3d3e80e22",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-23-image22-ime/mode.png",
+      "sha256": "b76d284790b93676e11ec8c7935893ae34d6ae4d7a44e3f5a5a98180d67bb8b5",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-23-image22-ime/numeric.png",
+      "sha256": "2706d3358bcd57ed66aace4158d2073faf3a7a67df8d05b6a8e9cf16c6685639",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-23-image22-ime/picker.png",
+      "sha256": "53baeaf65717f0e6cebe3486cff5b4981295465756f61b58f661aefab34b7141",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-23-image22-ime/restored.png",
+      "sha256": "f765e7cf392c605212a7ef7349f7477f3af21a4ecf19af9165f802a99c211fb5",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-23-image23-ime/cancelled-trial04.png",
+      "sha256": "b08c0fcd59d29f5fa40b5882f37d7d92aeac53680069c9f1bbdbe9e6d4371c98",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-23-image23-ime/initial-trial04.png",
+      "sha256": "b08c0fcd59d29f5fa40b5882f37d7d92aeac53680069c9f1bbdbe9e6d4371c98",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-23-image23-ime/mode-trial03.png",
+      "sha256": "1542d6ec06c67fccf9749ab7a6def381953b3cadd24e48113e4cfa7f3c18419e",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-23-image23-ime/numeric-trial04.png",
+      "sha256": "46b56504d5466f7b4d70b3852efbe2922a0e847aba8455bc24403088fd6ccc63",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-23-image23-ime/picker-trial03.png",
+      "sha256": "e2ecf22dded66904ab40d23ffa4f86d205d6ff1771e10b239803a3d61f35f5e7",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-23-image23-ime/picker-trial04.png",
+      "sha256": "1737f984cc9e564f7377e453dd1f894238c749331bd9d23f3dccb3d8827a03d6",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-23-image23-ime/restored_late-trial04.png",
+      "sha256": "0db02ba163b2075d70c78454a8a298aed3b285dba8f9ffbb326873a7694df219",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-23-image24-ime/cancelled.png",
+      "sha256": "2ff5d058fa0ce07f65990626ad0485b2133710be95e45da670ee2b2c7348132c",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-23-image24-ime/initial.png",
+      "sha256": "c712e2f095a0d24a09573e6ad8708810d43c18f6c1c720ffa7d03eeb793bb017",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-23-image24-ime/numeric.png",
+      "sha256": "327a06578f7e0bcaad09901eb289d7c97ab2516b4a8a4281be7e1029ff3d9521",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-23-image24-ime/picker.png",
+      "sha256": "a963c5a22c6e4b0a0bfed25e2d2f2f4eb7bb5838a26dfe71e8d351a9ea9d9e4b",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-23-image24-ime/restored.png",
+      "sha256": "23e815eaec3b54b5f3d27aa2196ecf1c589aa53bf41dc3e599afb71122566e0f",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-23-image24-ime/restored_late.png",
+      "sha256": "23e815eaec3b54b5f3d27aa2196ecf1c589aa53bf41dc3e599afb71122566e0f",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-23-ime-model-trial/01-alphabetic-ad.png",
+      "sha256": "0dfe7e244e7b23b2d553ac5b715b3b7fe16e88af37f13cef224476651e3e0406",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-23-ime-model-trial/02-repeated-aa.png",
+      "sha256": "b10b7af07a87163850bc0534f07a53125c3a17be4fe4327320f080ac3826ce2b",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-23-ime-model-trial/03-delete-a.png",
+      "sha256": "5ee90fcaafd26555773807986eab131d356aa013c66f1ad5ed8b166c38d6b328",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-23-ime-modes/numeric.png",
+      "sha256": "575378fdc2ea250a4211960e22276e90cda21b9904b44b6a017b1990ba8ae43a",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-23-ime-modes/predictive.png",
+      "sha256": "afbad12974a582711728a00870b1a98efbe0da61d1bb8b4f4df8ca1f33192f25",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-23-ime-multitap/fast.png",
+      "sha256": "c11d7995094bc90b7c4184260234f55cb2de887f652ffe3b4c65bb0a8020700a",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-23-ime-multitap/slow.png",
+      "sha256": "7016c3b4f71494b90f425c0f8f12b3abbfc1633ad03b4b940e0557dde20731b5",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-23-ime-overlay/diagnostic-mode-label.png",
+      "sha256": "874d43a3eef5bc90c9c02e1be3323e4e485af2e1d25a47935398372b9289913d",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-23-ime-selection/committed.png",
+      "sha256": "2c1fd7ec2925ce92365f247cb17f46717a8a492ef8aa690c4d7ec579b4cfd701",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-23-ime-selection/deleted.png",
+      "sha256": "bc2b2dca5e0f1aa846f1c018c61531f11ee06d27528452407dcb90c7332fddea",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-23-ime-selection/selected.png",
+      "sha256": "40366cadade457bbbef0ce064a8341cdcc3fb1d8b1d4067b850c8fc61f4c92b9",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-23-ime-trial/01-model-error.png",
+      "sha256": "8de420fbfb742b18baa45413b742dbb30f2b02ec6c863099ece4e5986ac47cd0",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-23-ime-trial/02-delete.png",
+      "sha256": "5c4379caf426e5763cf30db1abaff7faccee91e5758a86953538c2e1f393e425",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-23-kyocera-renderer/app-single-bar.png",
+      "sha256": "60bfda5de8921ac82e6ebda53f2ae90703ef20f696ca62712c4fe3fc10bcef7b",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-23-kyocera-renderer/app.png",
+      "sha256": "3a45887582496e74bea2c19a81aaa5b82362c9e4a92a8d0e6a983fe7e1fbe5d0",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-23-kyocera-renderer/ime-single-bar.png",
+      "sha256": "e370c093a5d848687c79e0d3421c044356e815383df059cf58459ad62ef7c74b",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-23-kyocera-renderer/ime.png",
+      "sha256": "a3056d33d309e681f41a6c5621d15d3d58a44cd49112e6952ba936b89bdc7e04",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-23-kyocera-renderer/launcher-accessibility-failure.png",
+      "sha256": "38d3c8901e3f535408131f69270344e7c7acb90ad3cd2ca028870b4e91086a4a",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-23-kyocera-renderer/long-single-bar.png",
+      "sha256": "af56541ade0eb5d7134497f525bf487f266b0eb8b305f6cac1ec6f1d97b66340",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-23-kyocera-renderer/long.png",
+      "sha256": "673cef00f5b9ffb5ca48e8391de43478fa784c76210b583498d47b508bbeeb5c",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-23-kyocera-renderer/tcl-menubar-light.png",
+      "sha256": "cc8a91a083e741e293ffdfcac43277cccfee69ac3b25256552bea0ab020bae01",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-23-launcher-trial/01-restored-home.png",
+      "sha256": "f72b306f118a7b6b5b792c850c9e5ae5275c133e608e476c70b5419352ee6752",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-23-tcl-launcher/01-home.png",
+      "sha256": "6288a2212e241c87ddcbb0f3c9e28eea97e53daec45009252b88ee7926bbe324",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-23-tcl-launcher/02-app-grid.png",
+      "sha256": "2f8ad45079b7e20643dcc70012e931316f89ed613733c6a9d295438ca0b742e5",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-23-tcl-launcher/03-selection.png",
+      "sha256": "8fc8bf2e599d59c398aa90313c2c132d9351e98c4cf48b3a992a497f8a364e54",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-25-image25-ime/numeric.png",
+      "sha256": "118a8b19cb0702577ace574737b343f966d3270c4b41da2bde766a3873b1622e",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-25-image25-ime/picker.png",
+      "sha256": "4ba5cf5a60ebff404be5c82765f237e524a7599e1177636868d550be8bb7275b",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-25-image25-ime/restored.png",
+      "sha256": "62234c007539eba4cf10e8cc075db858e6c1b582168143473b9c55faadf209b1",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-client-composition/lockscreen.png",
+      "sha256": "aac2f70864ae5954409e139cd5c089b2f375c17cd91941e8363831cfd06009e2",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-compact-permission/call-log-permission.png",
+      "sha256": "176bbb959af39adad19fc0224446faa9703cf5a66d5a388200b8495f14a3e9eb",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-compact-permission02/call-log-permission.png",
+      "sha256": "778c136f6a189486b42ae9eb87ca5dd993bb803df6721e0bec1be4bde4eb253e",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-contacts-list/contacts.png",
+      "sha256": "83fc07763904984f8b43240fef3dea3b70779119662cdaa6d773eb673723ea67",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-contacts-one-choice/allow.png",
+      "sha256": "e061604ebd093f90624f791b4b982882d8cc521516561daae5381e170ebc8e65",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-contacts-one-choice/deny.png",
+      "sha256": "8dfd1a9af209b5fccc0e7722939742c11a6ce8411e66e21048117663329d2498",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-contacts-permission/call-log-permission.png",
+      "sha256": "b47b4d8113000c99c0aa7f232cd37d234d92e451abbc127b3d2f591aa40626cd",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image31/screen.png",
+      "sha256": "6fcbcbfc10bd2fe3e44bd8d2f0242e9dbdc4b45221ffa47aefbab1b7c2410ebd",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image33-contacts-settings/contacts-before.png",
+      "sha256": "4f71f50af88ce265a12b61f7725ac48e582a57d7f8ed1ccd3536cc7c41d04484",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image33-contacts-settings/contacts-return.png",
+      "sha256": "4f71f50af88ce265a12b61f7725ac48e582a57d7f8ed1ccd3536cc7c41d04484",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image33-contacts-settings/settings.png",
+      "sha256": "859147b4b59a80fb8bd664fc15a19e909acf537f7a5a654493e99864a44bfc75",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image33-contacts-sort-width/sort-dialog.png",
+      "sha256": "ebf9f25432eccb0ff8b8978b561ca680ce899c82ce00ec4d0bf2abc6cfa73333",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image33-contacts-sort/contacts-return.png",
+      "sha256": "3c6f8a3a47ecab69b223ca77eafe752c9605af8c2e4b11796327a8eddf507bd6",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image33-contacts-sort/settings-return.png",
+      "sha256": "14e27a8b910d9dd89192a3ff9bceb0dcf5903fb6f9318b7de0023012da8fe991",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image33-contacts-sort/sort-dialog.png",
+      "sha256": "85aa489d0408b01f9e9c62c054a349443cb34776bc581d441fc0ff9332e530b7",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image33/launcher-settled.png",
+      "sha256": "f17e43959ef506b9cb82bc57214f8b53dc55b424332be0349a74e8f6b20cf969",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image33/screen.png",
+      "sha256": "598373b502f2c9158a9ba408ed2f1475d96918f5345123780119ec9ff9afb2a5",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image34-contacts/nav-settings.png",
+      "sha256": "505dc43c9bef43e48f5a325bf3c9601cf70d6251c4f423465001550d8d13d380",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image34-contacts/people.png",
+      "sha256": "22b2fc994ceac3417715c81fa41161b0fc8d8555e053756777675880193c7962",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image34-contacts/sort-dialog.png",
+      "sha256": "abafeba574c07b9644c6240a929f901e34f7a89954c3d731bea47f7d084f2c90",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image34/launcher-density160.png",
+      "sha256": "4d885b209f6415b9ff86f341ee0711f88a8485a23046f7ec3a5133a87c8d9b45",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image35-power/global-actions.png",
+      "sha256": "43dc7dfe418733b5d219c90abf4dd8eec6fc45fef5057858c970dee77b97ef30",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image36-contacts/nav-settings.png",
+      "sha256": "cb1b931f16feb3379a49c3d781e7542abd1107564e6fd9b01ed3ac06b8e7f100",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image36-contacts/people.png",
+      "sha256": "d5ae1e3277e02c0475d335f4e6897e21d43cd14e74c11952e497e84ae0493cf8",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image36-contacts/sort-dialog.png",
+      "sha256": "ec20f039e7a2355838ccb4e20e397d110a273c3bb2faa379be1c896c8cab3024",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image36-notes/editor.png",
+      "sha256": "89b2586499ddaff28ef7e710671259e65b61442078291b3eca3c29e8debeb7b3",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image36-notes/list.png",
+      "sha256": "070986df827982fb8f02632ae6ad94c53e2d612102d6ca642df0d75ff6280545",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image36-notes/returned-list.png",
+      "sha256": "89b2586499ddaff28ef7e710671259e65b61442078291b3eca3c29e8debeb7b3",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image36-stock-apps/Calculator.png",
+      "sha256": "cb2b65f052d9302afa0e044c8bd9163be280177eb2db89299bbc967c844095c6",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image36-stock-apps/Note.png",
+      "sha256": "ed918e72199392c670677ccf4854941133cb55fbe413097fc4d7783cfd938b36",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image36/contacts-permission.png",
+      "sha256": "9e8b3905ae95b1d9dd068545a8bc0ba1ac1c12b791132621c4db17c44584af56",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image36/contacts-settings.png",
+      "sha256": "e1a24e74276f1b929cff98ae37738c8c0624e97c794153245101cef0bab3e095",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image36/startup-anr.png",
+      "sha256": "72da05fa0686d76a6f88d18bf087efd2c62f88e40b2953ce0cb30aaf1fa8fb11",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image37/launcher-after-wait.png",
+      "sha256": "0f67901def3f921bb64a3bce44f1415a7535bc9946aa56232106ea471225c886",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image37/startup-anr.png",
+      "sha256": "72da05fa0686d76a6f88d18bf087efd2c62f88e40b2953ce0cb30aaf1fa8fb11",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image38-clock/cancel.png",
+      "sha256": "883b761710ae57ac090b135d99f82c51eee5d653c5fc31a002bcd9dd624184d7",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image38-clock/main.png",
+      "sha256": "4c4b0998e851ebbc69c14727d5660bd9a1183988a6aa6e69b3b206bee13a15b8",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image38-clock/navigation-before.png",
+      "sha256": "2125a8e92de9d357cc4f676fbd71bec027fbd443dca1020199d99c10c3e66789",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image38-clock/navigation-left1.png",
+      "sha256": "40b88edf3cc7d391a4489e9d8e5b260a85bf9db47dc736e3c5986b6f754644f1",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image38-clock/navigation-right1.png",
+      "sha256": "73c62379bcf6515ad617cc9cfdffca56a6cbfb70d0197c6fa3643c8841a46f02",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image38-clock/navigation-right2.png",
+      "sha256": "042d10ec6aa8d0ed3540eeb0d65f425f78b23aeee4b7709ad69d58ec038a709b",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image38-clock/new-alarm.png",
+      "sha256": "e5867aa4e9ac9e7977b8312c01fbccbb36bc90cb4f992e0fabd485c299c1bf80",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image38-clock/right-tab.png",
+      "sha256": "b20770e76604add17c96cb4eff2bb0f8b51d21f6a40d751a79eedad3e32df83a",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image38-clock/wrap-alarm-after.png",
+      "sha256": "ba18326c591d58491fbce8afa89003bff47d2f21a7066460fa969d0a21a34ebf",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image38-clock/wrap-settings-after.png",
+      "sha256": "e0a0aa34f0ac00af61cf156cc5453c15a3db36bb6c277d4cc6fbf424c77c276c",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image38-clock/wrap-settings.png",
+      "sha256": "b6791c432688f178f4e5911062b655582c35329420d5a6428ea17a838e3caa1b",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image38-clock/wrap-snooze.png",
+      "sha256": "3e9fdfd2612687fc2d6ab0cfd8240e0534cb6848e6b807f3cb3b7dd829699de6",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image38-clock/wrap-tab2.png",
+      "sha256": "ce44da33712cceb1cc5bbe8757a60697007213eb511b34c3177115a67a3520eb",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image38-clock/wrap-tab3.png",
+      "sha256": "24cd5b25bbbd6289e438e49533c652c2fc03c49344792bf12105bbbed68adb20",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image38-filemanager/main.png",
+      "sha256": "26131f0fd3f7ffe55b256ad9f46952834346db968e89c3347b28a33db31c0f1c",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image38-filemanager/phone.png",
+      "sha256": "6bad271183a2e77bb3732fec4079d8009001d2057b88a47ccb58fd830d13e711",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image38-kika/after-back.png",
+      "sha256": "9c10f6523afaa9b8e573779540c94a44b277b84ef0c649cda7f616c811311f19",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image38-kika/editor.png",
+      "sha256": "24e52269d803d7b235cf758856fb46cd8a125ecd346fcbe742496f3d62136233",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image38-kika/typed.png",
+      "sha256": "d69a96e2c7ce00ba54362a8cd5b5fe7f5f13a56b3a966c16d0f7bbdf833c4d6f",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image38-messaging/compose-crash.png",
+      "sha256": "5f134171a8ae9706a468cdf46cf4f9c23968e56256ef28717c6af06c755aa0e4",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image38-messaging/inbox.png",
+      "sha256": "dc3e6762941fce21ec3f5a20d9abe401c0aac33327d2b3305fa93afc58072145",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image38-messaging/permission-guard.png",
+      "sha256": "6db5f286ae8707391f534ed41c49054796be9073ef7387f60d8e021aab7a02c0",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image38-messaging/settings.png",
+      "sha256": "5585b0aecb976ace2e0304d1c3753ab696c28684e3cfc1386b3b06f3c966397b",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image38-messaging/sms-permission.png",
+      "sha256": "f0ed93b391f776ae91d5e849215f5194aca25a9b32e0cc7ca816a413e7699ae3",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image38-music/artists.png",
+      "sha256": "83053e42f6779a9ea4cdb3de0dfee9ecc894b198535ead9441939be1077af67c",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image38-music/songs.png",
+      "sha256": "d764c382da0bd586d55da7147f15aabb5ae3c94b0464a02ac0c5197c0ee93bf9",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image38-recorder/idle.png",
+      "sha256": "861b8b128d028184297b59aa97541cb2c447703e0be47bb2a271d592964b533b",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image38/after-soft-left.png",
+      "sha256": "4628eef6c17f344ed19f14ae404034f9353e4bd321d4cb673a09bc72358c7bb5",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image38/list-after.png",
+      "sha256": "1cb62824336b366856cf09fe4cdf1125fa997a49ddaff96fe2f8946f5f197e61",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image38/list-before.png",
+      "sha256": "1cb62824336b366856cf09fe4cdf1125fa997a49ddaff96fe2f8946f5f197e61",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image38/startup-anr.png",
+      "sha256": "72da05fa0686d76a6f88d18bf087efd2c62f88e40b2953ce0cb30aaf1fa8fb11",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image39-calculator/clear.png",
+      "sha256": "0adf9f18925010a19856ad464f315e52cb7b628d9b70e4178bced0493923103e",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image39-calculator/equals.png",
+      "sha256": "0a8d41cffc251f3985c692585ac681b92bbc3dd1571754c60c79f5aa1c89c24d",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image39-calendar/date.png",
+      "sha256": "9e88818c49e8026c134cf70d4f1738b74c8e3d2a6055bdb28aed09d9557e5d59",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image39-calendar/options.png",
+      "sha256": "47d1a1c49ec5ae6f5510aa35902473b18dd4b129bc7b216d103f42c0435ff82b",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image39-calendar/restored.png",
+      "sha256": "413c1c6ee8e0f34b212462f4e9c0d763713cacc772987ae0901550147fcdcf4b",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image39-dialer/all.png",
+      "sha256": "0d17b1e88ca983035782cb5b3b392d405730ffce5785c1b746c1188e9e199a98",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image39-dialer/dialed.png",
+      "sha256": "3a4d1bfce4f466d0005d185d67d55c5d7352cf0dba0bb9b3532840300515b61c",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image39-dialer/missed.png",
+      "sha256": "1c264614061c54749c6a7902b88908848f798c493d41b72507597e672606c9ef",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image39-dialer/received.png",
+      "sha256": "ed5b5fdf81734f559470c233365ed66833afebd1fc8992cce74e35916f0be1e2",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image39-dialpad-softkey02/options.png",
+      "sha256": "e2cdf7b40e9deda72b17d73701dbed040536b41fc355077c5f4f55c45deee19a",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image39-dialpad/back.png",
+      "sha256": "d7803850cc9de2c4f1983e8025c6b7546816e5201768070d4113efb97f59328b",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image39-dialpad/blank.png",
+      "sha256": "e9909fc0b296c1e165c7a889dd8cdf492e054db849ec6a2bfabe212f23ab31a6",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image39-dialpad/options.png",
+      "sha256": "e9909fc0b296c1e165c7a889dd8cdf492e054db849ec6a2bfabe212f23ab31a6",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image39-messaging-counter/back1.png",
+      "sha256": "6647675dca0e03664bec01b104ae4fe3ce8f946a8094d042635bc5c33f376a93",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image39-messaging-counter/new.png",
+      "sha256": "59bdc69b35a355320385bf8483c047b4bed0ccb6df047ccab0684ed5f098dff3",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image39-messaging-fix/back-to-inbox.png",
+      "sha256": "2b973638181f81e162d8b1a12017516ade17197ce8f8d6f19208034aef6f3bdc",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image39-messaging-fix/new-message.png",
+      "sha256": "b91ec01b3bbc4dc830fbb024f3fe6e0f3db90a98eee5d09e78178b5c9ba531c9",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image39-messaging-fix/repeat-back.png",
+      "sha256": "f7e2dac9b3218144be51998fb0622609797a91f5edd14df0bc1995216cb64a7c",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image39-role/compose-default.png",
+      "sha256": "fc461ecdcd30f91c14facead753efb0637217c6f1dd845bfa23468e78b06a5f9",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image39-settings/home.png",
+      "sha256": "6b9d57c9a00a411f02a9f1f489c02745745487d2d1c7c5169b2ca2ab5d48293e",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image39/compose.png",
+      "sha256": "98d974dae58b20600ff27e9f068631d630556ef698975cf1ecf0e726b9031539",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image39/inbox.png",
+      "sha256": "29b7158af7d047cd95a7d0f5cf214a97cc6e79d14929492a703a63b13429ba08",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image39/startup-anr.png",
+      "sha256": "25fe305448b9360f80fba36e4d94c73748627c7e2278325679cf7d68865ee57a",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image40-boot/systemui-anr.png",
+      "sha256": "7841c21ecc0f7a77b03faae2c68a6c3ebbdf4073269aa9bcaaca8938fb6c4567",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image40-clock-fixed/clock.png",
+      "sha256": "9f85f04a057d41ee40d39a9086e6ab8c5b0c78a6e99e0e86783fe6a6d718ba61",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image40-clock-fixed/tools.png",
+      "sha256": "6b61795f02f30741dfb42d5bdd7d4b990f4b1cbfe6a14592253ba8643592e794",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image40-clock-route/rejected-tools.png",
+      "sha256": "190d27a8e17a421d5f67df58f6f2b610c3ab56e119d0743c21f7924f0d300e2f",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image40-dialer-options/back.png",
+      "sha256": "44014b4f50add4376ea4942ad33a041cb5176946194aafa818abb64e0ed7cdad",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image40-dialer-options/exit.png",
+      "sha256": "e3e1a4073876ef63d497a0bed05fa654f03628449773dce515f1fa7580d0b00b",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image40-dialer-options/options.png",
+      "sha256": "816597515380d642d65c1af5f20179d313aaa3415011a196420a3fcc5c2e2010",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image41/awake.png",
+      "sha256": "6ecd10ae910748c8c6ede7a001a25080b592326e6f657bc00bcdd7c3f45898ea",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image41/back.png",
+      "sha256": "e6aa2ab288d1adb39caaab0b74b05695431480146b460595daf3668dab8de1fd",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image41/options.png",
+      "sha256": "dcb9ca914a98ea3d031a3e90d65e94bee15e43e3a01ea7a2deb5ef40066bc3fd",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image41/startup-anr.png",
+      "sha256": "6bc7d0154e7d78d65da7a50356ee259c8e8a133c4928b0f328cf5405d53b0b45",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image42/awake.png",
+      "sha256": "6b1e11bb2011372c8a5429ebf0edcaa5b247cc1099a869725dd93b9d02256861",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image42/dialer-options.png",
+      "sha256": "198f4b6ad671fffed54d814b88cba5dfd498d4fe3a5f29af242205d1c389c12b",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image42/startup-anr.png",
+      "sha256": "8de056bdb308c040c9349711ae158561f92ff8a6946069c54bae71758dad8c81",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image43/launcher-after-wait.png",
+      "sha256": "b348f0162506aecd33493eca231c827e500d5019e1a6a96f637455981e92ff29",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image43/startup-anr.png",
+      "sha256": "7435b4c08629296b0724428868515092b222aa5985280f64878ec9d4b2eb62a5",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image44/error-key-after.png",
+      "sha256": "68d994b32a636295b7c9f6df18d570370146cfa292820a73b9841be473b54126",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image44/error-key-before.png",
+      "sha256": "bcc4c1a91ae5a0a6d361d12d7549f7f8cdfe92f0f1ee6234fdfdd85a61f7d919",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image44/launcher.png",
+      "sha256": "86df1ce882bddb1ae3c4d438bc442a73f749e7aff2dd5338a22275a444db9b6a",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image44/return-launcher.png",
+      "sha256": "54cb474d4f1d2d87114d83d139b431ca055842b76ad9d529e182d950ecb4a3e5",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image45-chooser/first-selected.png",
+      "sha256": "d928babd1eaf87da0107d2858f9852227b2b5b441f5c5a165bce739605d49586",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image45-chooser/second-selected.png",
+      "sha256": "c31ec90c254c4086c555d03660542ad8e748f5929a7fdfd797f846d5af98c68d",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image45-clock-editors/baseline.png",
+      "sha256": "59f8b66feb8b2121372934b38345c6fa8f5f6e00e08ffc0ee9bb96720ba33fb8",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image45-clock-editors/editor-cancel.png",
+      "sha256": "4eb5ce823f7c730ecd3fc3ed2863ab7698b134ed65fb7b79628921f1e4ae5ef9",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image45-clock-editors/new-editor.png",
+      "sha256": "d858b492a20347f27af32761a85d45deae1a8a2ce6278b2521ecec5ce9ef53c5",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image45-clock-editors/repeat-dialog.png",
+      "sha256": "6af3c488ebc8abda11c75262d08d97bcca00bd29520eb4c82b74eef567add614",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image45-clock-editors/sound-dialog.png",
+      "sha256": "845b2fd719dbb1bc6f722d13b5c250637118c8af490a06c93b6e76fdd915be0a",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image45-clock-editors/time-dialog.png",
+      "sha256": "63b80d6cb561f0ec7bf7bdd90c2dba5f32b8c2e7e229cfab546ad818202bd6dc",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image45-filemanager/options.png",
+      "sha256": "1bddcf47e70b17a62a3c844fd1058cfc8f0f0ca7eb2c0ddc2ec664f32f7eae2e",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image45-filemanager/root-return.png",
+      "sha256": "1bcc842fed7b67a2417bed86a10580025814d2d5b54cfb0b0e75fec8e38896d6",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image45-filemanager/search02.png",
+      "sha256": "185e466685bdfc76f456121343e4d14696ba54e741b8090d9a923d308e315980",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image45-filemanager/sort-dialog.png",
+      "sha256": "22788f748c15e4ad8a110b887f2a63cda5069d3bfd44480482a91870e894e892",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image45/launcher.png",
+      "sha256": "ee96212404c8a8b2f7fb9e0d874c803108ef051209259c215e939e6db6ebc223",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image46/alarm-cleanup.png",
+      "sha256": "028ccbfe09b5d319e61b28829edbad2afed7a5c5a4828e9e98edf872994a570b",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image46/alarm-delete-defect.png",
+      "sha256": "fcb09c1846b9f200b14d25abf68dc386e0117359b7b7b4fe3a0ef783387cdf27",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image46/chooser-share.png",
+      "sha256": "4aa6bfd072180a6420ea0a1f7029b1e119feb033bf3040953a85bdcd50dbac45",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image46/editor-cancel.png",
+      "sha256": "2aaf78f49dfc784d865f2d98aec7bd09e226e1a0c2cc298b73a263c2161c8652",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image46/launcher.png",
+      "sha256": "0612e387acce8ee9a4fcff85d5659f8be2469c054c21e29a2d8dbe72392deffe",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image46/memory-baseline.png",
+      "sha256": "ecb3d5669cf6d8526f0989f0dc629b96e8ab79d9601a4d40aec05a5d7eee750d",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image46/new-editor.png",
+      "sha256": "d58c31ad1da9ce4c5930a9e6f8b8fc3fd8d9d73e36bda414f7cf9f9c4de25ebb",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image46/scheduled-alarm.png",
+      "sha256": "d7b9c993469ff4ee92c1e9524a8a3a8ac6f818c9923e20778df0f16938211d29",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image46/sounds.png",
+      "sha256": "6e7b9ab7682f3b51f5a220ac76eb8724ddafefc004fc5dbcd64f2dd22c0ee204",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image47/launcher.png",
+      "sha256": "9c61bb3d114673416c49e48d508c16f486751df13b7468e707ad91221c08f5ff",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image47/memory-postcensus.png",
+      "sha256": "372f19961b2cf00c6e1cff75f3d772027cb72503e5dc991ec272b393b285831e",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image47/wake-cycle3.png",
+      "sha256": "1aeae9662a057d269752772f9835ac4daa5be45e0ea0d4cb86a6a03508e04c82",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image48-clock-delete/cleanup.png",
+      "sha256": "a282a0a83f1542d4f6468e4c2deab448a84656da4849e3718f5376f658996a92",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image48-clock-delete/delete-cancel.png",
+      "sha256": "43d6d076263a0b6f44c6cd6956abb46845359a96e97af8ee32a75e4fb3ae8706",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image48-clock-delete/delete-dialog.png",
+      "sha256": "1123564cedc4f72ac7b1fae2a245f195797a24daae56ac427e6893dc8e5b61f1",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image48-dialog-dynamic/add-title-changed.png",
+      "sha256": "c237ca9b8a540221997d2e0a052c93fbc4458130dcbcb957628df5423572e644",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image48-dialog-dynamic/add-title.png",
+      "sha256": "c237ca9b8a540221997d2e0a052c93fbc4458130dcbcb957628df5423572e644",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image48-dialog-dynamic/remove-title-changed.png",
+      "sha256": "c442abebbe1db3655572140499d4d28e66b2d1a7b06673c4998d3a08a19f2ff4",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image48-dialog-dynamic/remove-title.png",
+      "sha256": "4ec0acffd6e6c5113094f6028d0169af0a2c7c9642300cf9458cc5b1e31ca044",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image48-dialog-static/long-message.png",
+      "sha256": "7f178282a76384f0cf5869bef2fc3c73e84f9da44c400f47cee7f3ccdafe61cc",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image48-dialog-static/no-title.png",
+      "sha256": "7cbf12d3a2af94e2a1a33827abaf726b094e95cbfc96dd5cadb757cb50e2ffdb",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image48-dialog-static/with-title.png",
+      "sha256": "bb89943d3bf37aadc05040aa39c6fa147440ec9bd8985ec8c8e3180642ff3ea0",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image48-dialog-variants/checkbox-center.png",
+      "sha256": "2641a0e6d310659ca4b22ba90a7cf7f113c7133e2cd06e643dc43cfe38a8ca6c",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image48-dialog-variants/checkbox-focused.png",
+      "sha256": "2641a0e6d310659ca4b22ba90a7cf7f113c7133e2cd06e643dc43cfe38a8ca6c",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image48-dialog-variants/checkbox-initial.png",
+      "sha256": "f4774dbdc7b4176915c050bc35dcde0e933e9ed607f382c78590b3543b769f4c",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image48-dialog-variants/checkbox-left.png",
+      "sha256": "cfdca24f3ffec28fbec4a17d675722f53dabb39bb87d71a99b9b840906b03f12",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image48-dialog-variants/editor.png",
+      "sha256": "6780339e1160337de62c63d137ec8bf65d2cc9499ff79e85aedf2c27d452f547",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image48-dialog-variants/list-center.png",
+      "sha256": "479ecb65838e71f8afc8111b8a1fb6b80c8a1e8af4af91863a8991126ba16bb8",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image48-dialog-variants/list-down.png",
+      "sha256": "479ecb65838e71f8afc8111b8a1fb6b80c8a1e8af4af91863a8991126ba16bb8",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image48-dialog-variants/list-initial.png",
+      "sha256": "479ecb65838e71f8afc8111b8a1fb6b80c8a1e8af4af91863a8991126ba16bb8",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image48-dialog-variants/list-up.png",
+      "sha256": "9f4752c408d535320f0057f2431f93a4a537751e66a7c5db1907504eb8de7997",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image48/chooser-share.png",
+      "sha256": "497e463dbcb6dd654d7a71f2b92fdc229e446cd9e29b7d5b98e4e51e54392e34",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image48/launcher.png",
+      "sha256": "f6e0e80a07d82af8cdaad78554b829ea208210f7f2453b9a9deb3093a4d6f0dd",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image48/wake.png",
+      "sha256": "ca909f629b9204798f3d64c47431f238281ef46ac885bdcf7e024bd2579d5d16",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image49/clock-delete-cancel.png",
+      "sha256": "f941fc9c24c3088d7704dd73edac990ad313f81606edf4dd789f403ae5787277",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image49/clock-delete-dialog.png",
+      "sha256": "c7bd22819f5291cfdb4ffd28dd510c706cec482391319dc7504449a6c742a745",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image49/clock-empty.png",
+      "sha256": "1fe3b6ab717ca40d4073dd8eae099828249898dd4363f8120c5d4a6fbc487a48",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image49/clock-saved.png",
+      "sha256": "f941fc9c24c3088d7704dd73edac990ad313f81606edf4dd789f403ae5787277",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image49/dynamic-add-title-changed.png",
+      "sha256": "b616e196e63b898e81f178deb9e00968639da53c9721ffce3979ff4f26b4a939",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image49/dynamic-add-title.png",
+      "sha256": "b616e196e63b898e81f178deb9e00968639da53c9721ffce3979ff4f26b4a939",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image49/dynamic-remove-title-changed.png",
+      "sha256": "6af39ce85199f393f0e2e21cd2f6ecfdbf09044b5508fcb0a0c2a038c2d35a8a",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image49/dynamic-remove-title.png",
+      "sha256": "ad6ced90345057364f3242a82ee829db143c04bbc6a1995bc708bf55a32f920f",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image49/launcher.png",
+      "sha256": "5c896e8c595f7a43bf2b976aa57c5d11a2992f51fde82744b0d60a294d1d4a26",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image49/notes-after-picker-cancel.png",
+      "sha256": "b5772924b35c2929432987dd4494679446af7154d5c9b2a2322f4643f1eefc54",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image49/notes-after-soft-left.png",
+      "sha256": "08dc0e8609f6dfb3677c3fdab6a5203f81f8be2224322d85ed3b2284fd976915",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image49/notes-cleared.png",
+      "sha256": "118bf65057ffe8f311f0d22a171dbf42387514082eb397bdb1d31ff29ac4dd0c",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image49/notes-list-after.png",
+      "sha256": "171890100290863589ab0513775bc2289e7678841dc4523c7ab170684e3da442",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image49/notes-mode-picker.png",
+      "sha256": "95262b93fec1e4495d64fe4ac8b160ebb39c1f6820457ee6ea3d69491be72e6c",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image49/notes-typed.png",
+      "sha256": "ebc83223f7cb04d85a3acfdaaac546f8f5f790d4d11e58f62f9beeb294c4e43c",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image49/power-awake.png",
+      "sha256": "8b8cd5a87667d931c21666c6ad3f6442b0dfdbdfdb31035f1d38860e885a89d4",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image49/power-before.png",
+      "sha256": "873eaab6bf1d7060ab150f7fb45f6827866dc4aee129833a199f70ffa449cfa8",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image49/power-home.png",
+      "sha256": "fe79dca7190203abb1865bb94a36af1bc16f7c21efa89064218b8d7762fba713",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image49/static-long-message.png",
+      "sha256": "37daab075e5ddcb53b6a1fee5b457adb5ffc5a524cb5c1683d4f5a07d04947fe",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image49/static-no-title.png",
+      "sha256": "b616e196e63b898e81f178deb9e00968639da53c9721ffce3979ff4f26b4a939",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image49/static-with-title.png",
+      "sha256": "ad6ced90345057364f3242a82ee829db143c04bbc6a1995bc708bf55a32f920f",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image49/variants-checkbox-center.png",
+      "sha256": "2a898f9b7126c0e1d9e47fbb9871b4f44c70957620cc7ca7e416d15d34b71311",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image49/variants-checkbox-focused.png",
+      "sha256": "2a898f9b7126c0e1d9e47fbb9871b4f44c70957620cc7ca7e416d15d34b71311",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image49/variants-checkbox-initial.png",
+      "sha256": "d5c43165f5a0c8a5cddc859023fde6c68207f698fb70b06b6941d8bb6a6c8484",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image49/variants-checkbox-left.png",
+      "sha256": "1a554b816d54d93883c448615ca6fcaa2e74c0e971796e9d9074b512dc34b182",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image49/variants-editor.png",
+      "sha256": "d9c7764078c6ba1c077507841b7cd9e096636ae9b21e0c59dc5c226a34256480",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image49/variants-list-center.png",
+      "sha256": "bd156da341f87e42fb39e7d2e685b05641c7c8b20104afffd889f93e9eb8560e",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image49/variants-list-down.png",
+      "sha256": "bd156da341f87e42fb39e7d2e685b05641c7c8b20104afffd889f93e9eb8560e",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image49/variants-list-initial.png",
+      "sha256": "bd156da341f87e42fb39e7d2e685b05641c7c8b20104afffd889f93e9eb8560e",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image49/variants-list-up.png",
+      "sha256": "8fa19635d183a8a0587ceb370af98a80b2184c138b76ad997c9441e33cf037d7",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image50/launcher.png",
+      "sha256": "eb9d194b7afa3e88771dfb2a765d143bec4ab2eba18a25c520dd8d56ba249194",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image50/post-lifecycle.png",
+      "sha256": "831bea075d1d7a132d659b41a62b78cc92760c49700ba10f53ffc38cd6b3438e",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-image50/power-wake.png",
+      "sha256": "42b5e343120136b9f0631239ee8868ee5668d0476526fb16cce0b4d567212eb1",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-ime-picker-sdk/picker-before-canceled-digit.png",
+      "sha256": "b7a909e1523794135c15eaca9e3087e2f783195638c1ea7db26c39a5e1998ba3",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-ime-picker-sdk/picker-before-down.png",
+      "sha256": "b7a909e1523794135c15eaca9e3087e2f783195638c1ea7db26c39a5e1998ba3",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-ime-picker-sdk/picker-before-symbol-shortcut.png",
+      "sha256": "b7a909e1523794135c15eaca9e3087e2f783195638c1ea7db26c39a5e1998ba3",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-ime-picker-sdk/picker-initial.png",
+      "sha256": "b7a909e1523794135c15eaca9e3087e2f783195638c1ea7db26c39a5e1998ba3",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-ime-picker-sdk/picker-numeric-focused.png",
+      "sha256": "fb4154b8f8f01163e7e33b48dd95f8c77fff2e764c8ac7b73b5941ccae2f6c3b",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-nokia-gallery-fixture/fullscreen.png",
+      "sha256": "abbef47b8de6be19c5953fc0012154111251503ddb080a7eee49f6e332ff8761",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-nokia-gallery-fixture/options.png",
+      "sha256": "b6bafe91478bc145603bbe03d8b8a860f1fddf27b8d13eb7f6c564c6385eb064",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-nokia-gallery-fixture/share.png",
+      "sha256": "ce7053e2700f27b83ead0693ce5842e4f264783e12b5a49937d4ab54e6b0ca26",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-nokia-gallery-fixture/viewer.png",
+      "sha256": "a8c2da635b42f6906a5410f8fbef42627c97e270075b1d3a7caa0744782678e1",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-option-menu-colors/menu.png",
+      "sha256": "a294dcc4095d0d9e0bbf255a31ab42841c27ece39ec2b9f08425d539df5b22da",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-option-menu-inset/menu.png",
+      "sha256": "0fc1dc39e2fea1fb37aa532458508e41515c2b6046c7764ebd2a624ff0a20ef6",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-option-menu-probe/menu.png",
+      "sha256": "de5926745a080d90a62bd57c3eb2022e61d8bd030535f7434724ab2e2f68228a",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-rgb565/lockscreen.png",
+      "sha256": "baa61dd198d66d2cb31aa8cf23ac69e99582675cb24219555e453b2d3967b920",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-tcl-battery-presentation/candidate-100.png",
+      "sha256": "6e4bc5ac503be56f56a9a5a52173bb019b997f2386687499ee4b2bf1f9394a08",
+      "width": 24,
+      "height": 20
+    },
+    {
+      "path": "2026-10-26-tcl-battery-presentation/donor-100.png",
+      "sha256": "f1875c4e0a985291b05b186e1bc4a56b7d496c36484e9a92963aab3dcfa1d7f2",
+      "width": 24,
+      "height": 20
+    },
+    {
+      "path": "2026-10-26-tcl-battery-presentation/synthetic-state-grid.png",
+      "sha256": "272ed611b2c9e9cbb70f7c370fc68f7f7b8a26a2228b9e15d8b909c96f8878b5",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-tcl-battery-surfaces/dark-surface-candidate.png",
+      "sha256": "c3628f6331928f6ca30e085383e0d69b6244856b8f085e21c1b06bbfd6e15231",
+      "width": 24,
+      "height": 20
+    },
+    {
+      "path": "2026-10-26-tcl-battery-surfaces/dark-surface-reference.png",
+      "sha256": "c3628f6331928f6ca30e085383e0d69b6244856b8f085e21c1b06bbfd6e15231",
+      "width": 24,
+      "height": 20
+    },
+    {
+      "path": "2026-10-26-tcl-battery-surfaces/surface-candidate.png",
+      "sha256": "f1875c4e0a985291b05b186e1bc4a56b7d496c36484e9a92963aab3dcfa1d7f2",
+      "width": 24,
+      "height": 20
+    },
+    {
+      "path": "2026-10-26-tcl-battery-surfaces/surface-reference.png",
+      "sha256": "f1875c4e0a985291b05b186e1bc4a56b7d496c36484e9a92963aab3dcfa1d7f2",
+      "width": 24,
+      "height": 20
+    },
+    {
+      "path": "2026-10-26-tcl-calendar-workflows/allday.png",
+      "sha256": "f41967f790ed7bc50a179cb94a164d7a4eb51c0fea8dbf19e3ba16f62a9a3084",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-tcl-calendar-workflows/day.png",
+      "sha256": "355513c6936ff365df9ed980a41a95f7becbb510491ae2dca4f4cc3af1360aea",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-tcl-calendar-workflows/reminders.png",
+      "sha256": "7f5a74fe0aab6470dc3beec986bcbd2dca9e7f3dcb82048f1f0d3631d86da9f2",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-tcl-calendar-workflows/search.png",
+      "sha256": "5a0bb3c93f8a02b76ceb852610b04b6df9ac54e3d0127a31a7058cdfeb201535",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-tcl-calendar-workflows/settings.png",
+      "sha256": "8af7f0937de217d2431408e9f7cd1049aed4a092488547ee85b4cda9ca7999a4",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-tcl-calendar-workflows/week.png",
+      "sha256": "b0415b364e895ddb8a8a040af49aeb729244bb865edb3a7bff4ba082a8183193",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-tcl-checkbox-four-state/checkbox-center.png",
+      "sha256": "c03dc56a7fe233a296ee6ba8ca14389a0496b8f482c7a33687b8ff783257e974",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-tcl-checkbox-four-state/checkbox-focused.png",
+      "sha256": "c03dc56a7fe233a296ee6ba8ca14389a0496b8f482c7a33687b8ff783257e974",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-tcl-checkbox-four-state/checkbox-initial.png",
+      "sha256": "03ba4ddcd61730cb9458dd81ddf24458d85f69bfb2f63b2b4fa457c1333a84c4",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-tcl-checkbox-four-state/checkbox-left.png",
+      "sha256": "72560f7188f2622e2e540af9e71265e1e451db2a214dad09d1e8ae7ebd54802a",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-tcl-checkbox-four-state/checkbox-unfocused-left.png",
+      "sha256": "f4dbf40caec76caa5526aab95b9bd48cb23be51b2ea1ed1185ace9c934f55693",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-tcl-clock-editors/repeat.png",
+      "sha256": "840a33e09fc54a6ae19c55c0df31ec7c2ad10db03ac3653bae43e764df267309",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-tcl-clock-editors/sounds.png",
+      "sha256": "0aafb18aa8b31f26a890c5d849f5528deb43ee0fdfb4ed3983bbf0a03b859314",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-tcl-clock-editors/time.png",
+      "sha256": "da761e868fc56268098d5ce92a01be7b7106bb5b3a3ced3e9437b5cb64676ea9",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-tcl-filemanager-dialogs/246-filemanager-phone-options.png",
+      "sha256": "24a27f8fbdf960224d68d368b5629c6d8f2a898fc2436d7edd28011fefdb726c",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-tcl-filemanager-dialogs/247-filemanager-sort-dialog.png",
+      "sha256": "ff8efa6ea4aaca8f02ed2637358bb94e198f51f1fe9a41e140618ca2467ff9cb",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-tcl-gallery-fixture/delete.png",
+      "sha256": "b20f004172feb492ba1c35eb9fad310b92877ad37054f5dcb92223bfcfd92e4d",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-tcl-gallery-fixture/empty-after.png",
+      "sha256": "7ae3a48e6d75a44b522e554d6706d74e35afdee6af915aaaf81c6a99a74a5e49",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-tcl-gallery-fixture/fullscreen.png",
+      "sha256": "4469670da02044198ed43a3ae842dece3dd080f6335f784a05d7e4e9cfbfb9d4",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-tcl-gallery-fixture/grid.png",
+      "sha256": "473b5c4607e9420c7347ae6a09f9fd83aeb7ff233a384d3fa0c988d78d95c35f",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-tcl-gallery-fixture/info.png",
+      "sha256": "92882928db05ffb661fe025bfb384a48c426d2c020807482d0d275714cdcaa91",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-tcl-gallery-fixture/viewer-options.png",
+      "sha256": "e95ced0cb06c3eca2349e10a89b8b805023c3d3b7679de39c22b2e71316a5646",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-tcl-gallery-fixture/viewer.png",
+      "sha256": "bd73374687176cd6dc74f0b047aa7c5ed5fcfba3dc4b493debd1fa8baed4e0c0",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-tcl-kika-matched-dialogs/dynamic/add-title-changed.png",
+      "sha256": "b78afc9c880ef026c027b46f15cfcaceb1605a0dc9a8ede192b93c2f61b38699",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-tcl-kika-matched-dialogs/dynamic/add-title.png",
+      "sha256": "b78afc9c880ef026c027b46f15cfcaceb1605a0dc9a8ede192b93c2f61b38699",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-tcl-kika-matched-dialogs/dynamic/remove-title-changed.png",
+      "sha256": "277c59023e59f4dd51f345c3e89608f21377beec11a1859660d04fcfc1a2be83",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-tcl-kika-matched-dialogs/dynamic/remove-title.png",
+      "sha256": "b2e0e1eab587a64cd235607bea05febcbad12f8f0451c0675239924ce1bfa292",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-tcl-kika-matched-dialogs/static/long-message.png",
+      "sha256": "f0cbe4492fe9a00ee794f0f0d0da78a7b95665f898643733d96501ad7bc5770f",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-tcl-kika-matched-dialogs/static/no-title.png",
+      "sha256": "956f52e43e160b83326a33ffe443c465591042a4636740be8a756502489cde68",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-tcl-kika-matched-dialogs/static/with-title.png",
+      "sha256": "b2e0e1eab587a64cd235607bea05febcbad12f8f0451c0675239924ce1bfa292",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-tcl-kika-matched-dialogs/variants/checkbox-center.png",
+      "sha256": "39759ca6b6272cf659eaa10de7356b9e1a4dde689bbe1fd6d4a24439d9189664",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-tcl-kika-matched-dialogs/variants/checkbox-focused.png",
+      "sha256": "39759ca6b6272cf659eaa10de7356b9e1a4dde689bbe1fd6d4a24439d9189664",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-tcl-kika-matched-dialogs/variants/checkbox-initial.png",
+      "sha256": "f02f49c0466784794f386e0d9ba1b03542f1752d24a48a6cc6a52316fcffd3fd",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-tcl-kika-matched-dialogs/variants/checkbox-left.png",
+      "sha256": "a1eb4db9c894b98fe9e14df6b65c1ac9bd14a8011bd2323684f926cd72037d3e",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-tcl-kika-matched-dialogs/variants/editor.png",
+      "sha256": "b6da2971dbca5d26881ea4ccb858b79db3611bfe20c19cf60d5ca2ec25ed42b2",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-tcl-kika-matched-dialogs/variants/list-center.png",
+      "sha256": "309b8a37a666936341f903fe08fff5f32be7f2ce487e70d919d97348222ed138",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-tcl-kika-matched-dialogs/variants/list-down.png",
+      "sha256": "7b65004d8ae6108d34c668adc2c8abe300a68fc17b91486a0eb97a1536d107fc",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-tcl-kika-matched-dialogs/variants/list-initial.png",
+      "sha256": "bdfa3b01e92e78b35ad85cca17389d4e11a0aa2a80951ae8072dd9bfc67d50d9",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-tcl-kika-matched-dialogs/variants/list-up.png",
+      "sha256": "bea95d088762729243fca1d9c533cc1b6241619b26e3c1804071a90ba9899024",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-tcl-kika-notes-picker/after-picker.png",
+      "sha256": "46f76870821472facbc260c2161fa81ede949fefa13207c56e43b9cc735ba668",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-tcl-kika-notes-picker/editor.png",
+      "sha256": "8a82594b322ccba663ad2e8b3ee6715dc5a79f99c962889061aa48c1ed357533",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-tcl-kika-notes-picker/notes-list.png",
+      "sha256": "4a41366bd1a200ea094efa7ddc39170f4cb2edd5b3367bd782630ed3c5997cbe",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-tcl-kika-notes-picker/picker.png",
+      "sha256": "549000b0be99f0a6e9010d82a96a0962b72576c294c34a4fa7428109b9cf53c2",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-tcl-notes-owned-flow/01-empty.png",
+      "sha256": "b520de71f93d36a488254ed9631103d08c56b64907d631a6f8915a352e882f2d",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-tcl-notes-owned-flow/02-editor.png",
+      "sha256": "b23a30d223e9f26155e0d409b8f15e56def4398d5350fd710bc5acc888ea7dd6",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-tcl-notes-owned-flow/03-content.png",
+      "sha256": "637898c4c3eadb321b5d66ecfeb58997e6c28c761ad2f9346dabfbc780ea3154",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-tcl-notes-owned-flow/03b-content.png",
+      "sha256": "a5f724f23fb682f99331785394dcb1a52b3cb7d5752ff9d4dd0f68f633d47b7d",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-tcl-notes-owned-flow/04-discard-dialog.png",
+      "sha256": "2fc7d094521b85fac5d00b5a5ef70fdcfa6da1deb3403bd9b4b79880ec99f386",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-tcl-notes-owned-flow/05-editor-return.png",
+      "sha256": "a5f724f23fb682f99331785394dcb1a52b3cb7d5752ff9d4dd0f68f633d47b7d",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-tcl-notes-owned-flow/06-save-observed.png",
+      "sha256": "01aa7027edfcb0521535a3c977d570d99348ce70259b723b6f7e7eb8471f0844",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-tcl-notes-owned-flow/07-saved-list.png",
+      "sha256": "9cd828b5dc4a66fb727100a8822c7bd1ffd296c226710293534bb9a3d9d12311",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-tcl-notes-owned-flow/08-note-view.png",
+      "sha256": "48ebe6d685c60f116b96ec4d6905dc1bd0ec3bead537f183db6d49f981f14882",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-tcl-notes-owned-flow/09-edit-existing.png",
+      "sha256": "e8ed651480e252bccab1f6d7ec39c013cade2c6a2cea3a82c2ba62520705c8c8",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-tcl-notes-owned-flow/10-edit-discard-dialog.png",
+      "sha256": "8f520b68fadbe865e5668839b53cc2d0fd9413d584a55d1ea3880129028f658f",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-tcl-notes-owned-flow/11-list-after-discard.png",
+      "sha256": "8538e0dd2a832320976dc30eb3f93a4d9a0b4b8da4259920c20449e78f439657",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-tcl-notes-owned-flow/12-owned-view.png",
+      "sha256": "a5f5352dcdd7721e840139a49c78982921f22b902f3416f71757211e7736d7f1",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-tcl-notes-owned-flow/13-delete-screen.png",
+      "sha256": "ca8874c4c836ffa2962ad9f17e532de0ea0b307d9862cefa84f8c5663e96ee37",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-tcl-notes-owned-flow/14-cancelled-view.png",
+      "sha256": "2cc839933bce3a1240f358574c53fc35fd8ceaca8e4d5d54a6cd74bdae9f00f7",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-tcl-notes-owned-flow/15-delete-confirm-screen.png",
+      "sha256": "806272902eaa547d1371ae5ef19dd82298c9def1797086e5b1e7a26cbb0c8587",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-tcl-notes-owned-flow/16-list-after-delete.png",
+      "sha256": "33a419f8fd98d71ecd36cedd065e6bd1caa928dba69319f7562707eb44f7e1d5",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-tcl-notes-owned-flow/17-remaining-view.png",
+      "sha256": "a951d7544feb8588c480a309d5d4f9429de3f32df3f1a126af10e3d87060fe72",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-tcl-notes-owned-flow/18-remaining-delete-dialog.png",
+      "sha256": "2e027eebd8de064f34175ff4b244ad8b23ccffdfd6a8ee13d3317e962abcc53f",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-26-tcl-notes-owned-flow/19-empty-after.png",
+      "sha256": "a77d430f71e312593948774035dc0fbb6162b34c9403296ba29949b60aca2fa1",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-app-widgets-sdk/clock-picker.png",
+      "sha256": "88eb56024a4a2bb51e1b4d7d7c726fa29bbbdc94e34e65fe0b23667ff8abe14b",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-app-widgets-sdk/default-picker.png",
+      "sha256": "5bee7bc5d772c9a6681a40c7498eaeac2e35280405a1c53ff852d5ca37a28cc6",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-app-widgets-sdk/title-before.png",
+      "sha256": "06413aa1cc59d65c28be6dea5f2cc92d8f2f3da34fe02cb2696fbabc8811ad7c",
+      "width": 240,
+      "height": 58
+    },
+    {
+      "path": "2026-10-27-app-widgets-sdk/title-candidate.png",
+      "sha256": "1a606e2b3a73d06bdc96b293468d6eb26a62989850f3d630e6bc687abfb7fbc5",
+      "width": 240,
+      "height": 58
+    },
+    {
+      "path": "2026-10-27-app-widgets-sdk/title-original-xml.png",
+      "sha256": "1a606e2b3a73d06bdc96b293468d6eb26a62989850f3d630e6bc687abfb7fbc5",
+      "width": 240,
+      "height": 58
+    },
+    {
+      "path": "2026-10-27-image51/dialogs/dynamic-add-title-changed.png",
+      "sha256": "dd74aef399424fbbf29726cb2783659801e27deb185b061ac2666a53c1daf712",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image51/dialogs/dynamic-add-title.png",
+      "sha256": "dd74aef399424fbbf29726cb2783659801e27deb185b061ac2666a53c1daf712",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image51/dialogs/dynamic-remove-title-changed.png",
+      "sha256": "1d4886da34ae614ddb81f6fe4c6b299467313b9b72aed0287dd8f8b4437353e9",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image51/dialogs/dynamic-remove-title.png",
+      "sha256": "4b0d2b89d9c043d272ed045822d2b644ec44cbf4fecb1e9cba80c136e343fed2",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image51/dialogs/static-long-message.png",
+      "sha256": "772c70f39b3fd999c12765e126416fa6b8f48f2a455f38ec60e4f668d0c36a95",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image51/dialogs/static-no-title.png",
+      "sha256": "1b07e34292f362bbe4aadd109707b206cb469b8e2638ae3a639eb697bc709680",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image51/dialogs/static-with-title.png",
+      "sha256": "b081e184d571d18e900280eec4c9e3e310e2351ed5c5b6042e66b27a7ce86d11",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image51/dialogs/variants-checkbox-center.png",
+      "sha256": "b83e167ff0b743fd20e84f254078102da0d7ba7e8be9f76e12251668fcb3eb9c",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image51/dialogs/variants-checkbox-focused.png",
+      "sha256": "b83e167ff0b743fd20e84f254078102da0d7ba7e8be9f76e12251668fcb3eb9c",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image51/dialogs/variants-checkbox-initial.png",
+      "sha256": "a9f55b2dc7c06d72f29e907d3bec3c76b2a871f60c8d8bdceab99b499e7a84e5",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image51/dialogs/variants-checkbox-left.png",
+      "sha256": "454c0c04255e42e239f212812bcee7a43b8e79b1953d58b07e44e7e5342be9d2",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image51/dialogs/variants-editor.png",
+      "sha256": "40b55f3337c4e7be7933b205acb9a989bfdbae5d2fd85047de1eaf6d44d7bfc3",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image51/dialogs/variants-list-center.png",
+      "sha256": "9748e632d91d914f12f7a344f23aef996b2e4daf537b0e69976b9e8cc309be92",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image51/dialogs/variants-list-down.png",
+      "sha256": "9748e632d91d914f12f7a344f23aef996b2e4daf537b0e69976b9e8cc309be92",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image51/dialogs/variants-list-initial.png",
+      "sha256": "9748e632d91d914f12f7a344f23aef996b2e4daf537b0e69976b9e8cc309be92",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image51/dialogs/variants-list-up.png",
+      "sha256": "bbb97dc8717af4e2e381adc920b3f66a11d12e721777207d8dbb923cca5bc376",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image51/launcher.png",
+      "sha256": "06c113fc4da987e3fbd4a65253d5978a1938aae20375aa8b6b4e208b4b3abfb2",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image51/notes-picker-failed.png",
+      "sha256": "e0813444f0c820b864581c880815e80547060faf460979d37e0fc7404ce0a982",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image52/launcher.png",
+      "sha256": "b434958662a5aae61aa785dd296ed99194ab254909c871c2b12ac5ae64d728a7",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image53/notes-input-modes.png",
+      "sha256": "8cdd9a853c4f328b24183cbb6f47f5d07078797eb96c825ac718b61b0213a15f",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image53/notes-numeric-mode.png",
+      "sha256": "a01d138e97108c0e354ad79b01387e2d14744f3be198777f0d439a4fc87dbeb0",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image53/notes-restored-abc.png",
+      "sha256": "ed089ff829a12e28cac5dd569ca0efa4b25e5a6eba6687f5a1452889904f639a",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image53/notes-symbols-after-back.png",
+      "sha256": "b31864595cc5baf18a5c1a18910c6244154f854e4f16fd6d3f66c93a46a8737b",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image53/notes-symbols-panel.png",
+      "sha256": "1a0248d976e2625902996360f8584fc6db6dd54437340e3d9e0c7ba7f5dae3fe",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image54/dialog-list.png",
+      "sha256": "ce49e6cba929a3430ce45544aa0b23fa9fca60b485205c20dead21aa90168e1f",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image54/dialog-with-title.png",
+      "sha256": "6daf64259f8417c1c43843a68074b325c33d616330a82f2d3c12dfda74e8361c",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image54/notes-numeric-editor.png",
+      "sha256": "84680b87c231c0bae6557596f55f63f8a076d25a8f1d3afebd8793629376bf20",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image55/adapter-down.png",
+      "sha256": "678de93a5af135de23df33c90536ad3aef7db6d279fe183c18c3d6a58fc0c8d2",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image55/adapter-dual-retain.png",
+      "sha256": "66a9f58b19b7884cb35fdd9dd401c46420ffb0749961bb5ba17cea089cffeebf",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image55/calendar-reminder-pass04.png",
+      "sha256": "e4f0981fdc455f214f19c1697bf8da7056bc120d03ba8a9c8ce5e49b3c67c0f7",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image55/calendar-reminder.png",
+      "sha256": "a6b72aa14a326a1a83ecd1eaa7d9f29686f4a8971140eaec5b5d8813b9ac07f2",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image55/messaging-inbox.png",
+      "sha256": "be16abdcff2a6be2a6e72f50675c787da4d93639021c54b2a46a46f43eb3c966",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image55/notes-picker.png",
+      "sha256": "b17fe7eb75d28fbf8f0e61d12d2b6459c4026e4abedfb3f304c95b6db683a4eb",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image56-clock/clock-entry.png",
+      "sha256": "58f613495c4a964bbadcf73bd4d602c83b09c8d8f366cbb55dcac70f4d15128e",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image56-clock/clock-settings.png",
+      "sha256": "166e48685bccfbe25b475e6ad3bd5dca63ae0f5842b36329da4c6bc17a763549",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image56-clock/clock-snooze-dialog.png",
+      "sha256": "00d333695798c0c7189a2497c6693262198052fe666e3ae3cac84a26158416c3",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image56-clock/clock-stopwatch.png",
+      "sha256": "b4686a9751d870ae8785ac39102298f7f9783883b2bf82ad57e9c45d69c30220",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image56-clock/clock-timer.png",
+      "sha256": "800ca0588d04a438e6fd9b553ee69d20a069556d02946d8686c42c1e19d7eea0",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image56-clock/clock-world.png",
+      "sha256": "d85a8c5e2fb90836a86d4f1ccfbbae8ffc50b390686e2159c7a64cc4c421436e",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image56-clock/tools-clock-back.png",
+      "sha256": "fb0fecd523633b09e650718300e0a243cb51200f05184abd7872d0ca078cd717",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image56-clock/tools-clock-open.png",
+      "sha256": "f5a5e40bbdccf1016be060b8475af432848573db5035d246afd334085e908744",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image56-clock/tools-clock-right.png",
+      "sha256": "fb0fecd523633b09e650718300e0a243cb51200f05184abd7872d0ca078cd717",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image56-clock/tools-folder.png",
+      "sha256": "2473be5e8a210660f84924eefabf2ebdf98ec5803532a0ce7f64b861aa9ceb62",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image56-clock/tools-grid.png",
+      "sha256": "18cac47b52861235090c859ad28cb2afcfc885009bb7599911656e8534009966",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image57-apps/clock-title-focus.png",
+      "sha256": "a2f92f21d14df0c1cd538361b96d7a80f8401a7e26be2829390e80804c8643cd",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image57-apps/clock-title-input-modes.png",
+      "sha256": "1902b1232e7ac6d0b9ede32888b3f94414395f1479c03c58fae95e14cda04f7f",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image57-apps/clock-title-symbols-back.png",
+      "sha256": "2a981443a689e9b0fb0ad27ff70d7e968b2f720a6a905463ca40e72ac9404cbe",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image57-apps/clock-title-symbols.png",
+      "sha256": "76cc5f41003d3a1661a36dae9fcd21be3438b091da3301e578b72fe9186ac2d5",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image57-apps/clock-unsaved-editor-back.png",
+      "sha256": "056176d89d670e9cdbd3a48f8f183646e3cd723d36b7cb87a12ccbcd23d0955d",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image57-apps/contacts-entry.png",
+      "sha256": "de64e2fc47a11a6d68a9a41d27330b1f79813e95a5125a42e791e3d8dbf0eb05",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image57-apps/gallery-video-info.png",
+      "sha256": "46dbb0c8924f0fc7d8490ab1ee44e5613b9d0a7383f0fa1da26394f83f54e4ad",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image57-apps/phone-shortcuts-set-picker.png",
+      "sha256": "31184c8309ab4fbf74960cad176e53877930414481c8fcaebd73eff4501f7bf3",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image57-apps/phone-shortcuts.png",
+      "sha256": "41de4f1c12ae5899b857cc70c7eeb9e2add386e1f283a0f469ecaa186ed7c34b",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image57-apps/phone-storage.png",
+      "sha256": "ca6723e639990da021beb90044f92f10c9a9130656950a48e0e358ba7b9bc313",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image57-apps/settings-phone-settled.png",
+      "sha256": "4d0c0eb12378bf9908a893ab7a0875464a32db939b16541730b72c26910b007d",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image57-apps/settings-sound-focus.png",
+      "sha256": "fc4e7d9bb0d843affe8639a44d3f6039fcece0d4c689b143aa31f234ea4efcee",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image57-notes/cleanup-after-editor.png",
+      "sha256": "d87e0f193db660694631cff020168351fca48881e027c29463bd9aa38cb685e7",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image57-notes/editor-before.png",
+      "sha256": "6a70b1b0bfef46e3f36b7aeca774d4080aed34814a486e143b314e3f83a3ea27",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image57-notes/picker.png",
+      "sha256": "6c4c80846ff1a20d2506e0dba7a5b69f95486b23ebc033299d18ff38ec044485",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image57-notes/symbols-cancelled.png",
+      "sha256": "8c3cbb143bf5682e55af82afd83fcf3152887b3d7fc81e8d88f9aeae740a07b7",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image57-notes/symbols-editor.png",
+      "sha256": "659ac6b362bddd5f5ff983f3664148970675baaaeeaec3872637c253e93b745a",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image58-clock/baseline-before.png",
+      "sha256": "5719a4bb5512a15fb1b402eef78f2c6946bf451c0cac960d39d9b42cbc575495",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image58-clock/clock-entry.png",
+      "sha256": "ab1400d07a805d9fc54eca90d7102878f90ac826ae0ac2793a5caa35aa8c818c",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image58-clock/clock-exit.png",
+      "sha256": "006351f739a717f81717be9e441e9844c4112b4b5befae28250a660d7c231b70",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image58-clock/clock-new-alarm.png",
+      "sha256": "095dee7c8ae998f2228627e9de7d363086d300f7c91d79df7a430c1355dd646e",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image58-clock/clock-repeat-focus.png",
+      "sha256": "c101cd2380fc0179bf9b89b1f284c365e1c72c7b2ff432a181df0eeeda4d07e7",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image58-clock/clock-restored.png",
+      "sha256": "006351f739a717f81717be9e441e9844c4112b4b5befae28250a660d7c231b70",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image58-clock/clock-sound-focus.png",
+      "sha256": "56c62563db26331d05a0047e064f5372735198d183be6f228a908b7171c2fd23",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image58-clock/clock-title-focus.png",
+      "sha256": "0d8593d7ebb5917b69211ffd94b6934ed10338b8d0d231ec1f61e3190fe95098",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image58-clock/clock-title-focus02.png",
+      "sha256": "213390cd8c4242bd206dcce2747076181083fb4b51b8d70d087d598572c6c5f4",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image58-clock/clock-title-input-modes.png",
+      "sha256": "d07390ffc0fd220e9f48b3d286f7fc5c2fbd39856e222492437a4448f577e5c5",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image58-clock/clock-title-mode-down1.png",
+      "sha256": "ec9e2b7d4d7d4df712752fbc905397fb46cc0955ce8094eb69a0e53bd18c96b9",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image58-clock/clock-title-mode-down2.png",
+      "sha256": "073de1fc14c92f36db558e118f11244025e5c2d50566c7fdbb888bfabf6567c8",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image58-clock/clock-title-mode-down3.png",
+      "sha256": "f3fd6aa4472eb6fd2253637758a276e2fa28c6a2140984a86fdac9de3ad50c93",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image58-clock/clock-title-mode-down4.png",
+      "sha256": "bb4aa366d9618b04de6aa3a828cee2d71dc67ffb7ad624a48ebef2cb04889703",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image58-clock/clock-title-mode-down5.png",
+      "sha256": "b9e8e79c4d00f5633119459b8ac07b40ee26674a23534aea5f8b472c2dfa3de2",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image58-clock/clock-title-symbols-back.png",
+      "sha256": "1a1cc301524bdac9ea7601aaf3439bb04fa38ded41570a6dc2c2b86dc4806eba",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image58-clock/clock-title-symbols-settled.png",
+      "sha256": "09d020b20861e7b4d734d0c436051d1630c242cba0f004b79b966e07d415ba7a",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image58-clock/clock-title-symbols.png",
+      "sha256": "09d020b20861e7b4d734d0c436051d1630c242cba0f004b79b966e07d415ba7a",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image58-clock/clock-vibrate-focus.png",
+      "sha256": "ce208ef54036160f14098567fce8409937ff2b15637c741be42e13b95c29e2f8",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image58-contacts-permission/contacts.png",
+      "sha256": "64bdee4a2db6b89ff1fe9cb6b080bd0ddd41548b459f94cdb42b989b9889d10e",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image58-contacts-permission/settings.png",
+      "sha256": "fc63ab94d6c2397bf9fd6950c28a62aae3c861e856478bfd9371441421dc4f51",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image58-contacts-permission/sms-permission.png",
+      "sha256": "f126c779916bb569c9fb80c4870bd25d915ffc5615285191da59044cc91e8e67",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image58-contacts/nav-before.png",
+      "sha256": "fef860edd52799c109b7055c493caf851f3cd0ae0033da5028d194579806e59b",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image58-contacts/nav-return.png",
+      "sha256": "fef860edd52799c109b7055c493caf851f3cd0ae0033da5028d194579806e59b",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image58-contacts/nav-settings.png",
+      "sha256": "24726df4d44459f7488ff0172beb688423754533fd0d896ac22321ff247f8e8b",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image58-contacts/people.png",
+      "sha256": "fef860edd52799c109b7055c493caf851f3cd0ae0033da5028d194579806e59b",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image58-contacts/read_call_log-allow.png",
+      "sha256": "d6c0a9c18431430e24cc8c4e0f99f0487e7ff34b5f155589be78792b68d890ba",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image58-contacts/read_call_log-deny.png",
+      "sha256": "9707d51644b7ed3c65fa740b8945f33ca2f4c68bf0227a264c479c2780829589",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image58-contacts/read_sms-allow.png",
+      "sha256": "b6853989cbf9cbb6773220a3fe1f74ba3d2edd73f19270cd9e3ba3980dbd6088",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image58-contacts/read_sms-deny.png",
+      "sha256": "a5383d94bb252b64be92c27a3a909a6a72fd177b8e6bb1f669caa56c4a235c3f",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image58-contacts/sort-dialog.png",
+      "sha256": "da28e09ec68e8856633e9d7d30ef728c1da023e7ea566bb9cec7d1881d68277d",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image58-contacts/sort-return.png",
+      "sha256": "24726df4d44459f7488ff0172beb688423754533fd0d896ac22321ff247f8e8b",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image58-notes/cleanup-after-editor.png",
+      "sha256": "8918af1c62d163210184d672628337b32d0acf4b09e5f713aeff2d4bd0b00c19",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image58-notes/cleanup-after-picker.png",
+      "sha256": "6d0cef836ce3d83d365099ef8b541603690e7adf8f7867fd19d1487b51e8db36",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image58-notes/cleanup-current.png",
+      "sha256": "ddc0b232517135b2fb2d4efe35a40a9ba2021f87584ce0832b9ebdb3e4c41d9c",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image58-notes/editor-before.png",
+      "sha256": "313f0e06b772f6e04422dcb180cb4091a2df1c1bebcc0d2aa71205d5a541ea9c",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image58-notes/list-before.png",
+      "sha256": "4a252040f7eda6f81b01f885ad8526818fd3e3355510d1d9670976c113ecbbf0",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image58-notes/picker.png",
+      "sha256": "259f2a861b3566f6243665bdc3b6677ba91b8152482542a273c9809230d44986",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image58-notes/symbols-before.png",
+      "sha256": "259f2a861b3566f6243665bdc3b6677ba91b8152482542a273c9809230d44986",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image58-notes/symbols-cancelled.png",
+      "sha256": "ddb4510625f659463ebe6e8cbe0a423fce59627ac4df55581e6722ac8f979eca",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image58-notes/symbols-editor.png",
+      "sha256": "4da9399dfcc1f300c924454a4e02fdfabe65bc8a712bccb00a6dc074f7a150eb",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image58-notes/symbols-selected.png",
+      "sha256": "50167a75991b2ddc97b94b7dbbf3cddf9712907bc7745ce5173f4cb12e1c2e66",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image59-clock/continued-cleanup-after-editor.png",
+      "sha256": "d38e926a3a1ed0e63f04167b7e483f1651b51084790c16a11353d13ef8211c86",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image59-clock/continued-cleanup-current.png",
+      "sha256": "744d4887b4e44c18b83c4cbc4f5a38fda2b10a13d91c33780eecca7c67015cd4",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image59-clock/continued-continued-editor.png",
+      "sha256": "38efb54025479860b3d5f7509edc91989e1a2ed6ce277b46be45e9dbc5e53295",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image59-clock/continued-numeric-down1.png",
+      "sha256": "3a9de4c7650057d258e7e726ee9187dba64ff3b201f7c3096c6a34a131d0a9ae",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image59-clock/continued-numeric-down2.png",
+      "sha256": "909abf2b90e33ab0b54e8328d61ac96df75360be3362a28f19a1dbd76f68d383",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image59-clock/continued-numeric-down3.png",
+      "sha256": "66eb44eccb25f383ba90be1a9b69c0e3014b839d4c33d73e0ecbb3bb8e877847",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image59-clock/continued-numeric-down4.png",
+      "sha256": "4f71393aa044679f4674e5368b559dcd8b3f0d8249366c36cc6f18a5b943eef4",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image59-clock/continued-numeric-editor.png",
+      "sha256": "ea8205f4abafa56184effe5f19537fe59626ff2a340acf774b5170aaf2ce5249",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image59-clock/continued-numeric-picker.png",
+      "sha256": "742a4cb2fea72b0578fead1a145de36d0d6d0ce697c7b3d72c87ea21e5dc30b7",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image59-clock/continued-restore-down1.png",
+      "sha256": "3a9de4c7650057d258e7e726ee9187dba64ff3b201f7c3096c6a34a131d0a9ae",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image59-clock/continued-restore-editor.png",
+      "sha256": "744d4887b4e44c18b83c4cbc4f5a38fda2b10a13d91c33780eecca7c67015cd4",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image59-clock/continued-restore-picker.png",
+      "sha256": "a479d9c4e3f0419ecd0cae1591c52a486f0f4cf737f46ee232045f180059220e",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image59-clock/first-entry.png",
+      "sha256": "c858dba8ce8d97cb04bd067f134bb67feaccdfd725450069e3a55d6eeed95f8b",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image59-clock/first-first-symbols-down1.png",
+      "sha256": "790d43e7d3af13e7a198679a6f6481a6a6e2568d413790b163bc4fe45c0285db",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image59-clock/first-first-symbols-down2.png",
+      "sha256": "75eedf9d886249ebea095e624f74bb33492c3865974258a4351d981c28959180",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image59-clock/first-first-symbols-down3.png",
+      "sha256": "b1bafad6dee5211b37744ec11fb43a8c84cc8b2eb13043b41a8970a4ddfc0510",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image59-clock/first-first-symbols-down4.png",
+      "sha256": "009f923d087faa44cbdda46bbfd389573d3dc94c4b1095efecaa569b8fff25fc",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image59-clock/first-first-symbols-down5.png",
+      "sha256": "cf5676cd81d525e5525f7efee8a097d0b6f3fc9f784990d0b95a0c673b7cbdff",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image59-clock/first-first-symbols-editor.png",
+      "sha256": "4691820edf1a31b5ba3bca9990d9487de5c052d1b136fca16d0fa1cb79d37735",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image59-clock/first-first-symbols-picker.png",
+      "sha256": "a9e6fa5ce114c81a36ff0da98b2fcd9bc084603da7873f4123a9921c5922a462",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image59-clock/first-first-symbols-settled.png",
+      "sha256": "4691820edf1a31b5ba3bca9990d9487de5c052d1b136fca16d0fa1cb79d37735",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image59-clock/first-new-editor.png",
+      "sha256": "abef682e19dc0cdba1744bf7e9885d292020ee7b5a146f8327764571b0f73c3e",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image59-clock/first-symbols-cancelled.png",
+      "sha256": "72931ebd599060c0f3ae81141b2a27e013a4a6b65cebff66d429703fd84ea02b",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image59-clock/first-title-focus1.png",
+      "sha256": "f423217881d52ab2daa02871732eb1ea267101a2c044bc9660fb2b0eb71cd9c4",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image59-clock/first-title-focus2.png",
+      "sha256": "01ac495ee043a349f0a6b7b03bc708ab33e6f5cb01dc41c40accb00126ffa078",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image59-clock/first-title-focus3.png",
+      "sha256": "157de618d1773df0e22160b19963fcf363247a83ab73cf5de577f51f74f76516",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image59-clock/first-title-focus4.png",
+      "sha256": "9e023350ab4477030c45c82a6b9ae0e71ae883fb9ea2fd4a77a120b17dc044b0",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image59-clock/first-title-focus5.png",
+      "sha256": "b11f10c259bb585a2bca1b65d0ba5a0e58232cf5b437c84fa1ff803b70388c5f",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image59-clock/home-observed.png",
+      "sha256": "47807a81de6b21cf6cf00d701f66c5d2f8a0ed1aded7ce9911b775bb925d3f08",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image59-clock/postback-observed.png",
+      "sha256": "eeb1e4f0e75ff5277106b747b8a6350a3d7fc698d12a61705d3a409c1e9b8f21",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image59-notes-functional/cleanup-after-editor.png",
+      "sha256": "ff3ce43d6ddabe4f145cc2600e45c05a9934c972a8a1c70aa45d7d55528ff347",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image59-notes-functional/cleanup-current.png",
+      "sha256": "cfc5434dd5f733a1a85d61b35f878e5df3c02a1bfc068147edaef12be74e62e7",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image59-notes-functional/entry.png",
+      "sha256": "de9b0bd1a2c27181e693e6c9fdf48b68963a0ebcee2ea6096d2d737ccc2f5d56",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image59-notes-functional/first-symbols-down1.png",
+      "sha256": "8d5a3b8d110f9f9a429e3cd5f2f9816cd5b74eef6e6aa0cda7bfbc48893ff2e4",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image59-notes-functional/first-symbols-down2.png",
+      "sha256": "d0177b63dde997e2226e957f1367c5af2c6a09d0d05b81adf9cb821f30c063da",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image59-notes-functional/first-symbols-down3.png",
+      "sha256": "e1f94d352cafe81dd9cadf72b19f883b4790239e68444d02fac8d2510d12c7ef",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image59-notes-functional/first-symbols-down4.png",
+      "sha256": "c27984621df7d486098f900bd7ce68c8e2dc3db2a1c0378d0db97c789a8c0838",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image59-notes-functional/first-symbols-down5.png",
+      "sha256": "6555ccfb2446f52ca1589b67051660b18ade3cebd9a7b19bbbdb3571f76e90b1",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image59-notes-functional/first-symbols-editor.png",
+      "sha256": "97b9a36a1bd8597ff12cf9ea28269e04665aa2931f9395e47f8d072f2da61d46",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image59-notes-functional/first-symbols-picker.png",
+      "sha256": "debe6e796efdd219bd619039e0c14a4c72722646cc22b6aa03b8dfb01127d813",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image59-notes-functional/first-symbols-settled.png",
+      "sha256": "69abb9b5d380e6ecebecb15f471a9c17d02c4dd4aa4cf55e7ad37584a4a4cf04",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image59-notes-functional/new-editor.png",
+      "sha256": "5c9bedeefef57e17bf2636f5668e2a1510d4322f0041ea27cf90ce40c0e2e6c5",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image59-notes-functional/numeric-down1.png",
+      "sha256": "ed797ae8372217376454c2f6ca8a149a166a16e8304bf3b878ae5c1b8cdc271f",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image59-notes-functional/numeric-down2.png",
+      "sha256": "55e6397ff69a88947824d435f71c0d7302594a0e32b726bb199c2917324e4568",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image59-notes-functional/numeric-down3.png",
+      "sha256": "3ddf010998cb492dbd0f965492874fdf2aad60b389354e8ea123c84f198f22dd",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image59-notes-functional/numeric-down4.png",
+      "sha256": "402e711089d009fc628eb73b0adec3cccb0985f098428fbd3e3ad4f1ab4e300b",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image59-notes-functional/numeric-editor.png",
+      "sha256": "afee02ba7ff44a63521c7e1a8c09ea6fa0c8d8b3b2ce92fecb597f73e3772aa6",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image59-notes-functional/numeric-picker.png",
+      "sha256": "9f0626603389038332770dd3f8601f162cf9db5b481f9192815435d84d1f4e1d",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image59-notes-functional/restore-down1.png",
+      "sha256": "ed797ae8372217376454c2f6ca8a149a166a16e8304bf3b878ae5c1b8cdc271f",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image59-notes-functional/restore-down2.png",
+      "sha256": "a98998cf7b886009162ce9768047e85bca2d097e57e2a628d10d9bd045681b35",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image59-notes-functional/restore-editor.png",
+      "sha256": "1e739e6bc8b78096e5f7e37541d2a127e13fca204450d9e83a07f92e138e2752",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image59-notes-functional/restore-picker.png",
+      "sha256": "9f0626603389038332770dd3f8601f162cf9db5b481f9192815435d84d1f4e1d",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image59-notes-functional/symbols-cancelled.png",
+      "sha256": "96ccd0c366164feb133307280663b15a052190014f5213d4951e29d2baf82b5c",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image60-calculator-functional/before-calculator-clear-all.png",
+      "sha256": "e16421c321ac2a703f333c4b997754e8255074066e4a2cef1495f32b13dfb946",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image60-calculator-functional/before-calculator-clear.png",
+      "sha256": "2b38ca4e9a52b3d51974946196106461d31e10186a5ffc40bdc810ea23c43421",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image60-calculator-functional/before-calculator-divide-zero-result.png",
+      "sha256": "615defce8902892420e79cc0f740ff4328e059169b2322c0fa9c888b62195f12",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image60-calculator-functional/before-calculator-divide.png",
+      "sha256": "4adefd5a0d2db0cbfe371d1fcf67ea33bb8d684a65945ce7fdebb652f6aa152c",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image60-calculator-functional/before-calculator-eight.png",
+      "sha256": "e0284f2c63de0843bb4a97ddd49814f2afbe72993fc7f6e4405142b252c8613d",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image60-calculator-functional/before-calculator-equals.png",
+      "sha256": "e16421c321ac2a703f333c4b997754e8255074066e4a2cef1495f32b13dfb946",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image60-calculator-functional/before-calculator-error-clear-all.png",
+      "sha256": "a95b80b9765c7d6f8483406e1f9bc659111570d10f74c92e11c7c89306a47bd3",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image60-calculator-functional/before-calculator-one.png",
+      "sha256": "cd0e19682a525d48e26b1eb29e5f08f46af2f918583d8237b8f56fe610b59268",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image60-calculator-functional/before-calculator-plus.png",
+      "sha256": "2430c55e56cf67164b836d0d5d2c001e4c7e4487c05e0f2b80ba2f4a46ada1ff",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image60-calculator-functional/before-calculator-two.png",
+      "sha256": "0152040f3c47103869fe2c043cb61991487296291a53b96409c920136a4e7e75",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image60-calculator-functional/before-calculator-zero.png",
+      "sha256": "d94eb43edc2da5228c49501d1cd9542c7e3f1536e484f3c9ccc711fb342215e1",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image60-calculator-functional/before-home.png",
+      "sha256": "800d8f608287fb55e62adbf6cdc8de0650f9ddc76bda7b8a10e9ef42cba53536",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image60-calculator-functional/calculator-clear-all-mismatch-map.png",
+      "sha256": "adc803a3b06275ebe7a932801207dd57c5b5d2f327bad02a0e7d1f85318905f3",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image60-calculator-functional/calculator-clear-all.png",
+      "sha256": "cd0e19682a525d48e26b1eb29e5f08f46af2f918583d8237b8f56fe610b59268",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image60-calculator-functional/calculator-clear-mismatch-map.png",
+      "sha256": "51f2f093cc4f48d8b9983d122beb7e8f2fb269785c2722dfe3efad09dd49e7b9",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image60-calculator-functional/calculator-clear.png",
+      "sha256": "e16421c321ac2a703f333c4b997754e8255074066e4a2cef1495f32b13dfb946",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image60-calculator-functional/calculator-divide-mismatch-map.png",
+      "sha256": "78554293db2eae31d60dd1cb61658a6f87b18e2b082cf4c69201b00047b59edd",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image60-calculator-functional/calculator-divide-zero-result-mismatch-map.png",
+      "sha256": "8c6dcd2babd5620c3e3184b6ce02c635df545e9e9901ce7c3acef010423fdd42",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image60-calculator-functional/calculator-divide-zero-result.png",
+      "sha256": "a95b80b9765c7d6f8483406e1f9bc659111570d10f74c92e11c7c89306a47bd3",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image60-calculator-functional/calculator-divide.png",
+      "sha256": "d94eb43edc2da5228c49501d1cd9542c7e3f1536e484f3c9ccc711fb342215e1",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image60-calculator-functional/calculator-eight-mismatch-map.png",
+      "sha256": "4e2798a467bcd64ff7f7744628b2dcbd79e3ea6e6f9743a58ab0c7c61c840a3c",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image60-calculator-functional/calculator-eight.png",
+      "sha256": "2430c55e56cf67164b836d0d5d2c001e4c7e4487c05e0f2b80ba2f4a46ada1ff",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image60-calculator-functional/calculator-entry-mismatch-map.png",
+      "sha256": "31123d41cc81a5a42089b40fc15c886ee38190f4852089094997e7395762cf74",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image60-calculator-functional/calculator-entry.png",
+      "sha256": "e0284f2c63de0843bb4a97ddd49814f2afbe72993fc7f6e4405142b252c8613d",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image60-calculator-functional/calculator-equals-mismatch-map.png",
+      "sha256": "beea290bb07d9f7d0002ede13d5365945ecc74ab151c61c446d47eea38a06612",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image60-calculator-functional/calculator-equals.png",
+      "sha256": "2b38ca4e9a52b3d51974946196106461d31e10186a5ffc40bdc810ea23c43421",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image60-calculator-functional/calculator-error-clear-all-mismatch-map.png",
+      "sha256": "c9032310c102b791a60c644a9c6c37252cdbd036e838dc5f67e08c7e5a244050",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image60-calculator-functional/calculator-error-clear-all.png",
+      "sha256": "800d8f608287fb55e62adbf6cdc8de0650f9ddc76bda7b8a10e9ef42cba53536",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image60-calculator-functional/calculator-one-mismatch-map.png",
+      "sha256": "ad9080e46b7ee23b79144af4782e7208b6b5ee44ee15597a057bd4ddc7f090c6",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image60-calculator-functional/calculator-one.png",
+      "sha256": "4adefd5a0d2db0cbfe371d1fcf67ea33bb8d684a65945ce7fdebb652f6aa152c",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image60-calculator-functional/calculator-plus-mismatch-map.png",
+      "sha256": "37e5adb93fd6559e1128c5524bb2ee76b65e067163e5be8b3362fae90da1571c",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image60-calculator-functional/calculator-plus.png",
+      "sha256": "d95b017589b82ee57522a076278169905d90b09e38f90030c81797765fe8b0f2",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image60-calculator-functional/calculator-two-mismatch-map.png",
+      "sha256": "a75c4d4e9ca656e34482ae96d20af8192c2e7eb275d9616639bbcc7ce32cf088",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image60-calculator-functional/calculator-two.png",
+      "sha256": "e16421c321ac2a703f333c4b997754e8255074066e4a2cef1495f32b13dfb946",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image60-calculator-functional/calculator-zero-mismatch-map.png",
+      "sha256": "589b5b5d253abd7268aa8432977da2da02835e98f6298b9a9be39451e6f8856e",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image60-calculator-functional/calculator-zero.png",
+      "sha256": "32be86245686ce9cbb99ed1b53b6450ed7977e85229503688deb57122fc55611",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image60-calendar-blocker/after-cancel.png",
+      "sha256": "425e783e4bf34178ccd1655e7987147765327b919b25ffed436606b3d1a0e1a6",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image60-calendar-blocker/before-cancel.png",
+      "sha256": "47062be23a3696051ec14e7d7315c6cfd1a4447a19931f708cda0cc3778eb1e6",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image60-calendar-blocker/calendar-entry.png",
+      "sha256": "9ff3f29ed6d5b22bbf4029bcd435cdf77670fa6d4d608704e22adb95d4c33d17",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image60-calendar-blocker/no-calendars.png",
+      "sha256": "c599299f7401a8f3d64d5b37f9a96976d9788266dbe8903dfec9935b33f7efd4",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-image60-display/home.png",
+      "sha256": "1e88922a08b739923c3ee05805d2de5d02ff05d2bf0dac15d5b6d567959745d5",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-ime-footer-sdk/candidate-ordinary.png",
+      "sha256": "abadba5c2f858ab5b4c08a375b36f59cdfdc18944559b8be81eacf1d972c18e2",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-ime-footer-sdk/candidate-symbols.png",
+      "sha256": "3b061ed6b13cf0b7dd91912716742a9fd7cd8a46230fbe2d2685a3697ce09619",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-ime-footer-sdk/candidate-words.png",
+      "sha256": "277ad5642712c0dabde7e66e0485e0759d2392245d7bbcb066a634937adfbc46",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-ime-footer-sdk/negative-symbols.png",
+      "sha256": "faff74bd2ac080059c56ea0845c2bdb7fcfaa7fb0b3b844497f3fbe6ea6ea290",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-picker-correction/picker-initial.png",
+      "sha256": "66c2dfa4ae6cd42e22c75f64f50d0ab8f6ea29a7b3e46f1ea23a8444c3f7ea15",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-picker-correction/picker-numeric-focused.png",
+      "sha256": "ec9e31f6e6686f3786a25853f895569c112cb56fc783ecc20f1fe5beb9d8e053",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-adapter-reference/adapter-action-initial.png",
+      "sha256": "9fd514d5b4a9bde6aebea7b6cca8184762a3b5c76bd03b370f0fe6842ae3926b",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-adapter-reference/adapter-center-button.png",
+      "sha256": "44d2e9823aa3319e31afc067d1313b3f5c5f99c695927f8531df4ee870113fad",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-adapter-reference/adapter-center.png",
+      "sha256": "41f34c27bc1fdd652b665871a18bfbd3ec2cf0c514aca88e29888e81cb445d8b",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-adapter-reference/adapter-down.png",
+      "sha256": "41f34c27bc1fdd652b665871a18bfbd3ec2cf0c514aca88e29888e81cb445d8b",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-adapter-reference/adapter-empty.png",
+      "sha256": "928042497ee77015167b63026525fd071f877ebeb6cb248c3674a71b12af739c",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-adapter-reference/adapter-initial.png",
+      "sha256": "41f34c27bc1fdd652b665871a18bfbd3ec2cf0c514aca88e29888e81cb445d8b",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-adapter-reference/adapter-populated.png",
+      "sha256": "5a091a29999de16bca7be42c4bd77b6e8f5dce27940254c9f6c9c30febed75f9",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-adapter-reference/adapter-replaced-after-show.png",
+      "sha256": "5a091a29999de16bca7be42c4bd77b6e8f5dce27940254c9f6c9c30febed75f9",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-adapter-reference/adapter-up.png",
+      "sha256": "72eb923195d056d3962d0f40cc4618dd0cfbd8f3e2ed0f75e8ee3394e7127bb1",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-app-editors/baseline-after.png",
+      "sha256": "81c597ba20a8bfac2114e7b836bf45e593518216b3496237ca55100d9a34c38f",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-app-editors/baseline-before.png",
+      "sha256": "d65d6a0f122ffb7a7d227467978903884b3c06ac0e5bd4ce4149f0659da102d4",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-app-editors/calendar-all-day-focus.png",
+      "sha256": "feacdeb70cba05671b852ea3dcd5503e6375dcc583eb2c4d75ab3ff5ffe0d753",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-app-editors/calendar-end-date-back.png",
+      "sha256": "b62aeb000b8cf1f9b580c0718ea0a73ab8867a1e239288d2d4251928cac9afa5",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-app-editors/calendar-end-date-dialog.png",
+      "sha256": "e62545722388246cd6155829a534c2c02bc948fc01e9d727fb1adc0982451a92",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-app-editors/calendar-end-date-focus.png",
+      "sha256": "3154fa140a53e152ece5aae602969e658c0f4467d002555c155eee8298c99990",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-app-editors/calendar-end-time-back.png",
+      "sha256": "8bff63e3dfac478ac2a066b9396a05a409abc26005e0a96fdce784184e795136",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-app-editors/calendar-end-time-dialog.png",
+      "sha256": "fbf34481de9fd0b97c4709da74d7abafe272692a520054419fc86c8f9044b7fd",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-app-editors/calendar-end-time-focus.png",
+      "sha256": "06c304e8faea5fbaeb08b615804040a98fba6808fd46ad9668e15af46e0a34e0",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-app-editors/calendar-event-reminder-back.png",
+      "sha256": "a9b969ff3368b0becd92d1b06fbe39a9adf7a9ad06318c4aad6d5e366f160c7a",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-app-editors/calendar-event-reminder-dialog.png",
+      "sha256": "535c4a6168e420a2734089364d2a060d5704eeb7e6540c2e7ba3ba2971371f34",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-app-editors/calendar-location-focus.png",
+      "sha256": "f842953fa73df1cf6b8c563eeb4b51a7ae86beb6ebc61416c1041dc39354911a",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-app-editors/calendar-new-event-back.png",
+      "sha256": "7ec656783febff9df58ad80602f5d31a67db30ff7207bf499b046e8f7a0569d3",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-app-editors/calendar-new-event.png",
+      "sha256": "5fea1506e6917803ab089d71e9dc6c14b9687c96c0a2d9e923b40ce32a7b107b",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-app-editors/calendar-notes-focus.png",
+      "sha256": "dab4d552e76ebda07b5381e9b51c51a1eb026ab1b25f00c3948faf00fb114446",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-app-editors/calendar-reminder-focus.png",
+      "sha256": "24cdec22e702fd0d551e2a3851048b7e97716216be07d946e71aa144914cf13b",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-app-editors/calendar-reminder-focus02.png",
+      "sha256": "ca2700a37839e01547ff64803ca8579b38d6e7677df05ccd18b476e16a4885d5",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-app-editors/calendar-repeat-back.png",
+      "sha256": "f109ec6c8c77fbbeec410db340b846235f50c80701fb91169fbd44469ad55dc6",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-app-editors/calendar-repeat-dialog.png",
+      "sha256": "14ff40b920582d39e2b34f1cab9a9c8e7ea37eab9fcc54cbbc9ef38073cb9081",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-app-editors/calendar-repeat-focus.png",
+      "sha256": "f109ec6c8c77fbbeec410db340b846235f50c80701fb91169fbd44469ad55dc6",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-app-editors/calendar-start-date-back.png",
+      "sha256": "27d467b039a2136f07634ef9f1d0d61864b824d878e6b501c1d3d4d02730596e",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-app-editors/calendar-start-date-dialog.png",
+      "sha256": "201e7813b1abb812d7d996385b14ee7c1818e5a2c4da6c6da50dea8be20aa760",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-app-editors/calendar-start-date-focus.png",
+      "sha256": "0c9d1400e085b0da385d99e2ea0f65073ca01a86cb4f4ab4ced2bd383bd77a72",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-app-editors/calendar-start-time-back.png",
+      "sha256": "0a2971178e994e82bcb549fa03efeba7357150a61674f6366dbdc42f353e7758",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-app-editors/calendar-start-time-dialog.png",
+      "sha256": "c96b47c0b9c317fa73884d09a82c254fbc66908510cd05009c576de5824846ee",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-app-editors/calendar-start-time-focus.png",
+      "sha256": "63b03335ddf9876e9039925a9f494d179706d765df8808d7dd0ef521cc0694a3",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-app-editors/calendar-timezone-back.png",
+      "sha256": "34b4a044c1c5dfe2e4b312e7e996fafc66b1ec0155c8ef0d3afbf08b9377388a",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-app-editors/calendar-timezone-dialog.png",
+      "sha256": "afd05c3a34b292e23231e65a53f75f004712e6e41ce13adb6f03a73e290a3389",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-app-editors/contacts-empty-settings.png",
+      "sha256": "fc370f7e4d2b5640df985c8cc2ba8dda7fc252619a205e96e995a0da7b1286ec",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-app-editors/contacts-entry.png",
+      "sha256": "eb22157fbed80ea8e3d7eb232866bbeed0910ff69a094c7b7a10ae0e96a5e07b",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-app-editors/contacts-exit.png",
+      "sha256": "712a14423c758a42aacbbba734511c80ac9ed2064dbf8667f43583647331f013",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-app-editors/contacts-last-name-focus.png",
+      "sha256": "ede8fbe1dcfd534a5053ab1148b8879f42183b0387037de54a59a9da998c0602",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-app-editors/contacts-new-back.png",
+      "sha256": "78a7dce85a94289caf2a7ed030319658ee6d1560240b6b842d550ce95a52e5e8",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-app-editors/contacts-new-options-back.png",
+      "sha256": "51f9dffb602fc4edbacbb0cc1f570ced1fd3ce463da7b95772948275373a2389",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-app-editors/contacts-new-options-wrap.png",
+      "sha256": "af92721d1e7bcc8f67c2d43b57d1fd20417d4d357c21298af1f61f24cb0f9521",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-app-editors/contacts-new.png",
+      "sha256": "b18298b4ccc17d08db67622640dd9aa99e350e248bbddd883902be6bc5d96daf",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-app-editors/contacts-phone-focus.png",
+      "sha256": "1e73586e8b74e4d80270d0d00e07b50540fd3efef4bd8a48d3cf3e3a6eae8033",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-app-editors/contacts-phone-select.png",
+      "sha256": "5f41607171e7ef0f821e449877162c585c82395f9223cb01477299fcecc99143",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-app-editors/contacts-settings-back.png",
+      "sha256": "1036f08fe1b9f1f476d5e17e8c0c5b8a1f5e46e94974b02f9e83145b631968fc",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-app-editors/contacts-sort-back.png",
+      "sha256": "0c4f62f84adfa4474a9e4063b5758948f6ac99d90298521bcc682979ce733520",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-app-editors/contacts-sort-dialog.png",
+      "sha256": "f63a8861a9187bd4ccd93055af726830b1891758c1ac61b4127920a9ebf26110",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-app-editors/music-entry.png",
+      "sha256": "5d1b1000212fed4eae125080bd3236c119a966be8660eb1a16a03ba279607457",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-app-editors/music-exit.png",
+      "sha256": "a1a54cba3e282dacdb9a7f5a3eccda0ef35c023c91fc6fba86f6739f2d03d187",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-app-editors/music-tab-right-wrap.png",
+      "sha256": "b28c237ee56fffbb67509d8e798d36147e50f9dd8bd980490a236b482072f030",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-app-editors/music-tab-right01.png",
+      "sha256": "aaeb3cb1624b8fb7e8891eb95449a810867cb1bcbe9427754f3fccf2ed0b3b53",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-app-editors/music-tab-right02.png",
+      "sha256": "94fdcb80ebe894a55ad3839be36d18b2b11a66463b52ad927112176b9bb4bcc3",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-app-editors/music-tab-right03.png",
+      "sha256": "688188d254bd6d602ab3abba589fe344c4bf373e964258aea6201055532eaa36",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-app-editors/recorder-entry.png",
+      "sha256": "69081876d3bf6322564065c24fed689c43e34efb7d42861543c50d92142062a7",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-app-editors/recorder-exit.png",
+      "sha256": "81c597ba20a8bfac2114e7b836bf45e593518216b3496237ca55100d9a34c38f",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-app-editors/recorder-list-back.png",
+      "sha256": "f53c2d02e8df8ab863ad2c696358b8873e12aa7528c8dba3936de2b42f8b506e",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-app-editors/recorder-list.png",
+      "sha256": "71d4bc4e1b0ce7ce83664432d3bab71dada5bc03342fd93e8cbe9ac17401c43b",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-app-workflows/contacts-entry.png",
+      "sha256": "bf75c00dbcac70201fe2a974b2e02d783d15cea0fc7b80b29cbc8400aabe64a9",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-app-workflows/contacts-options.png",
+      "sha256": "0f552ad81a88a402a2e99fdca50ca2e3e56adb30bb235c4596d88acffe1f061a",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-app-workflows/contacts-settings-focus.png",
+      "sha256": "bd1c4f8125e414f50be6df47ae5622f1a784adefd4a81f0339fb3c50b8d8aaa9",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-app-workflows/contacts-settings-settled.png",
+      "sha256": "7ab2f5ecf7d978b477de407d69490fae1881c729d4d2cd11529cc4034bacd01e",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-app-workflows/gallery-entry.png",
+      "sha256": "a8b6704b5034344e9827cd5d603adb6b99bf2dab984fd43eb3d828c9aa8ae626",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-app-workflows/gallery-info.png",
+      "sha256": "90905c674e36c4c417568fa40e89b5d03edbdd53428ea7a144edc5bcd5de51e8",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-app-workflows/gallery-options-wrap-info.png",
+      "sha256": "51acf8ea192a39dc73d929b97ad37f86c7be7cfdbeb1f4e511c7ba6803f4faee",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-app-workflows/gallery-viewer-options.png",
+      "sha256": "362234d2b5fee9ab14e7e49280462a02ae0fcd3e893f51ecbe7aba5b29573394",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-app-workflows/phone-shortcuts.png",
+      "sha256": "b522172605575964cfbe8794d80b319f439217a478b011fbcfe7060983ec9874",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-app-workflows/phone-storage.png",
+      "sha256": "f7320272733000a603411dfe4e53a9cf517f006817189981ee6537345c2ffd97",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-app-workflows/settings-entry.png",
+      "sha256": "d98d974657075e29cea1e94cc794e5cd8c7df3b837e7f62e07a1128fb258386c",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-app-workflows/settings-phone.png",
+      "sha256": "d59c24793b63c0db6e9d742376154daaeb3a78d186257a1aec89c89ff328f608",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-calculator/calculator-clear-all.png",
+      "sha256": "3b61b5884b93b3bd881a0e9a341d360b1ef94bf6d76d041f08b6864deea4d233",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-calculator/calculator-clear.png",
+      "sha256": "7402ef722956b3e6e6574dc61baf995b6026994e104ac7a3bb2bfefbf6cccf18",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-calculator/calculator-divide-zero-result.png",
+      "sha256": "9b9119885526159c6a6b16b09449b3c3096f5afdc40e99a78f1ccf47182b48cf",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-calculator/calculator-divide.png",
+      "sha256": "a191b82b372d2bb006bd0ca405a98054c537e5875965098ecbc25754000876f6",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-calculator/calculator-eight.png",
+      "sha256": "dbe66b2aeb7a5afbe82e0e4a893aff294dab9ca6fc2433a5a70bce2442250a36",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-calculator/calculator-entry.png",
+      "sha256": "81e90809683803d0a40e37ea05b3fdf4148e54755a8e7a04272da78f50a4e0de",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-calculator/calculator-equals.png",
+      "sha256": "15d8d81cc0f7767ff6c7ae6ca2ef8e5f334a6fdac1028cfabcaecadb4218c1eb",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-calculator/calculator-error-clear-all.png",
+      "sha256": "29213d1eddb696ba10fe0327f5c1f6e4509ff8a7372701f1c8bcd7ebe61f8556",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-calculator/calculator-one.png",
+      "sha256": "cbf3a69dab34d07997449c5dbb879831c605577c09f42a056b4302321a6ccbfe",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-calculator/calculator-plus.png",
+      "sha256": "04dc13d7b51f0a6fabc42281e70d879446333df0f1a9a27ea8463a2fdd2117e2",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-calculator/calculator-two.png",
+      "sha256": "1f5c9f6e267b97d1beca203aa15401a94fb1006c95e9e31be23aeb00da469d5b",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-calculator/calculator-zero.png",
+      "sha256": "65836df6e5cce5f90b8fe552567df98c9f6d34b876c75f85d32ce08d62a8c499",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-calculator/calendar-baseline.png",
+      "sha256": "d1d20a23f828947474e44d5037cc2901e7473de67b604ba2f21c75c7b163a18d",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-calculator/calendar-restored.png",
+      "sha256": "b2eea3fcfda0606a494cc349b90f8bb01ffbcaaaf9dbfff941c5f9b553f01da8",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-calculator/pre-calculator-clear-all.png",
+      "sha256": "1251a2d4a5b32fa4c1ca4db3d3e976d497df7ca0b188a6a945ed27aeeccc7f94",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-calculator/pre-calculator-clear.png",
+      "sha256": "15d8d81cc0f7767ff6c7ae6ca2ef8e5f334a6fdac1028cfabcaecadb4218c1eb",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-calculator/pre-calculator-divide-zero-result.png",
+      "sha256": "65836df6e5cce5f90b8fe552567df98c9f6d34b876c75f85d32ce08d62a8c499",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-calculator/pre-calculator-divide.png",
+      "sha256": "760798d27c38b0590fb66796edaebfbfaa273afcc8bac03a60528f1bb15981e6",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-calculator/pre-calculator-eight.png",
+      "sha256": "b123f3d8d980445ffa996b95903200a9748436114c382dc3534d4765916986fd",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-calculator/pre-calculator-equals.png",
+      "sha256": "7402ef722956b3e6e6574dc61baf995b6026994e104ac7a3bb2bfefbf6cccf18",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-calculator/pre-calculator-error-clear-all.png",
+      "sha256": "fca163d4d3805218ef7c6431aab11922cecfcb4cfcb3ecbe73531bface6cf18a",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-calculator/pre-calculator-one.png",
+      "sha256": "e3d627887c1cfa2d779468d150f6794c151a6a913f5027140b3633cc7d951b42",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-calculator/pre-calculator-plus.png",
+      "sha256": "14abf5baa59b08e6dcc0ec6625df0586447d98021a0e5a41fb66993855a36a01",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-calculator/pre-calculator-two.png",
+      "sha256": "91c0e93c72e0486dbddb62ebaf9d1eeb87fa80b93edb9b0f68e679f5bc7ce40f",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-calculator/pre-calculator-zero.png",
+      "sha256": "a191b82b372d2bb006bd0ca405a98054c537e5875965098ecbc25754000876f6",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-clock-kika/kika-title-focus.png",
+      "sha256": "193083e75d8b10a5cddd6f4501fd027a97ac1c8110901f13de419da3cd016bc2",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-clock-kika/kika-title-mode-down5.png",
+      "sha256": "f8636ec60ca7d1e298240eab11f293c91793359f28eccb4bcef84e0bc0dcd27d",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-clock-kika/kika-title-symbols-back.png",
+      "sha256": "aca29666b07992b6ca43ee0224b5c31f68eb31652be6dff2321afe07cf550d6e",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-clock-kika/kika-title-symbols.png",
+      "sha256": "3e8691547aef283816aa8f4f4a8bc959ccea0c926ba6908e308e127c554f26a9",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-clock-kika/kika-unsaved-editor-back.png",
+      "sha256": "8cd89e8694783fd5cc53a4e81df5b5eda97ed5c631bd734b73a50696e1e8654e",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-clock-kika/tt9-title-focus.png",
+      "sha256": "718a3d5d9038faca8674ca1fa7d15489a5e2cacf859be518a8285cd880a30e86",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-clock-settings/clock-entry.png",
+      "sha256": "4d6605a176419370fc395ddf6108c64d900f55b5912685ec53eaa095ec166bdc",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-clock-settings/clock-next-tab01.png",
+      "sha256": "23df67879ab94a59760d437530218d5916115f980ceec5efb18fbdd9db287f96",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-clock-settings/clock-next-tab02.png",
+      "sha256": "967b089c123654fa0537269c3977779438229e9ef39bc6b5cd4d0c45c4ced212",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-clock-settings/clock-next-tab03.png",
+      "sha256": "9f958d0ffafaeffcf410f0b3f2c0e07214ae2d2ec99be942353effc4d667030d",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-clock-settings/clock-settings-snooze-cancel.png",
+      "sha256": "078fbe3059b2bdb88d2b801413a98b38e7854d06d5a652b582f908678c218589",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-clock-settings/clock-settings.png",
+      "sha256": "28f7b3addae8eaf565c2d9ed3f1b4f710027ecf2205b39f495ba09baf2e6ce3c",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-clock-settings/clock-snooze-dialog.png",
+      "sha256": "d09d864589242a38124dd793ab55536ee6c74db1bf293926839bfd4206216f1d",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-clock-settings/clock-tab-wrap.png",
+      "sha256": "6b66d18b579dc1c36eb65ac034167b2901b93e7587947152f1ef37b776f706b6",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-clock-settings/settings-accessibility.png",
+      "sha256": "ea1fcdc7cc99383d50062613c72a45b67d2b55f4a32409344dc6dd0ad7193aaa",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-clock-settings/settings-display.png",
+      "sha256": "afb936277c14015c082db76823512e7a804b8fc71869de958bb06c50ac146ffd",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-clock-settings/settings-entry.png",
+      "sha256": "f440f8e70c10a44f7687c43423a2fc355fcbad5a394220150b3c658332767057",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-clock-settings/settings-menu-layout-dialog.png",
+      "sha256": "678ec435953770d592addf4bf5476e5a0df082593b50cbceed3405a2a8cf9347",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-clock-settings/settings-sound.png",
+      "sha256": "de0babee1563a6a733d69aec83a3c70ff4c38417eb9a38bf4ed7eff30156af3e",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-clock-settings/tools-clock-open.png",
+      "sha256": "d231ccdff8c80ad297aecc63f3b6b7fd4711d4faf43ee3dee30d17f5441c94e1",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-composite-dialog-reference/adapter-dual-dismiss-before.png",
+      "sha256": "32c670b4bd3e46e68565d134c8a673fb6aa0b74d4ecc08a7ad7fd0c83ed82e4d",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-composite-dialog-reference/adapter-dual-dismiss.png",
+      "sha256": "f26958b62a0ee441a377c9f024fef773c5d9159c4abb76f2399e6dce29d3ae25",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-composite-dialog-reference/adapter-dual-retain-before.png",
+      "sha256": "32c670b4bd3e46e68565d134c8a673fb6aa0b74d4ecc08a7ad7fd0c83ed82e4d",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-composite-dialog-reference/adapter-dual-retain.png",
+      "sha256": "ce85e02632fe0584f4ada9b65eaf6e363c99130fdf75a86cb3aca4a42726f9d1",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-composite-dialog-reference/array-dual-dismiss-before.png",
+      "sha256": "ecf05f819e93300e9844087c76c16d02b1d42082269717617a91e9cae6bc0d64",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-composite-dialog-reference/array-dual-dismiss.png",
+      "sha256": "f26958b62a0ee441a377c9f024fef773c5d9159c4abb76f2399e6dce29d3ae25",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-composite-dialog-reference/array-dual-retain-before.png",
+      "sha256": "ecf05f819e93300e9844087c76c16d02b1d42082269717617a91e9cae6bc0d64",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-composite-dialog-reference/array-dual-retain.png",
+      "sha256": "8fd5f908e604fce1a0217825f0e91209f48fa6427fe484aebcb3b9cd067dbe0a",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-symbols-reference/symbols-after-back.png",
+      "sha256": "835e9274b6471598f063e17fa0db83dad00685eaa16d5a818eed91871b2a5446",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "2026-10-27-tcl-symbols-reference/symbols-open.png",
+      "sha256": "f4a6927c0c910167e034d93f5a86c6e000ffeb87b2a2a9fff3634b64cdf24ea8",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "image56-dialog-composite01.png",
+      "sha256": "21dfa6bd779e9019da4068709e0ce222cc6a562ff4ca0c4eec50ea07a0600a5d",
+      "width": 240,
+      "height": 320
+    },
+    {
+      "path": "image56-launcher01.png",
+      "sha256": "c0178ac48066a263325111c1e20f950d91ec92ba21a896c31e554cd7e3c23657",
+      "width": 240,
+      "height": 320
+    }
+  ]
+}

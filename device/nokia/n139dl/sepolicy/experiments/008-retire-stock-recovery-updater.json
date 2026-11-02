@@ -1,0 +1,84 @@
+{
+  "scope": "Offline candidate 008 for system-only target with no legacy flash_recovery handler. Retire explicit grants for stock boot-to-recovery patch updater; recovery procedure remains separate and unproven. Not build-wired.",
+  "files": {
+    "plat_pub_versioned.cil": {
+      "input_sha256": "cb76f48a47c41df425bd81e6f629d415059acca8ac2c976598446a53e78891aa",
+      "edits": [
+        {
+          "old": "(allow install_recovery_29_0 self (capability (dac_override dac_read_search)))",
+          "new": "",
+          "count": 1,
+          "reason": "Do not carry stock system-script boot-to-recovery patch privileges into a TARGET_NO_RECOVERY system-only target that does not import the script. Recovery replacement requires a separately validated procedure."
+        },
+        {
+          "old": "(allow install_recovery_29_0 self (cap_userns (dac_override dac_read_search)))",
+          "new": "",
+          "count": 1,
+          "reason": "Do not carry stock system-script boot-to-recovery patch privileges into a TARGET_NO_RECOVERY system-only target that does not import the script. Recovery replacement requires a separately validated procedure."
+        },
+        {
+          "old": "(allow install_recovery_29_0 shell_exec_29_0 (file (ioctl read getattr lock map execute execute_no_trans open)))",
+          "new": "",
+          "count": 1,
+          "reason": "Do not carry stock system-script boot-to-recovery patch privileges into a TARGET_NO_RECOVERY system-only target that does not import the script. Recovery replacement requires a separately validated procedure."
+        },
+        {
+          "old": "(allow install_recovery_29_0 system_file_29_0 (file (ioctl read getattr lock map execute execute_no_trans open)))",
+          "new": "",
+          "count": 1,
+          "reason": "Do not carry stock system-script boot-to-recovery patch privileges into a TARGET_NO_RECOVERY system-only target that does not import the script. Recovery replacement requires a separately validated procedure."
+        },
+        {
+          "old": "(allow install_recovery_29_0 toolbox_exec_29_0 (file (ioctl read getattr lock map execute execute_no_trans open)))",
+          "new": "",
+          "count": 1,
+          "reason": "Do not carry stock system-script boot-to-recovery patch privileges into a TARGET_NO_RECOVERY system-only target that does not import the script. Recovery replacement requires a separately validated procedure."
+        },
+        {
+          "old": "(allow install_recovery_29_0 block_device_29_0 (dir (search)))",
+          "new": "",
+          "count": 1,
+          "reason": "Do not carry stock system-script boot-to-recovery patch privileges into a TARGET_NO_RECOVERY system-only target that does not import the script. Recovery replacement requires a separately validated procedure."
+        },
+        {
+          "old": "(allow install_recovery_29_0 boot_block_device_29_0 (blk_file (ioctl read getattr lock map open)))",
+          "new": "",
+          "count": 1,
+          "reason": "Do not carry stock system-script boot-to-recovery patch privileges into a TARGET_NO_RECOVERY system-only target that does not import the script. Recovery replacement requires a separately validated procedure."
+        },
+        {
+          "old": "(allow install_recovery_29_0 recovery_block_device_29_0 (blk_file (ioctl read write getattr lock append map open)))",
+          "new": "",
+          "count": 1,
+          "reason": "Do not carry stock system-script boot-to-recovery patch privileges into a TARGET_NO_RECOVERY system-only target that does not import the script. Recovery replacement requires a separately validated procedure."
+        },
+        {
+          "old": "(allow install_recovery_29_0 cache_file_29_0 (dir (ioctl read write getattr lock add_name remove_name search open)))",
+          "new": "",
+          "count": 1,
+          "reason": "Do not carry stock system-script boot-to-recovery patch privileges into a TARGET_NO_RECOVERY system-only target that does not import the script. Recovery replacement requires a separately validated procedure."
+        },
+        {
+          "old": "(allow install_recovery_29_0 cache_file_29_0 (file (ioctl read write create getattr setattr lock append map unlink rename open)))",
+          "new": "",
+          "count": 1,
+          "reason": "Do not carry stock system-script boot-to-recovery patch privileges into a TARGET_NO_RECOVERY system-only target that does not import the script. Recovery replacement requires a separately validated procedure."
+        },
+        {
+          "old": "(allow install_recovery_29_0 proc_drop_caches_29_0 (file (write lock append map open)))",
+          "new": "",
+          "count": 1,
+          "reason": "Do not carry stock system-script boot-to-recovery patch privileges into a TARGET_NO_RECOVERY system-only target that does not import the script. Recovery replacement requires a separately validated procedure."
+        }
+      ]
+    },
+    "vendor_sepolicy.cil": {
+      "input_sha256": "2e8e125ce3fdc5238e3514e1b2ef256f5bba4b82925a19e9c2ae3480f8d1b678",
+      "edits": []
+    },
+    "29.0.compat.cil": {
+      "input_sha256": "0f3b926c8e2335f96fea8d3b70aa4ffc777bf0f168bc70a0036ffd02af50b841",
+      "edits": []
+    }
+  }
+}

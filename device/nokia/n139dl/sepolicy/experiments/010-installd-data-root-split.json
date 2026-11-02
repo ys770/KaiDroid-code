@@ -1,0 +1,60 @@
+{
+  "scope": "Offline candidate 010: keep legacy installd operations on system_data_file only after Android 11 /data root split. Mapping and root traversal unchanged. Requires sysdata-block.cil from candidate 009. Not build-wired.",
+  "files": {
+    "plat_pub_versioned.cil": {
+      "input_sha256": "e49473f1cbfb1262dd81cebf8d792617d6e1085c5d16caedfaffbe328f3f6bb7",
+      "edits": [
+        {
+          "old": "(allow installd_29_0 system_data_file_29_0 (dir (ioctl read write create getattr setattr lock rename add_name remove_name reparent search rmdir open)))",
+          "new": "(allow installd_29_0 system_data_file (dir (ioctl read write create getattr setattr lock rename add_name remove_name reparent search rmdir open)))",
+          "count": 1,
+          "reason": "Android 11 gives installd these operations on system_data_file, not the distinct /data root label. Domain-wide system_data_root_file search/getattr still permits traversal."
+        },
+        {
+          "old": "(allow installd_29_0 system_data_file_29_0 (lnk_file (read create getattr setattr unlink)))",
+          "new": "(allow installd_29_0 system_data_file (lnk_file (read create getattr setattr unlink)))",
+          "count": 1,
+          "reason": "Android 11 gives installd these operations on system_data_file, not the distinct /data root label. Domain-wide system_data_root_file search/getattr still permits traversal."
+        },
+        {
+          "old": "(allow installd_29_0 system_data_file_29_0 (dir (relabelfrom)))",
+          "new": "(allow installd_29_0 system_data_file (dir (relabelfrom)))",
+          "count": 1,
+          "reason": "Android 11 gives installd these operations on system_data_file, not the distinct /data root label. Domain-wide system_data_root_file search/getattr still permits traversal."
+        },
+        {
+          "old": "(allow installd_29_0 system_data_file_29_0 (file (getattr relabelfrom unlink)))",
+          "new": "(allow installd_29_0 system_data_file (file (getattr relabelfrom unlink)))",
+          "count": 1,
+          "reason": "Android 11 gives installd these operations on system_data_file, not the distinct /data root label. Domain-wide system_data_root_file search/getattr still permits traversal."
+        },
+        {
+          "old": "(allow installd_29_0 system_data_file_29_0 (lnk_file (getattr relabelfrom unlink)))",
+          "new": "(allow installd_29_0 system_data_file (lnk_file (getattr relabelfrom unlink)))",
+          "count": 1,
+          "reason": "Android 11 gives installd these operations on system_data_file, not the distinct /data root label. Domain-wide system_data_root_file search/getattr still permits traversal."
+        },
+        {
+          "old": "(allow installd_29_0 system_data_file_29_0 (sock_file (getattr relabelfrom unlink)))",
+          "new": "(allow installd_29_0 system_data_file (sock_file (getattr relabelfrom unlink)))",
+          "count": 1,
+          "reason": "Android 11 gives installd these operations on system_data_file, not the distinct /data root label. Domain-wide system_data_root_file search/getattr still permits traversal."
+        },
+        {
+          "old": "(allow installd_29_0 system_data_file_29_0 (fifo_file (getattr relabelfrom unlink)))",
+          "new": "(allow installd_29_0 system_data_file (fifo_file (getattr relabelfrom unlink)))",
+          "count": 1,
+          "reason": "Android 11 gives installd these operations on system_data_file, not the distinct /data root label. Domain-wide system_data_root_file search/getattr still permits traversal."
+        }
+      ]
+    },
+    "vendor_sepolicy.cil": {
+      "input_sha256": "afa2c3565e195c9acfafea15acf7f98e4155d62869f3bc7f1dc33b43f4943c0a",
+      "edits": []
+    },
+    "29.0.compat.cil": {
+      "input_sha256": "0f3b926c8e2335f96fea8d3b70aa4ffc777bf0f168bc70a0036ffd02af50b841",
+      "edits": []
+    }
+  }
+}

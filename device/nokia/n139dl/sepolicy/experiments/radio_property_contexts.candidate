@@ -1,0 +1,5 @@
+# Offline candidate only; not copied into an Android image.
+# Nokia init.qcom.rc bridges vendor.rild.libpath to this legacy radio key.
+# Android 11 already permits vendor_init to set exported_radio_prop.
+# Validate generated property-info output and actual RIL consumers before wiring.
+rild.libpath u:object_r:exported_radio_prop:s0 exact string

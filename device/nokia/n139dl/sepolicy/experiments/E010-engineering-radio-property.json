@@ -1,0 +1,24 @@
+{
+  "scope": "Engineering E010: replace broad vendor-init default-property setter with exact rild.libpath context using platform exported_radio_prop permissions. Requires system_ext private property_contexts. Static source audit only; native/computed writes and generated trie/runtime remain separate checks.",
+  "files": {
+    "plat_pub_versioned.cil": {
+      "input_sha256": "3dcb82ac22b2bc4a05e99106e7785cc47c66e80a43c4dc083d140d574f442bae",
+      "edits": []
+    },
+    "vendor_sepolicy.cil": {
+      "input_sha256": "835a8085153faab70347f5882a3f435031d09b88817504f47f3cb031d215e5be",
+      "edits": [
+        {
+          "old": "(allow vendor_init_29_0 default_prop_29_0 (property_service (set)))",
+          "new": "",
+          "count": 1,
+          "reason": "Exact rild.libpath exported_radio_prop context preserves only static vendor-init write requiring old generic label. AOSP already permits vendor_init setter and domain readers for exported_radio_prop."
+        }
+      ]
+    },
+    "29.0.compat.cil": {
+      "input_sha256": "0f3b926c8e2335f96fea8d3b70aa4ffc777bf0f168bc70a0036ffd02af50b841",
+      "edits": []
+    }
+  }
+}

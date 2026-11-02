@@ -1,0 +1,4 @@
+; Offline compatibility input; not installed by the product.
+; Stock platform coredomain membership and live /system/product executables
+; agree for these two services. Keep all 70 stock mapping additions active.
+(typeattributeset coredomain (dpmd cnefwk))

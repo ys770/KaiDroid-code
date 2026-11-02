@@ -1,0 +1,47 @@
+--- a/libcutils/ashmem-dev.cpp
++++ b/libcutils/ashmem-dev.cpp
+@@ -42,6 +42,8 @@
+ #include <sys/types.h>
+ #include <unistd.h>
+ 
++#include <android-base/file.h>
++#include <android-base/strings.h>
+ #include <android-base/properties.h>
+ #include <android-base/unique_fd.h>
+ 
+@@ -215,6 +217,19 @@
+     return memfd_supported;
+ }
+ 
++// Android 11 device naming; retain Q allocation and ioctl behavior.
++static std::string get_ashmem_device_path() {
++    std::string boot_id;
++    if (!android::base::ReadFileToString("/proc/sys/kernel/random/boot_id", &boot_id)) {
++        return "";
++    }
++    boot_id = android::base::Trim(boot_id);
++    if (boot_id.empty()) {
++        return "";
++    }
++    return std::string(ASHMEM_DEVICE) + boot_id;
++}
++
+ /* logistics of getting file descriptor for ashmem */
+ static int __ashmem_open_locked()
+ {
+@@ -232,7 +247,14 @@
+     }
+ #endif
+     if (fd < 0) {
+-        fd = TEMP_FAILURE_RETRY(open(ASHMEM_DEVICE, O_RDWR | O_CLOEXEC));
++        static const std::string path = get_ashmem_device_path();
++        if (!path.empty()) {
++            fd = TEMP_FAILURE_RETRY(open(path.c_str(), O_RDWR | O_CLOEXEC));
++        }
++        // Retain stock-Q fallback; policy may deny it on Android 11.
++        if (fd < 0) {
++            fd = TEMP_FAILURE_RETRY(open(ASHMEM_DEVICE, O_RDWR | O_CLOEXEC));
++        }
+     }
+     if (fd < 0) {
+         return fd;

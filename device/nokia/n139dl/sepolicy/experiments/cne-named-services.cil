@@ -1,0 +1,6 @@
+; Offline experiment only; no Android bridge implementation supplied.
+(type kaidroid_b2g_system_service)
+(type kaidroid_b2g_telephony_service)
+(typeattributeset service_manager_type (kaidroid_b2g_system_service kaidroid_b2g_telephony_service))
+(typeattribute kaidroid_cne_legacy_service)
+(typeattributeset kaidroid_cne_legacy_service (kaidroid_b2g_system_service kaidroid_b2g_telephony_service))

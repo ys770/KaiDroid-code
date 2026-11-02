@@ -1,0 +1,45 @@
+--- a/art/runtime/oat_file.cc
++++ b/art/runtime/oat_file.cc
+@@ -22,6 +22,7 @@
+ #endif
+ #include <unistd.h>
+ 
++#include <cerrno>
+ #include <cstdlib>
+ #include <cstring>
+ #include <sstream>
+@@ -2058,6 +2059,34 @@
+     DexLayoutSection::MadviseLargestPageAlignedRegion(dex_file.Begin(),
+                                                       dex_file.Begin() + dex_file.Size(),
+                                                       MADV_RANDOM);
++
++    // Experimental RX-only advice for two reviewed N139DL OAT artifacts.
++    // Logical locations are not physical filenames; also require the exact
++    // reviewed header/size tuple before advising code owned by this OatFile.
++    const OatDexFile* loaded_oat_dex_file = dex_file.GetOatDexFile();
++    const OatFile* loaded_oat_file = loaded_oat_dex_file != nullptr
++        ? loaded_oat_dex_file->GetOatFile() : nullptr;
++    if (loaded_oat_file != nullptr && loaded_oat_file->IsExecutable()) {
++      const std::string& location = loaded_oat_file->GetLocation();
++      const bool services = location == "/system/framework/oat/arm/services.odex";
++      const bool framework = location == "/system/framework/boot-framework.oat";
++      if (services || framework) {
++        const OatHeader& header = loaded_oat_file->GetOatHeader();
++        const uint32_t checksum = services ? 1705782879u : 3542819386u;
++        const size_t oat_size = services ? 12699918u : 9437174u;
++        const uint32_t code_offset = services ? 2895872u : 2023424u;
++        if (header.IsValid() && header.GetChecksum() == checksum &&
++            loaded_oat_file->Size() == oat_size &&
++            header.GetExecutableOffset() == code_offset) {
++          // Existing helper rounds inward. Do not include R metadata, BSS,
++          // relro, VDEX reservations or the final partial code page.
++          const int saved_errno = errno;
++          DexLayoutSection::MadviseLargestPageAlignedRegion(
++              loaded_oat_file->Begin() + code_offset, loaded_oat_file->End(), MADV_RANDOM);
++          errno = saved_errno;
++        }
++      }
++    }
+   }
+   const OatDexFile* oat_dex_file = dex_file.GetOatDexFile();
+   if (oat_dex_file != nullptr) {

@@ -1,0 +1,51 @@
+--- a/frameworks/base/packages/SystemUI/src/com/android/systemui/pip/PipUI.java
++++ b/frameworks/base/packages/SystemUI/src/com/android/systemui/pip/PipUI.java
+@@ -31,6 +31,8 @@
+ import java.io.FileDescriptor;
+ import java.io.PrintWriter;
+ 
++import dagger.Lazy;
++
+ import javax.inject.Inject;
+ import javax.inject.Singleton;
+ 
+@@ -45,10 +47,13 @@
+ 
+     @Inject
+     public PipUI(Context context, CommandQueue commandQueue,
+-            BasePipManager pipManager) {
++            Lazy<BasePipManager> pipManager) {
+         super(context);
+         mCommandQueue = commandQueue;
+-        mPipManager = pipManager;
++        // Keep the existing eager path on supported devices. On unsupported devices,
++        // do not construct the PiP controller/listener graph merely to skip start().
++        mPipManager = context.getPackageManager().hasSystemFeature(
++                FEATURE_PICTURE_IN_PICTURE) ? pipManager.get() : null;
+     }
+ 
+     @Override
+@@ -70,14 +75,23 @@
+ 
+     @Override
+     public void showPictureInPictureMenu() {
++        if (mPipManager == null) {
++            return;
++        }
+         mPipManager.showPictureInPictureMenu();
+     }
+ 
+     public void expandPip() {
++        if (mPipManager == null) {
++            return;
++        }
+         mPipManager.expandPip();
+     }
+ 
+     public void hidePipMenu(Runnable onStartCallback, Runnable onEndCallback) {
++        if (mPipManager == null) {
++            return;
++        }
+         mPipManager.hidePipMenu(onStartCallback, onEndCallback);
+     }
+ 

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Original symbolic definition from observed theme attributes.
+         Target build assigns IDs; never reuse the donor's numeric ID.
+         Selected by TctDialog in the staged boot framework. -->
+    <java-symbol type="style" name="TctDialogStyle" />
+    <style name="TctDialogStyle" parent="">
+        <item name="android:backgroundDimAmount">0.5</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:background">#00000000</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">#ff474747</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+</resources>

@@ -1,0 +1,8 @@
+# Preserve stock subsystem diagnostic paths under platform-owned tombstones.
+# AOSP init creates /data/tombstones with its encryption policy first.
+# System init owns these operations; vendor_init must not mutate core data.
+on post-fs-data
+    mkdir /data/tombstones/modem 0771 system system
+    mkdir /data/tombstones/lpass 0771 system system
+    mkdir /data/tombstones/wcnss 0771 system system
+    mkdir /data/tombstones/dsps 0771 system system

@@ -1,0 +1,163 @@
+{
+  "scope": "Engineering E012 offline probe: retire conflicting rules for absent KaiOS B2G/logmanager and removed perfprofd; remove legacy crash_dump access to KaiOS API data. All 70 stock-only mappings remain active. Do not install without complete mapping/context validation.",
+  "files": {
+    "plat_pub_versioned.cil": {
+      "input_sha256": "e79f02b779c2358b2814670a82fc3beece85896ed16f31c66176b0ce932de7c0",
+      "edits": [
+        {
+          "old": "(allow logmanager_service_29_0 b2g_data_file_29_0 (dir (read write getattr setattr add_name search open)))",
+          "new": "",
+          "count": 1,
+          "reason": "Android staging contains no B2G, logmanager or perfprofd executable; preserve Android process policy and retire only this conflicting legacy grant. KaiOS API data has no Android consumer."
+        },
+        {
+          "old": "(allow logmanager_service_29_0 b2g_data_file_29_0 (file (ioctl read write create getattr setattr lock append map unlink rename open)))",
+          "new": "",
+          "count": 1,
+          "reason": "Android staging contains no B2G, logmanager or perfprofd executable; preserve Android process policy and retire only this conflicting legacy grant. KaiOS API data has no Android consumer."
+        },
+        {
+          "old": "(allow perfprofd_29_0 app_data_file_29_0 (dir (search)))",
+          "new": "",
+          "count": 1,
+          "reason": "Android staging contains no B2G, logmanager or perfprofd executable; preserve Android process policy and retire only this conflicting legacy grant. KaiOS API data has no Android consumer."
+        },
+        {
+          "old": "(allow perfprofd_29_0 app_data_file_29_0 (file (ioctl read getattr lock map open)))",
+          "new": "",
+          "count": 1,
+          "reason": "Android staging contains no B2G, logmanager or perfprofd executable; preserve Android process policy and retire only this conflicting legacy grant. KaiOS API data has no Android consumer."
+        },
+        {
+          "old": "(allow perfprofd_29_0 debugfs_tracing_29_0 (file (ioctl read getattr lock map open)))",
+          "new": "",
+          "count": 1,
+          "reason": "Android staging contains no B2G, logmanager or perfprofd executable; preserve Android process policy and retire only this conflicting legacy grant. KaiOS API data has no Android consumer."
+        },
+        {
+          "old": "(allow perfprofd_29_0 exec_type (file (ioctl read getattr lock map open)))",
+          "new": "",
+          "count": 1,
+          "reason": "Android staging contains no B2G, logmanager or perfprofd executable; preserve Android process policy and retire only this conflicting legacy grant. KaiOS API data has no Android consumer."
+        },
+        {
+          "old": "(allow perfprofd_29_0 privapp_data_file_29_0 (dir (search)))",
+          "new": "",
+          "count": 1,
+          "reason": "Android staging contains no B2G, logmanager or perfprofd executable; preserve Android process policy and retire only this conflicting legacy grant. KaiOS API data has no Android consumer."
+        },
+        {
+          "old": "(allow perfprofd_29_0 privapp_data_file_29_0 (file (ioctl read getattr lock map open)))",
+          "new": "",
+          "count": 1,
+          "reason": "Android staging contains no B2G, logmanager or perfprofd executable; preserve Android process policy and retire only this conflicting legacy grant. KaiOS API data has no Android consumer."
+        },
+        {
+          "old": "(allow perfprofd_29_0 self (cap_userns (dac_override dac_read_search)))",
+          "new": "",
+          "count": 1,
+          "reason": "Android staging contains no B2G, logmanager or perfprofd executable; preserve Android process policy and retire only this conflicting legacy grant. KaiOS API data has no Android consumer."
+        },
+        {
+          "old": "(allow perfprofd_29_0 self (cap_userns (sys_ptrace sys_resource)))",
+          "new": "",
+          "count": 1,
+          "reason": "Android staging contains no B2G, logmanager or perfprofd executable; preserve Android process policy and retire only this conflicting legacy grant. KaiOS API data has no Android consumer."
+        },
+        {
+          "old": "(allow perfprofd_29_0 self (capability (dac_override dac_read_search)))",
+          "new": "",
+          "count": 1,
+          "reason": "Android staging contains no B2G, logmanager or perfprofd executable; preserve Android process policy and retire only this conflicting legacy grant. KaiOS API data has no Android consumer."
+        },
+        {
+          "old": "(allow perfprofd_29_0 self (capability (sys_ptrace sys_resource)))",
+          "new": "",
+          "count": 1,
+          "reason": "Android staging contains no B2G, logmanager or perfprofd executable; preserve Android process policy and retire only this conflicting legacy grant. KaiOS API data has no Android consumer."
+        },
+        {
+          "old": "(allow perfprofd_29_0 vendor_app_file_29_0 (dir (ioctl read getattr lock search open)))",
+          "new": "",
+          "count": 1,
+          "reason": "Android staging contains no B2G, logmanager or perfprofd executable; preserve Android process policy and retire only this conflicting legacy grant. KaiOS API data has no Android consumer."
+        },
+        {
+          "old": "(allow perfprofd_29_0 vendor_app_file_29_0 (file (ioctl read getattr lock map open)))",
+          "new": "",
+          "count": 1,
+          "reason": "Android staging contains no B2G, logmanager or perfprofd executable; preserve Android process policy and retire only this conflicting legacy grant. KaiOS API data has no Android consumer."
+        },
+        {
+          "old": "(allow perfprofd_29_0 vendor_file_29_0 (file (ioctl read getattr lock map open)))",
+          "new": "",
+          "count": 1,
+          "reason": "Android staging contains no B2G, logmanager or perfprofd executable; preserve Android process policy and retire only this conflicting legacy grant. KaiOS API data has no Android consumer."
+        }
+      ]
+    },
+    "vendor_sepolicy.cil": {
+      "input_sha256": "264f19b24daeff448f1448b4dbdd8cb4226b5cee7fa308c154521bd2b5fe84f9",
+      "edits": [
+        {
+          "old": "(allow b2g_29_0 dpmd_data_file_29_0 (dir (ioctl read write create getattr setattr lock rename add_name remove_name reparent search rmdir open)))",
+          "new": "",
+          "count": 1,
+          "reason": "Android staging contains no B2G, logmanager or perfprofd executable; preserve Android process policy and retire only this conflicting legacy grant. KaiOS API data has no Android consumer."
+        },
+        {
+          "old": "(allow b2g_29_0 dpmd_data_file_29_0 (file (ioctl read write create getattr setattr lock append map unlink rename open)))",
+          "new": "",
+          "count": 1,
+          "reason": "Android staging contains no B2G, logmanager or perfprofd executable; preserve Android process policy and retire only this conflicting legacy grant. KaiOS API data has no Android consumer."
+        },
+        {
+          "old": "(allow b2g_29_0 hal_omx_hwservice_29_0 (hwservice_manager (find)))",
+          "new": "",
+          "count": 1,
+          "reason": "Android staging contains no B2G, logmanager or perfprofd executable; preserve Android process policy and retire only this conflicting legacy grant. KaiOS API data has no Android consumer."
+        },
+        {
+          "old": "(allow b2g_29_0 hal_vibrator_hwservice_29_0 (hwservice_manager (find)))",
+          "new": "",
+          "count": 1,
+          "reason": "Android staging contains no B2G, logmanager or perfprofd executable; preserve Android process policy and retire only this conflicting legacy grant. KaiOS API data has no Android consumer."
+        },
+        {
+          "old": "(allow b2g_29_0 hal_wifi_hostapd_hwservice_29_0 (hwservice_manager (find)))",
+          "new": "",
+          "count": 1,
+          "reason": "Android staging contains no B2G, logmanager or perfprofd executable; preserve Android process policy and retire only this conflicting legacy grant. KaiOS API data has no Android consumer."
+        },
+        {
+          "old": "(allow b2g_29_0 sysfs_battery_supply (dir (ioctl read write create getattr setattr lock rename add_name remove_name reparent search rmdir open)))",
+          "new": "",
+          "count": 1,
+          "reason": "Android staging contains no B2G, logmanager or perfprofd executable; preserve Android process policy and retire only this conflicting legacy grant. KaiOS API data has no Android consumer."
+        },
+        {
+          "old": "(allow b2g_29_0 sysfs_graphics (dir (ioctl read write create getattr setattr lock rename add_name remove_name reparent search rmdir open)))",
+          "new": "",
+          "count": 1,
+          "reason": "Android staging contains no B2G, logmanager or perfprofd executable; preserve Android process policy and retire only this conflicting legacy grant. KaiOS API data has no Android consumer."
+        },
+        {
+          "old": "(allow b2g_29_0 sysfs_usb_supply (dir (ioctl read write create getattr setattr lock rename add_name remove_name reparent search rmdir open)))",
+          "new": "",
+          "count": 1,
+          "reason": "Android staging contains no B2G, logmanager or perfprofd executable; preserve Android process policy and retire only this conflicting legacy grant. KaiOS API data has no Android consumer."
+        },
+        {
+          "old": "(allow crash_dump_29_0 api_data_file_29_0 (file (ioctl read getattr lock map open)))",
+          "new": "",
+          "count": 1,
+          "reason": "Android staging contains no B2G, logmanager or perfprofd executable; preserve Android process policy and retire only this conflicting legacy grant. KaiOS API data has no Android consumer."
+        }
+      ]
+    },
+    "29.0.compat.cil": {
+      "input_sha256": "0f3b926c8e2335f96fea8d3b70aa4ffc777bf0f168bc70a0036ffd02af50b841",
+      "edits": []
+    }
+  }
+}

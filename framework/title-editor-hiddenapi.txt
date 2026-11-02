@@ -1,0 +1,14 @@
+Landroid/widget/TitleEditText$OnEditTextFocusChangeListener;->onEditTextFocusChange(Landroid/view/View;Z)V
+Landroid/widget/TitleEditText;-><init>(Landroid/content/Context;)V
+Landroid/widget/TitleEditText;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+Landroid/widget/TitleEditText;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+Landroid/widget/TitleEditText;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
+Landroid/widget/TitleEditText;->getEditText()Landroid/widget/EditText;
+Landroid/widget/TitleEditText;->getText()Ljava/lang/String;
+Landroid/widget/TitleEditText;->getTextView()Landroid/widget/TextView;
+Landroid/widget/TitleEditText;->getTitle()Ljava/lang/String;
+Landroid/widget/TitleEditText;->handlerEditTextWithNoNeedForFocus()V
+Landroid/widget/TitleEditText;->setHintText(Ljava/lang/String;)V
+Landroid/widget/TitleEditText;->setInputType(I)V
+Landroid/widget/TitleEditText;->setOnEditTextFocusChangeListener(Landroid/widget/TitleEditText$OnEditTextFocusChangeListener;)V
+Landroid/widget/TitleEditText;->setText(Ljava/lang/String;)V

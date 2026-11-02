@@ -1,0 +1,39 @@
+{
+  "scope": "Experimental Nokia Android 11 policy candidate; apply only after legacy assertion separation. No new grants. Not build-wired.",
+  "files": {
+    "plat_pub_versioned.cil": {
+      "input_sha256": "cb98f6aa8530f2bd0876b44da2a8feeee4bf6bbb34f4558335ff5ff46add290b",
+      "edits": [
+        {
+          "old": "(allow servicemanager_29_0 init_29_0 (binder (transfer)))",
+          "new": "",
+          "count": 1,
+          "reason": "Android init is not a Binder endpoint; fix any mislabelled service separately."
+        },
+        {
+          "old": "(allow netd_29_0 fs_bpf_29_0 (file (read write setattr)))",
+          "new": "(allow netd_29_0 fs_bpf_29_0 (file (read write)))",
+          "count": 1,
+          "reason": "Keep netd data access; Android 11 bpfloader/init own BPF metadata changes."
+        }
+      ]
+    },
+    "vendor_sepolicy.cil": {
+      "input_sha256": "108241c1b83c0251e52c35f3bdcbfae618d7440f9ac10a909efef2e53fec1fcc",
+      "edits": [
+        {
+          "old": "(allow cameraserver_29_0 init_29_0 (binder (transfer)))",
+          "new": "",
+          "count": 1,
+          "reason": "Android init is not a camera Binder service. Correct service transitions are required."
+        },
+        {
+          "old": "(allow shell_29_0 kernel_29_0 (system (syslog_read)))",
+          "new": "",
+          "count": 1,
+          "reason": "Retire direct kernel syslog access from shell under current Android app-domain policy; does not remove logd/logcat permissions."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "scope": "Offline candidate: remove init setattr on native-test directories in alignment with Android 11 domain.te. Not product wired or hardware validated.",
+  "files": {
+    "vendor_sepolicy.cil": {
+      "input_sha256": "afa2c3565e195c9acfafea15acf7f98e4155d62869f3bc7f1dc33b43f4943c0a",
+      "edits": [
+        {
+          "old": "(allow init_29_0 nativetest_data_file_29_0 (dir (read getattr setattr open)))",
+          "new": "(allow init_29_0 nativetest_data_file_29_0 (dir (read getattr open)))",
+          "count": 1,
+          "reason": "Android 11 forbids all domains from mutating native-test directories. Preserve legacy read/getattr/open; remove only setattr, unrelated to fitted hardware support."
+        }
+      ]
+    },
+    "plat_pub_versioned.cil": {
+      "input_sha256": "f00223f48909294d3d2b9d1f62dd766f5efea9383ee44ee6179f1a7b915b34ab",
+      "edits": []
+    },
+    "29.0.compat.cil": {
+      "input_sha256": "0f3b926c8e2335f96fea8d3b70aa4ffc777bf0f168bc70a0036ffd02af50b841",
+      "edits": []
+    }
+  }
+}

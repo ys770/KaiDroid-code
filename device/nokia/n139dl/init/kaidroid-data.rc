@@ -1,0 +1,16 @@
+# Preserve measured legacy paths with platform init owning core-data operations.
+# Paired with engineering policy recipe E009; does not start legacy services.
+on post-fs-data
+    # Existing KaiOS directory retains system_data_file; Android installd needs
+    # the packaged install_data_file label before creating layout_version.
+    restorecon /data/misc/installd
+    mkdir /data/usbmsc 0771 system system
+    # Stock GET_ENCRYPTION_POLICY returns ENODATA for this populated legacy path.
+    # Preserve that policy; AOSP's inferred Require caused recovery on image02.
+    mkdir /data/fota 0771 system system encryption=None
+    mkdir /data/hostapd 0770 system wifi
+    mkdir /data/misc/dts 0770 media audio
+
+# Match the existing opt-in diagnostic trigger without enabling it.
+on property:persist.debug.trace=1
+    mkdir /data/core 0777 root root

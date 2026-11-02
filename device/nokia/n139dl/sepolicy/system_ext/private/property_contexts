@@ -1,0 +1,2 @@
+# Preserve the measured vendor.rild.libpath -> legacy radio-key init bridge.
+rild.libpath u:object_r:exported_radio_prop:s0 exact string

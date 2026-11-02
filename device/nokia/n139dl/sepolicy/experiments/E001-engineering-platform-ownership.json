@@ -1,0 +1,192 @@
+{
+  "scope": "Engineering candidate E001: reviewed named-type platform ownership changes, not generated-attribute substitutions. Combines retail semantics 001/002/008/010/011/012/013 against exact fresh engineering inputs. Still standalone userdebug platform probe; not runtime ready.",
+  "source_recipes": [
+    "001",
+    "002",
+    "008",
+    "010",
+    "011",
+    "012",
+    "013"
+  ],
+  "files": {
+    "plat_pub_versioned.cil": {
+      "input_sha256": "19bcb6828129068c139340a4e3561b3bfc90220b93a44f3a725f73d01afbffad",
+      "edits": [
+        {
+          "old": "(allow servicemanager_29_0 init_29_0 (binder (transfer)))",
+          "new": "",
+          "count": 1,
+          "reason": "Android init is not a Binder endpoint; fix any mislabelled service separately."
+        },
+        {
+          "old": "(allow netd_29_0 fs_bpf_29_0 (file (read write setattr)))",
+          "new": "(allow netd_29_0 fs_bpf_29_0 (file (read write)))",
+          "count": 1,
+          "reason": "Keep netd data access; Android 11 bpfloader/init own BPF metadata changes."
+        },
+        {
+          "old": "(allow netdomain self (netlink_route_socket (read write create getattr setattr lock append bind connect getopt setopt shutdown nlmsg_read)))",
+          "new": "(allow netdomain self (netlink_route_socket (read write create getattr setattr lock append connect getopt setopt shutdown nlmsg_read)))",
+          "count": 1,
+          "reason": "Use Android 11 netdomain exclusion-based bind/nlmsg_readpriv grant plus its explicit legacy-app grants; do not regrant bind to modern untrusted apps through the Android 10 exported rule."
+        },
+        {
+          "old": "(allow install_recovery_29_0 self (capability (dac_override dac_read_search)))",
+          "new": "",
+          "count": 1,
+          "reason": "Do not carry stock system-script boot-to-recovery patch privileges into a TARGET_NO_RECOVERY system-only target that does not import the script. Recovery replacement requires a separately validated procedure."
+        },
+        {
+          "old": "(allow install_recovery_29_0 self (cap_userns (dac_override dac_read_search)))",
+          "new": "",
+          "count": 1,
+          "reason": "Do not carry stock system-script boot-to-recovery patch privileges into a TARGET_NO_RECOVERY system-only target that does not import the script. Recovery replacement requires a separately validated procedure."
+        },
+        {
+          "old": "(allow install_recovery_29_0 shell_exec_29_0 (file (ioctl read getattr lock map execute execute_no_trans open)))",
+          "new": "",
+          "count": 1,
+          "reason": "Do not carry stock system-script boot-to-recovery patch privileges into a TARGET_NO_RECOVERY system-only target that does not import the script. Recovery replacement requires a separately validated procedure."
+        },
+        {
+          "old": "(allow install_recovery_29_0 system_file_29_0 (file (ioctl read getattr lock map execute execute_no_trans open)))",
+          "new": "",
+          "count": 1,
+          "reason": "Do not carry stock system-script boot-to-recovery patch privileges into a TARGET_NO_RECOVERY system-only target that does not import the script. Recovery replacement requires a separately validated procedure."
+        },
+        {
+          "old": "(allow install_recovery_29_0 toolbox_exec_29_0 (file (ioctl read getattr lock map execute execute_no_trans open)))",
+          "new": "",
+          "count": 1,
+          "reason": "Do not carry stock system-script boot-to-recovery patch privileges into a TARGET_NO_RECOVERY system-only target that does not import the script. Recovery replacement requires a separately validated procedure."
+        },
+        {
+          "old": "(allow install_recovery_29_0 block_device_29_0 (dir (search)))",
+          "new": "",
+          "count": 1,
+          "reason": "Do not carry stock system-script boot-to-recovery patch privileges into a TARGET_NO_RECOVERY system-only target that does not import the script. Recovery replacement requires a separately validated procedure."
+        },
+        {
+          "old": "(allow install_recovery_29_0 boot_block_device_29_0 (blk_file (ioctl read getattr lock map open)))",
+          "new": "",
+          "count": 1,
+          "reason": "Do not carry stock system-script boot-to-recovery patch privileges into a TARGET_NO_RECOVERY system-only target that does not import the script. Recovery replacement requires a separately validated procedure."
+        },
+        {
+          "old": "(allow install_recovery_29_0 recovery_block_device_29_0 (blk_file (ioctl read write getattr lock append map open)))",
+          "new": "",
+          "count": 1,
+          "reason": "Do not carry stock system-script boot-to-recovery patch privileges into a TARGET_NO_RECOVERY system-only target that does not import the script. Recovery replacement requires a separately validated procedure."
+        },
+        {
+          "old": "(allow install_recovery_29_0 cache_file_29_0 (dir (ioctl read write getattr lock add_name remove_name search open)))",
+          "new": "",
+          "count": 1,
+          "reason": "Do not carry stock system-script boot-to-recovery patch privileges into a TARGET_NO_RECOVERY system-only target that does not import the script. Recovery replacement requires a separately validated procedure."
+        },
+        {
+          "old": "(allow install_recovery_29_0 cache_file_29_0 (file (ioctl read write create getattr setattr lock append map unlink rename open)))",
+          "new": "",
+          "count": 1,
+          "reason": "Do not carry stock system-script boot-to-recovery patch privileges into a TARGET_NO_RECOVERY system-only target that does not import the script. Recovery replacement requires a separately validated procedure."
+        },
+        {
+          "old": "(allow install_recovery_29_0 proc_drop_caches_29_0 (file (write lock append map open)))",
+          "new": "",
+          "count": 1,
+          "reason": "Do not carry stock system-script boot-to-recovery patch privileges into a TARGET_NO_RECOVERY system-only target that does not import the script. Recovery replacement requires a separately validated procedure."
+        },
+        {
+          "old": "(allow installd_29_0 system_data_file_29_0 (dir (ioctl read write create getattr setattr lock rename add_name remove_name reparent search rmdir open)))",
+          "new": "(allow installd_29_0 system_data_file (dir (ioctl read write create getattr setattr lock rename add_name remove_name reparent search rmdir open)))",
+          "count": 1,
+          "reason": "Android 11 gives installd these operations on system_data_file, not the distinct /data root label. Domain-wide system_data_root_file search/getattr still permits traversal."
+        },
+        {
+          "old": "(allow installd_29_0 system_data_file_29_0 (lnk_file (read create getattr setattr unlink)))",
+          "new": "(allow installd_29_0 system_data_file (lnk_file (read create getattr setattr unlink)))",
+          "count": 1,
+          "reason": "Android 11 gives installd these operations on system_data_file, not the distinct /data root label. Domain-wide system_data_root_file search/getattr still permits traversal."
+        },
+        {
+          "old": "(allow installd_29_0 system_data_file_29_0 (dir (relabelfrom)))",
+          "new": "(allow installd_29_0 system_data_file (dir (relabelfrom)))",
+          "count": 1,
+          "reason": "Android 11 gives installd these operations on system_data_file, not the distinct /data root label. Domain-wide system_data_root_file search/getattr still permits traversal."
+        },
+        {
+          "old": "(allow installd_29_0 system_data_file_29_0 (file (getattr relabelfrom unlink)))",
+          "new": "(allow installd_29_0 system_data_file (file (getattr relabelfrom unlink)))",
+          "count": 1,
+          "reason": "Android 11 gives installd these operations on system_data_file, not the distinct /data root label. Domain-wide system_data_root_file search/getattr still permits traversal."
+        },
+        {
+          "old": "(allow installd_29_0 system_data_file_29_0 (lnk_file (getattr relabelfrom unlink)))",
+          "new": "(allow installd_29_0 system_data_file (lnk_file (getattr relabelfrom unlink)))",
+          "count": 1,
+          "reason": "Android 11 gives installd these operations on system_data_file, not the distinct /data root label. Domain-wide system_data_root_file search/getattr still permits traversal."
+        },
+        {
+          "old": "(allow installd_29_0 system_data_file_29_0 (sock_file (getattr relabelfrom unlink)))",
+          "new": "(allow installd_29_0 system_data_file (sock_file (getattr relabelfrom unlink)))",
+          "count": 1,
+          "reason": "Android 11 gives installd these operations on system_data_file, not the distinct /data root label. Domain-wide system_data_root_file search/getattr still permits traversal."
+        },
+        {
+          "old": "(allow installd_29_0 system_data_file_29_0 (fifo_file (getattr relabelfrom unlink)))",
+          "new": "(allow installd_29_0 system_data_file (fifo_file (getattr relabelfrom unlink)))",
+          "count": 1,
+          "reason": "Android 11 gives installd these operations on system_data_file, not the distinct /data root label. Domain-wide system_data_root_file search/getattr still permits traversal."
+        }
+      ]
+    },
+    "vendor_sepolicy.cil": {
+      "input_sha256": "9c814dd942920ce54189d216b9a53e20dac86a84214397b72a0a39b512443acb",
+      "edits": [
+        {
+          "old": "(allow cameraserver_29_0 init_29_0 (binder (transfer)))",
+          "new": "",
+          "count": 1,
+          "reason": "Android init is not a camera Binder service. Correct service transitions are required."
+        },
+        {
+          "old": "(allow shell_29_0 kernel_29_0 (system (syslog_read)))",
+          "new": "",
+          "count": 1,
+          "reason": "Retire direct kernel syslog access from shell under current Android app-domain policy; does not remove logd/logcat permissions."
+        },
+        {
+          "old": "(allow init_29_0 nativetest_data_file_29_0 (dir (read getattr setattr open)))",
+          "new": "(allow init_29_0 nativetest_data_file_29_0 (dir (read getattr open)))",
+          "count": 1,
+          "reason": "Android 11 forbids all domains from mutating native-test directories. Preserve legacy read/getattr/open; remove only setattr, unrelated to fitted hardware support."
+        },
+        {
+          "old": "(allow init_29_0 system_file_29_0 (file (getattr map execute execute_no_trans)))",
+          "new": "(allow init_29_0 system_file_29_0 (file (getattr map execute)))",
+          "count": 1,
+          "reason": "Android 11 init.te forbids init execute_no_trans; service.cpp rejects computed service contexts remaining in init. Keep getattr/map/execute for proper domain transitions."
+        },
+        {
+          "old": "(allow init_29_0 vendor_toolbox_exec_29_0 (file (getattr map execute execute_no_trans)))",
+          "new": "(allow init_29_0 vendor_toolbox_exec_29_0 (file (getattr map execute)))",
+          "count": 1,
+          "reason": "Android 11 init.te forbids init execute_no_trans; service.cpp rejects computed service contexts remaining in init. Keep getattr/map/execute for proper domain transitions."
+        },
+        {
+          "old": "(allow init_29_0 vendor_file_29_0 (file (getattr map execute execute_no_trans)))",
+          "new": "(allow init_29_0 vendor_file_29_0 (file (getattr map execute)))",
+          "count": 1,
+          "reason": "Android 11 init.te forbids init execute_no_trans; service.cpp rejects computed service contexts remaining in init. Keep getattr/map/execute for proper domain transitions."
+        },
+        {
+          "old": "(allow vendor_init_29_0 tombstone_data_file_29_0 (dir (ioctl read write create getattr setattr lock rename add_name remove_name reparent search rmdir open)))",
+          "new": "",
+          "count": 1,
+          "reason": "Core tombstone creation belongs to system init. Device kaidroid-diagnostics.rc preserves four stock subsystem directory paths/modes; AOSP creates the encrypted parent. Stock duplicate vendor mkdir attempts can still be denied; runtime ordering/collection unverified."
+        }
+      ]
+    }
+  }
+}

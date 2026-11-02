@@ -1,0 +1,31 @@
+{
+  "scope": "Engineering E006: retire registrations for sampleauthdaemon and qseeproxysampledaemon absent in live expected directories and processes, with no matching service label. Keep all other grants; not product-wired.",
+  "presence_evidence": "docs/evidence/engineering-policy-E006.json",
+  "files": {
+    "plat_pub_versioned.cil": {
+      "input_sha256": "3dcb82ac22b2bc4a05e99106e7785cc47c66e80a43c4dc083d140d574f442bae",
+      "edits": []
+    },
+    "vendor_sepolicy.cil": {
+      "input_sha256": "4af866cbbd2e828dbade0d5ee8bedb373f78249fe062f413949b24d9a99230ad",
+      "edits": [
+        {
+          "old": "(allow fidotest fidotest_service (service_manager (add)))",
+          "new": "",
+          "count": 1,
+          "reason": "Live file contexts identify the executable path; directory inventory and processes lack that executable, and service contexts have no matching registration label. Reassess if implementation is supplied."
+        },
+        {
+          "old": "(allow qseeproxysample qseeproxysample_service (service_manager (add)))",
+          "new": "",
+          "count": 1,
+          "reason": "Live file contexts identify the executable path; directory inventory and processes lack that executable, and service contexts have no matching registration label. Reassess if implementation is supplied."
+        }
+      ]
+    },
+    "29.0.compat.cil": {
+      "input_sha256": "0f3b926c8e2335f96fea8d3b70aa4ffc777bf0f168bc70a0036ffd02af50b841",
+      "edits": []
+    }
+  }
+}

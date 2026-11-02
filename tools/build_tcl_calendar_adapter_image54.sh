@@ -1,0 +1,46 @@
+#!/usr/bin/env bash
+# Pack image54 only after audited adapter2 staging; hardware owns launch/install.
+set -euo pipefail
+stage=/build/engineering-tcl-calendar-adapter-stage-54
+test -f "$stage/staging.complete"
+test ! -e "$stage/build.log"
+test ! -e "$stage/build.exit"
+exec > "$stage/build.log" 2>&1
+trap 'result=$?; printf "%s\n" "$result" > "$stage/build.exit"' EXIT
+python3 "$stage/stage-check.py" --check-stage "$stage"
+cd /build/aosp
+export PATH=/build/out-eng-02/host/linux-x86/bin:$PATH
+avbtool add_hashtree_footer --partition_size 834666496 --algorithm SHA256_RSA2048 --key external/avb/test/data/testkey_rsa2048.pem --do_not_generate_fec --calc_max_image_size > "$stage/avb-max-image-bytes.txt"
+sefcontext_compile -o "$stage/file_contexts.bin" "$stage/file_contexts.txt"
+python3 build/make/tools/releasetools/build_image.py "$stage/compact-system" "$stage/system_image_info.compact.txt" "$stage/compact-image/system.img" "$stage/compact-system"
+simg2img "$stage/compact-image/system.img" "$stage/compact-image/system.raw.img"
+avbtool verify_image --image "$stage/compact-image/system.raw.img" --key external/avb/test/data/testkey_rsa2048.pem > "$stage/avb-verification.txt"
+avbtool info_image --image "$stage/compact-image/system.raw.img" > "$stage/avb-info.txt"
+sha256sum "$stage/compact-image/system.raw.img" > "$stage/raw.sha256"
+python3 "$stage/stage-check.py" --check-stage "$stage"
+python3 - "$stage" <<'PY'
+import hashlib,json,re,sys
+from pathlib import Path
+s=Path(sys.argv[1]);m=json.loads((s/'staging.json').read_text());raw=s/'compact-image/system.raw.img'
+def sha(p):
+ h=hashlib.sha256()
+ with p.open('rb') as f:
+  for block in iter(lambda:f.read(1048576),b''):h.update(block)
+ return h.hexdigest()
+assert m['image']==54 and m['baseline_image']==53
+assert m['optional_fec'] is False and m['signed_hashtree_required'] is True
+assert raw.stat().st_size==834666496
+info=(s/'avb-info.txt').read_text()
+assert re.search(r'FEC num roots:\s+0\s*$',info,re.M)
+assert re.search(r'FEC offset:\s+0\s*$',info,re.M)
+assert re.search(r'FEC size:\s+0 bytes\s*$',info,re.M)
+assert re.search(r'Algorithm:\s+SHA256_RSA2048\s*$',info,re.M)
+assert re.search(r'Hash Algorithm:\s+sha1\s*$',info,re.M)
+assert re.search(r'Tree Size:\s+[1-9][0-9]* bytes',info)
+assert int((s/'avb-max-image-bytes.txt').read_text())==828018688
+r=dict(image=54,baseline_image=53,base_raw_sha256=m['base_raw_sha256'],raw_bytes=raw.stat().st_size,raw_sha256=sha(raw),
+ staging_sha256=sha(s/'staging.json'),avb_verified=True,optional_fec=False,signed_hashtree_verified=True,
+ max_avb_payload_bytes=828018688,avb_info_sha256=sha(s/'avb-info.txt'),avb_verification_sha256=sha(s/'avb-verification.txt'),
+ installed=False,raw_closure_verified=False,changed_file_closure=sorted(m['changed']))
+(s/'outputs.json').write_text(json.dumps(r,indent=2)+'\n');print(json.dumps(r))
+PY

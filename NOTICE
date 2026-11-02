@@ -1,0 +1,13 @@
+KaiDroid
+
+This source snapshot includes patches and configuration adaptations for the
+Android Open Source Project. Applicable upstream copyright and license notices
+in the included source files remain in place.
+
+Android Open Source Project sources are referenced by the framework patches
+and source contracts. This snapshot does not include the complete upstream
+Android source tree.
+
+A project-wide license for original KaiDroid additions has not yet been
+selected. This attribution notice is not a substitute for that license and
+does not grant rights to omitted firmware, vendor binaries, or donor APKs.

@@ -1,0 +1,2 @@
+# Captured platform device-name path. Actual ueventd label selection unverified.
+/dev/block/platform/soc/7824900\.sdhci/by-name/sysdata u:object_r:sysdata_block_device:s0

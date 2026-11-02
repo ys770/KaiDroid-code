@@ -1,0 +1,24 @@
+{
+  "scope": "Offline E013: replace untyped legacy service lookup with explicit B2G telephony/system types. Requires companion CIL and service_contexts. This does not implement Android bridge services or prove runtime functionality.",
+  "files": {
+    "vendor_sepolicy.cil": {
+      "input_sha256": "f256c787aa72f6bd37ec0a03a2111c8ae14ea6bca7b0ef25d24eae7c8040f413",
+      "edits": [
+        {
+          "old": "(allow cnefwk_29_0 default_android_service_29_0 (service_manager (find)))",
+          "new": "(allow cnefwk_29_0 kaidroid_cne_legacy_service (service_manager (find)))",
+          "count": 1,
+          "reason": "Captured cnefwk imports B2G system and telephony SERVICE_NAME functions; corresponding libraries contain b2g_system_binder and b2g_telephony_binder, both live-registered and missing exact stock service-context entries. Other three B2G service lookups retain their existing labels/grants."
+        }
+      ]
+    },
+    "plat_pub_versioned.cil": {
+      "input_sha256": "b4998d758fb2fd6cfa9484e81b4eb8a17f7f85d259dcd5dd11d596a77ed6e3cc",
+      "edits": []
+    },
+    "29.0.compat.cil": {
+      "input_sha256": "0f3b926c8e2335f96fea8d3b70aa4ffc777bf0f168bc70a0036ffd02af50b841",
+      "edits": []
+    }
+  }
+}

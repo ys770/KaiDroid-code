@@ -1,0 +1,6 @@
+# Requires paired vendor linker route and executable context; no shell launcher.
+service vendor.kaidroid-memtrack /odm/kaidroid/bin/kaidroid-memtrack-service
+    interface android.hardware.memtrack@1.0::IMemtrack default
+    class hal
+    user system
+    group system

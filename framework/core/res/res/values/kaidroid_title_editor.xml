@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="title_edit_text_label" />
+    <item type="id" name="title_edit_text_content" />
+    <java-symbol type="id" name="title_edit_text_label" />
+    <java-symbol type="id" name="title_edit_text_content" />
+    <!-- Build assigns target IDs. Remap donor typed XML references after build;
+         never assume these numbers match the donor framework. -->
+    <declare-styleable name="TitleEditText">
+        <attr name="editTextTitle" format="string" />
+        <attr name="titleTextSize" format="dimension" />
+        <attr name="editTextNeedFocus" format="boolean" />
+        <attr name="editTextMaxLength" format="integer" />
+        <attr name="editTextMaxLine" format="integer" />
+    </declare-styleable>
+</resources>

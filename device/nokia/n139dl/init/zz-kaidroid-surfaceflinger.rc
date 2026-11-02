@@ -1,0 +1,17 @@
+# Derived from AOSP frameworks/native surfaceflinger.rc, Android 11.
+# Copyright (C) The Android Open Source Project
+# SPDX-License-Identifier: Apache-2.0
+# Upstream revision: fa13239bda4a96e9abbdcdafdf5ed902aeb07f84
+# Device adaptation: override the disabled KaiOS factory service imported first.
+# Preserve upstream service options; physical startup remains unvalidated.
+service surfaceflinger /system/bin/surfaceflinger
+    override
+    class core animation
+    user system
+    group graphics drmrpc readproc
+    capabilities SYS_NICE
+    onrestart restart zygote
+    task_profiles HighPerformance
+    socket pdx/system/vr/display/client     stream 0666 system graphics u:object_r:pdx_display_client_endpoint_socket:s0
+    socket pdx/system/vr/display/manager    stream 0666 system graphics u:object_r:pdx_display_manager_endpoint_socket:s0
+    socket pdx/system/vr/display/vsync      stream 0666 system graphics u:object_r:pdx_display_vsync_endpoint_socket:s0

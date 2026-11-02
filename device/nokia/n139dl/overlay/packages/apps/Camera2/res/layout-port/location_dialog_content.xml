@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Nokia portrait onboarding: keep confirmation visible and allow text to scroll. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="@string/remember_location_title"
+                android:textColor="@color/dialog_text_color"
+                android:textSize="18sp" />
+            <CheckBox
+                android:id="@+id/check_box"
+                style="@style/DialogCheckBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:text="@string/remember_location_prompt"
+                android:textSize="14sp"
+                android:nextFocusDown="@id/confirm_button"
+                android:nextFocusForward="@id/confirm_button">
+                <requestFocus />
+            </CheckBox>
+        </LinearLayout>
+    </ScrollView>
+    <Button
+        android:id="@+id/confirm_button"
+        style="@style/BlueButton"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="4dp"
+        android:nextFocusUp="@id/check_box"
+        android:text="@string/startup_dialog_button_next" />
+</LinearLayout>

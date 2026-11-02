@@ -1,0 +1,32 @@
+--- a/frameworks/base/packages/SystemUI/src/com/android/systemui/bubbles/BubbleDataRepository.kt
++++ b/frameworks/base/packages/SystemUI/src/com/android/systemui/bubbles/BubbleDataRepository.kt
+@@ -43,8 +43,27 @@
+     private val launcherApps: LauncherApps
+ ) {
+ 
+-    private val ioScope = CoroutineScope(Dispatchers.IO)
+-    private val uiScope = CoroutineScope(Dispatchers.Main)
++    private var ioScopeValue: CoroutineScope? = null
++    private var uiScopeValue: CoroutineScope? = null
++
++    // Keep the original scopes and dispatchers, creating each only on first use.
++    private val ioScope: CoroutineScope
++        @Synchronized get() {
++            val existing = ioScopeValue
++            if (existing != null) return existing
++            val created = CoroutineScope(Dispatchers.IO)
++            ioScopeValue = created
++            return created
++        }
++
++    private val uiScope: CoroutineScope
++        @Synchronized get() {
++            val existing = uiScopeValue
++            if (existing != null) return existing
++            val created = CoroutineScope(Dispatchers.Main)
++            uiScopeValue = created
++            return created
++        }
+     private var job: Job? = null
+ 
+     /**

@@ -1,0 +1,38 @@
+--- a/art/runtime/oat_file_manager.cc
++++ b/art/runtime/oat_file_manager.cc
+@@ -38,6 +38,7 @@
+ #include "dex/dex_file-inl.h"
+ #include "dex/dex_file_loader.h"
+ #include "dex/dex_file_tracking_registrar.h"
++#include "gc/heap.h"
+ #include "gc/scoped_gc_critical_section.h"
+ #include "gc/space/image_space.h"
+ #include "handle_scope-inl.h"
+@@ -46,6 +47,7 @@
+ #include "jni/jni_internal.h"
+ #include "mirror/class_loader.h"
+ #include "mirror/object-inl.h"
++#include "oat.h"
+ #include "oat_file.h"
+ #include "oat_file_assistant.h"
+ #include "obj_ptr-inl.h"
+@@ -431,6 +433,19 @@
+                                         ClassLoaderContext* context,
+                                         std::string* error_msg) {
+   Runtime* const runtime = Runtime::Current();
++  // Experimental prospective-native09-image54 services app-image bypass on low-RAM devices.
++  // Keep accepted compiled OAT/DEX and the ordinary LoadDexFiles path intact.
++  // A future preopt change must fail closed until its artifacts are reviewed.
++  gc::Heap* const heap = runtime->GetHeap();
++  if (heap != nullptr && heap->IsLowMemoryMode() && source_oat_file->IsExecutable() &&
++      source_oat_file->GetLocation() == "/system/framework/oat/arm/services.odex") {
++    const OatHeader& header = source_oat_file->GetOatHeader();
++    if (header.IsValid() && header.GetChecksum() == 3915454583u &&
++        source_oat_file->Size() == 12699918u &&
++        header.GetExecutableOffset() == 2895872u) {
++      return false;
++    }
++  }
+   if (kEnableAppImage && (!runtime->IsJavaDebuggable() || source_oat_file->IsDebuggable())) {
+     // If we verified the class loader context (skipping due to the special marker doesn't
+     // count), then also avoid the collision check.

@@ -1,0 +1,10 @@
+# Captured dedicated partition, not /data and not generic block-device access.
+type sysdata_block_device, dev_type;
+type sysdata_file, file_type;
+
+allow init sysdata_file:dir mounton;
+allow fsck sysdata_block_device:blk_file rw_file_perms;
+allow e2fs sysdata_block_device:blk_file rw_file_perms;
+allowxperm e2fs sysdata_block_device:blk_file ioctl {
+    BLKSECDISCARD BLKDISCARD BLKPBSZGET BLKDISCARDZEROES BLKROGET
+};

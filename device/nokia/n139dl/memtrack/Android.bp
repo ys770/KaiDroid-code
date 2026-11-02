@@ -1,0 +1,13 @@
+// Diagnostic build only: not yet included in PRODUCT_PACKAGES.
+cc_binary {
+    name: "kaidroid-memtrack-service",
+    proprietary: true,
+    relative_install_path: "hw",
+    srcs: ["service.cpp"],
+    shared_libs: [
+        "libhidlbase",
+        "libutils",
+        "android.hardware.memtrack@1.0",
+    ],
+    cflags: ["-Wall", "-Wextra", "-Werror"],
+}

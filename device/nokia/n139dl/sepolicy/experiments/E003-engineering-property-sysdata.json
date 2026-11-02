@@ -1,0 +1,27 @@
+{
+  "scope": "Engineering E003: preserve actual default property classification and use observed sysdata-specific fsck target. Requires sysdata-block.cil and eventual file-context integration; not product wired.",
+  "files": {
+    "plat_pub_versioned.cil": {
+      "input_sha256": "2cbe473a1152868b1e4e918fa48a878ad6544d764cebe7edb43cd3c4b40b0fd4",
+      "edits": [
+        {
+          "old": "(typeattributeset core_property_type (audio_prop_29_0 config_prop_29_0 cppreopt_prop_29_0 dalvik_prop_29_0 debuggerd_prop_29_0 debug_prop_29_0 default_prop_29_0 dhcp_prop_29_0 dumpstate_prop_29_0 ffs_prop_29_0 fingerprint_prop_29_0 logd_prop_29_0 net_radio_prop_29_0 nfc_prop_29_0 pan_result_prop_29_0 persist_debug_prop_29_0 powerctl_prop_29_0 radio_prop_29_0 restorecon_prop_29_0 shell_prop_29_0 system_prop_29_0 system_radio_prop_29_0 vold_prop_29_0))",
+          "new": "(typeattributeset core_property_type (audio_prop_29_0 config_prop_29_0 cppreopt_prop_29_0 dalvik_prop_29_0 debuggerd_prop_29_0 debug_prop_29_0 default_prop dhcp_prop_29_0 dumpstate_prop_29_0 ffs_prop_29_0 fingerprint_prop_29_0 logd_prop_29_0 net_radio_prop_29_0 nfc_prop_29_0 pan_result_prop_29_0 persist_debug_prop_29_0 powerctl_prop_29_0 radio_prop_29_0 restorecon_prop_29_0 shell_prop_29_0 system_prop_29_0 system_radio_prop_29_0 vold_prop_29_0))",
+          "count": 1,
+          "reason": "Android 11 defines apk_verity_prop with system_vendor_config_prop and excludes new properties from legacy core_property_type. Keep actual default_prop membership without importing the split mapped type."
+        }
+      ]
+    },
+    "vendor_sepolicy.cil": {
+      "input_sha256": "3ae9ab600306335f8b139f68f54347394da210a73ebdca3c295078f33d49df27",
+      "edits": [
+        {
+          "old": "(allow fsck_29_0 block_device_29_0 (blk_file (ioctl read write getattr lock append map open)))",
+          "new": "(allow fsck_29_0 sysdata_block_device (blk_file (ioctl read write getattr lock append map open)))",
+          "count": 2,
+          "reason": "Stock system policy labels sysdata separately and grants fsck access to it. Preserve that intended check target without granting arbitrary generic block-device read/write. Other typed fsck targets remain unchanged."
+        }
+      ]
+    }
+  }
+}

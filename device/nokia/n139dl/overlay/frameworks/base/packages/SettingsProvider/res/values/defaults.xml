@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- TCL4058L1/PJEP packaged defaults, verified against runtime resources.
+         These initialize new settings databases; they do not migrate existing users. -->
+    <bool name="def_lockscreen_disabled">true</bool>
+    <integer name="def_end_button_behavior">1</integer>
+    <integer name="def_screen_off_timeout">30000</integer>
+</resources>

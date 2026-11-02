@@ -1,0 +1,74 @@
+--- a/frameworks/base/packages/SystemUI/src/com/android/systemui/ImageWallpaper.java
++++ b/frameworks/base/packages/SystemUI/src/com/android/systemui/ImageWallpaper.java
+@@ -16,6 +16,7 @@
+ 
+ package com.android.systemui;
+ 
++import android.app.ActivityManager;
+ import android.graphics.Rect;
+ import android.os.Handler;
+ import android.os.HandlerThread;
+@@ -24,6 +25,7 @@
+ import android.service.wallpaper.WallpaperService;
+ import android.util.Log;
+ import android.util.Size;
++import android.view.Display;
+ import android.view.SurfaceHolder;
+ 
+ import com.android.internal.annotations.VisibleForTesting;
+@@ -116,6 +118,22 @@
+             Size frameSize = mRenderer.reportSurfaceSize();
+             int width = Math.max(MIN_SURFACE_WIDTH, frameSize.getWidth());
+             int height = Math.max(MIN_SURFACE_HEIGHT, frameSize.getHeight());
++            // Bounded low-RAM experiment: preserve the reviewed WMS frames in both rotations.
++            // Keep the source bitmap and all wallpaper offsets/zoom policy unchanged.
++            Display display = getDisplayContext().getDisplay();
++            if (ActivityManager.isLowRamDeviceStatic() && display != null
++                    && display.getDisplayId() == Display.DEFAULT_DISPLAY
++                    && width == 1243 && height == 1024
++                    && Float.compare(getDisplayContext().getResources().getFloat(
++                            com.android.internal.R.dimen.config_wallpaperMaxScale), 1.10f) == 0) {
++                Display.Mode[] modes = display.getSupportedModes();
++                if (modes != null && modes.length == 1
++                        && modes[0].getPhysicalWidth() == 240
++                        && modes[0].getPhysicalHeight() == 320) {
++                    width = 429;
++                    height = 353;
++                }
++            }
+             holder.setFixedSize(width, height);
+         }
+ 
+--- a/frameworks/base/packages/SystemUI/src/com/android/systemui/glwallpaper/ImageWallpaperRenderer.java
++++ b/frameworks/base/packages/SystemUI/src/com/android/systemui/glwallpaper/ImageWallpaperRenderer.java
+@@ -45,6 +45,8 @@
+     private final ImageGLProgram mProgram;
+     private final ImageGLWallpaper mWallpaper;
+     private final Rect mSurfaceSize = new Rect();
++    private int mViewportWidth;
++    private int mViewportHeight;
+     private final WallpaperTexture mTexture;
+ 
+     public ImageWallpaperRenderer(Context context) {
+@@ -79,13 +81,20 @@
+ 
+     @Override
+     public void onSurfaceChanged(int width, int height) {
++        mViewportWidth = width;
++        mViewportHeight = height;
+         glViewport(0, 0, width, height);
+     }
+ 
+     @Override
+     public void onDrawFrame() {
+         glClear(GL_COLOR_BUFFER_BIT);
+-        glViewport(0, 0, mSurfaceSize.width(), mSurfaceSize.height());
++        boolean boundedSurface = mSurfaceSize.width() == 1243
++                && mSurfaceSize.height() == 1024
++                && mViewportWidth == 429 && mViewportHeight == 353;
++        glViewport(0, 0,
++                boundedSurface ? mViewportWidth : mSurfaceSize.width(),
++                boundedSurface ? mViewportHeight : mSurfaceSize.height());
+         mWallpaper.useTexture();
+         mWallpaper.draw();
+     }

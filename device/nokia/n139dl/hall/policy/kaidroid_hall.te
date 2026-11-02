@@ -1,0 +1,20 @@
+# Private system_ext policy selected by BoardConfig; service remains disabled.
+type kaidroid_hall, domain, coredomain;
+type kaidroid_hall_exec, exec_type, file_type, system_file_type;
+type sysfs_kaidroid_hall, fs_type, sysfs_type;
+init_daemon_domain(kaidroid_hall)
+
+# Discovery reads input names and the measured hall_status, never writes sysfs.
+allow kaidroid_hall sysfs:dir r_dir_perms;
+allow kaidroid_hall sysfs:lnk_file r_file_perms;
+allow kaidroid_hall sysfs_kaidroid_hall:dir r_dir_perms;
+allow kaidroid_hall sysfs_kaidroid_hall:lnk_file r_file_perms;
+allow kaidroid_hall sysfs_kaidroid_hall:file r_file_perms;
+allow kaidroid_hall input_device:dir search;
+allow kaidroid_hall input_device:chr_file { open read getattr };
+
+# Stock engineering kernel labels /dev/uinput as uhid_device.
+allow kaidroid_hall uhid_device:chr_file { open write getattr ioctl };
+allowxperm kaidroid_hall uhid_device:chr_file ioctl {
+    UI_DEV_CREATE UI_DEV_DESTROY UI_SET_EVBIT UI_SET_SWBIT
+};

@@ -1,0 +1,24 @@
+{
+  "scope": "Engineering E005: exclude configstore from the compatibility-only netlink grant, retaining its Android 11 no-network contract. All other candidate files unchanged. Offline, not product-wired.",
+  "files": {
+    "plat_pub_versioned.cil": {
+      "input_sha256": "3dcb82ac22b2bc4a05e99106e7785cc47c66e80a43c4dc083d140d574f442bae",
+      "edits": []
+    },
+    "vendor_sepolicy.cil": {
+      "input_sha256": "4af866cbbd2e828dbade0d5ee8bedb373f78249fe062f413949b24d9a99230ad",
+      "edits": []
+    },
+    "29.0.compat.cil": {
+      "input_sha256": "c35da4f6e965d4809003e95a26af0032efa5754bbe8c2e599178db8ef7062e4a",
+      "edits": [
+        {
+          "old": "(typeattributeset vendordomain ((and (domain) ((not (coredomain))))))",
+          "new": "(typeattributeset vendordomain ((and (domain) ((not (coredomain hal_configstore_server))))))",
+          "count": 1,
+          "reason": "The inspected vendordomain attribute is used only for the compatibility nlmsg_readpriv grant. Exclude configstore servers, whose Android 11 HAL contract prohibits network sockets; retain the grant for every other non-core domain."
+        }
+      ]
+    }
+  }
+}

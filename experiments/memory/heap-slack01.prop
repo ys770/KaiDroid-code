@@ -1,0 +1,6 @@
+# UNINSTALLED experiment. Review effective final properties before integration.
+# Reduce GC growth headroom, not application heap limits or required features.
+# AndroidRuntime.cpp consumes these at VM creation; existing VMs are unchanged.
+# More frequent GC may increase CPU, latency and battery cost.
+dalvik.vm.heapminfree=2m
+dalvik.vm.heapmaxfree=4m

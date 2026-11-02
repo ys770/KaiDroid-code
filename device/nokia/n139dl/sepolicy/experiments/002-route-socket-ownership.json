@@ -1,0 +1,20 @@
+{
+  "scope": "Offline candidate 002 layered on candidate 001 after assertion separation; remove only broad legacy route-socket bind. Android 11 public/net.te and app compatibility grants supply restricted replacement. No added grants; not build-wired.",
+  "files": {
+    "plat_pub_versioned.cil": {
+      "input_sha256": "7423b642339a124ec474e0bf678d2d719b8435597667fd8499c6e53e7cc5939a",
+      "edits": [
+        {
+          "old": "(allow netdomain self (netlink_route_socket (read write create getattr setattr lock append bind connect getopt setopt shutdown nlmsg_read)))",
+          "new": "(allow netdomain self (netlink_route_socket (read write create getattr setattr lock append connect getopt setopt shutdown nlmsg_read)))",
+          "count": 1,
+          "reason": "Use Android 11 netdomain exclusion-based bind/nlmsg_readpriv grant plus its explicit legacy-app grants; do not regrant bind to modern untrusted apps through the Android 10 exported rule."
+        }
+      ]
+    },
+    "vendor_sepolicy.cil": {
+      "input_sha256": "63cad8f97adb4e2aebb62069504c33ff8be7fc4af17f3bff23a15aade9480756",
+      "edits": []
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "scope": "Engineering E011: remove only legacy direct ashmem open permissions, retaining all other operations. Requires tested boot-ID-path libcutils adaptation to be installed in VNDK29 and platform ueventd/labels. Offline candidate only; do not install without paired runtime integration.",
+  "files": {
+    "plat_pub_versioned.cil": {
+      "input_sha256": "3dcb82ac22b2bc4a05e99106e7785cc47c66e80a43c4dc083d140d574f442bae",
+      "edits": [
+        {
+          "old": "(allow base_typeattr_199_29_0 ashmem_device_29_0 (chr_file (ioctl read write getattr lock append map open)))",
+          "new": "(allow base_typeattr_199_29_0 ashmem_device_29_0 (chr_file (ioctl read write getattr lock append map)))",
+          "count": 1,
+          "reason": "Android11 domain policy grants rw access to ashmem_libcutils_device, whose boot-ID path is created by ueventd and exercised by the adapted library. Retain received legacy FD operations and platform legacy-app exceptions; remove only conflicting direct opens."
+        },
+        {
+          "old": "(allow init_29_0 ashmem_device_29_0 (chr_file (read open)))",
+          "new": "(allow init_29_0 ashmem_device_29_0 (chr_file (read)))",
+          "count": 1,
+          "reason": "Android11 domain policy grants rw access to ashmem_libcutils_device, whose boot-ID path is created by ueventd and exercised by the adapted library. Retain received legacy FD operations and platform legacy-app exceptions; remove only conflicting direct opens."
+        }
+      ]
+    },
+    "vendor_sepolicy.cil": {
+      "input_sha256": "264f19b24daeff448f1448b4dbdd8cb4226b5cee7fa308c154521bd2b5fe84f9",
+      "edits": []
+    },
+    "29.0.compat.cil": {
+      "input_sha256": "0f3b926c8e2335f96fea8d3b70aa4ffc777bf0f168bc70a0036ffd02af50b841",
+      "edits": []
+    }
+  }
+}

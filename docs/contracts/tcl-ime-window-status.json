@@ -1,0 +1,47 @@
+{
+  "revision": "34a1b9c951c38537ab96b69bc308f6e0884823f5",
+  "files": [
+    {
+      "path": "core/java/com/android/internal/view/IInputMethodManager.aidl",
+      "sha256": "208c4f12e1ffa09622350a2dab6c1c2920f2aaac9f15702f50d68bddc199d6af"
+    },
+    {
+      "path": "core/java/android/view/inputmethod/InputMethodManager.java",
+      "sha256": "54b8ee1ff39155fd282674915544ef5e8409365a2996516f22ce8d3201c295e6"
+    },
+    {
+      "path": "services/core/java/com/android/server/inputmethod/InputMethodManagerService.java",
+      "sha256": "7efbd8b0c372fe9b456d92fd669188cc2fa87a9d465c9dae1cb2c6c1b3561802"
+    },
+    {
+      "path": "services/core/java/com/android/server/inputmethod/MultiClientInputMethodManagerService.java",
+      "sha256": "2b4c1339e6d98ab9ab147ac296c43c0b72bc311453a3400cbbca4fc63ea5bff2"
+    }
+  ],
+  "contract": {
+    "method": "android.view.inputmethod.InputMethodManager.getImeWindowStatus()I",
+    "source": "InputMethodManagerService.mImeWindowVis",
+    "locking": "mMethodMap",
+    "background_user_result": 0,
+    "binder_transaction": "appended to preserve existing transaction ordinals",
+    "ownership": "global snapshot; requires independent focused editor, window and interactive checks",
+    "multi_client_backend": "unsupported, reports via existing reportNotSupported and returns zero"
+  },
+  "platform_compiled": true,
+  "runtime_validated": false,
+  "build_evidence": "../evidence/ime-status-bridge-build.json",
+  "client_contract": {
+    "method": "android.view.inputmethod.InputMethodManager.getImeClientWindowStatus()I",
+    "source": "InputMethodManagerService.mImeWindowVis only when mCurClient uid and pid equal Binder calling uid and pid",
+    "locking": "mMethodMap",
+    "non_owner_result": 0,
+    "background_user_result": 0,
+    "binder_transaction": "appended after existing getImeWindowStatus; global API unchanged",
+    "multi_client_backend": "unsupported, reports and returns zero",
+    "platform_compiled": true,
+    "runtime_validated": true,
+    "build_evidence": "../evidence/ime-focus-build23.json",
+    "runtime_evidence": "../evidence/image23-ime-regression.json",
+    "runtime_scope": "Owning editor status3, same-UID different-PID peer client0/global3, parent remains active; transient hidden_api_policy=1 permitted peer reflection and was restored"
+  }
+}

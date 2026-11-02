@@ -1,0 +1,4 @@
+# Preserve captured partition labels; never relabel arbitrary block devices.
+/sysdata(/.*)? u:object_r:sysdata_file:s0
+/dev/block/platform/soc/7824900\.sdhci/by-name/sysdata u:object_r:sysdata_block_device:s0
+/odm/kaidroid/bin/kaidroid-memtrack-service u:object_r:hal_memtrack_default_exec:s0

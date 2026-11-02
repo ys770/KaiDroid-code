@@ -1,0 +1,3 @@
+; SurfaceFlinger requests gated backlight changes through the vendor Light HAL.
+; Do not grant direct vendor sysfs access to this coredomain.
+(typeattributeset hal_light_client (surfaceflinger))

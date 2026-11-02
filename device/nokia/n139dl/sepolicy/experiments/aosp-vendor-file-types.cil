@@ -1,0 +1,17 @@
+; Android 11 platform file_contexts references this standard vendor type.
+; The retained Android 10 vendor policy does not declare it.
+; Define the label only: no updater domain, transition or block-write grants.
+(type vendor_install_recovery_exec)
+(typeattributeset file_type (vendor_install_recovery_exec))
+(typeattributeset exec_type (vendor_install_recovery_exec))
+(typeattributeset vendor_file_type (vendor_install_recovery_exec))
+; Stock platform-private executable labels referenced by captured vendor contexts.
+; These labels do not supply their original domain transitions or service policy.
+(type qti_telephony_exec)
+(typeattributeset file_type (qti_telephony_exec))
+(typeattributeset exec_type (qti_telephony_exec))
+(typeattributeset system_file_type (qti_telephony_exec))
+(type embms_qti_exec)
+(typeattributeset file_type (embms_qti_exec))
+(typeattributeset exec_type (embms_qti_exec))
+(typeattributeset system_file_type (embms_qti_exec))

@@ -1,0 +1,7 @@
+# Candidate: explicitly started for enforcing tests; no boot trigger yet.
+service kaidroid-hall /system/bin/kaidroid-hall --daemon --uinput
+    class late_start
+    user uhid
+    group uhid input
+    disabled
+    restart_period 5

@@ -1,0 +1,42 @@
+--- a/art/libartbase/base/arena_allocator.h
++++ b/art/libartbase/base/arena_allocator.h
+@@ -27,0 +28,9 @@
++
++// BEGIN KAIDROID_NONCURRENT_TAIL_DEFINE
++#ifndef KAIDROID_ARENA_NONCURRENT_TAIL_REALLOC
++#define KAIDROID_ARENA_NONCURRENT_TAIL_REALLOC 0
++#endif
++#if KAIDROID_ARENA_NONCURRENT_TAIL_REALLOC != 0 && KAIDROID_ARENA_NONCURRENT_TAIL_REALLOC != 1
++#error "KAIDROID_ARENA_NONCURRENT_TAIL_REALLOC must be 0 or 1"
++#endif
++// END KAIDROID_NONCURRENT_TAIL_DEFINE
+@@ -327,0 +337,29 @@
++// BEGIN KAIDROID_NONCURRENT_TAIL_BRANCH
++#if KAIDROID_ARENA_NONCURRENT_TAIL_REALLOC
++    // A non-current arena's allocated prefix is final until we explicitly
++    // extend it. Reuse only that prefix's last allocation, never a live middle
++    // block. Memory-tool red zones keep the original allocation/copy path.
++    if (ptr != nullptr && arena_head_ != nullptr && !IsRunningOnMemoryTool()) {
++      const size_t aligned_new_size = RoundUp(new_size, kAlignment);
++      if (aligned_new_size > aligned_ptr_size) {
++        const size_t size_delta = aligned_new_size - aligned_ptr_size;
++        size_t examined = 0;
++        for (Arena* arena = arena_head_->next_;
++             arena != nullptr && examined != 16u;
++             arena = arena->next_, ++examined) {
++          const size_t used = arena->GetBytesAllocated();
++          if (used >= aligned_ptr_size && used <= arena->Size() &&
++              reinterpret_cast<uint8_t*>(ptr) == arena->Begin() + used - aligned_ptr_size &&
++              size_delta <= arena->Size() - used) {
++            // Preserve the zero-initialized growth contract, including any
++            // padding that now becomes part of the caller's logical array.
++            memset(reinterpret_cast<uint8_t*>(ptr) + ptr_size, 0, new_size - ptr_size);
++            arena->bytes_allocated_ = used + size_delta;
++            ArenaAllocatorStats::RecordAlloc(size_delta, kind);
++            return ptr;
++          }
++        }
++      }
++    }
++#endif
++// END KAIDROID_NONCURRENT_TAIL_BRANCH

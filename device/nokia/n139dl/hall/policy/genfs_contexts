@@ -1,0 +1,1 @@
+genfscon sysfs /devices/platform/soc/soc:hall_sensor u:object_r:sysfs_kaidroid_hall:s0

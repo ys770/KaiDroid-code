@@ -1,0 +1,24 @@
+{
+  "scope": "Offline candidate 009: replace generic fsck block grants with captured sysdata-specific intent. Requires sysdata-block.cil and matching file-context candidate; not product integrated.",
+  "files": {
+    "plat_pub_versioned.cil": {
+      "input_sha256": "e49473f1cbfb1262dd81cebf8d792617d6e1085c5d16caedfaffbe328f3f6bb7",
+      "edits": []
+    },
+    "vendor_sepolicy.cil": {
+      "input_sha256": "2e8e125ce3fdc5238e3514e1b2ef256f5bba4b82925a19e9c2ae3480f8d1b678",
+      "edits": [
+        {
+          "old": "(allow fsck_29_0 block_device_29_0 (blk_file (ioctl read write getattr lock append map open)))",
+          "new": "(allow fsck_29_0 sysdata_block_device (blk_file (ioctl read write getattr lock append map open)))",
+          "count": 2,
+          "reason": "Stock system policy labels sysdata separately and grants fsck access to it. Preserve that intended check target without granting arbitrary generic block-device read/write. Other typed fsck targets remain unchanged."
+        }
+      ]
+    },
+    "29.0.compat.cil": {
+      "input_sha256": "0f3b926c8e2335f96fea8d3b70aa4ffc777bf0f168bc70a0036ffd02af50b841",
+      "edits": []
+    }
+  }
+}

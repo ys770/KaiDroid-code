@@ -1,0 +1,24 @@
+{
+  "scope": "Offline candidate 007: local Android 11 compatibility-file adjustment only; vendordomain exclusion prevents configstore network permission. Pinned upstream source unchanged. Not build-wired.",
+  "files": {
+    "plat_pub_versioned.cil": {
+      "input_sha256": "cb76f48a47c41df425bd81e6f629d415059acca8ac2c976598446a53e78891aa",
+      "edits": []
+    },
+    "vendor_sepolicy.cil": {
+      "input_sha256": "2e8e125ce3fdc5238e3514e1b2ef256f5bba4b82925a19e9c2ae3480f8d1b678",
+      "edits": []
+    },
+    "29.0.compat.cil": {
+      "input_sha256": "c35da4f6e965d4809003e95a26af0032efa5754bbe8c2e599178db8ef7062e4a",
+      "edits": [
+        {
+          "old": "(typeattributeset vendordomain ((and (domain) ((not (coredomain))))))",
+          "new": "(typeattributeset vendordomain ((and (domain) ((not (coredomain hal_configstore_server))))))",
+          "count": 1,
+          "reason": "The inspected vendordomain attribute is used only for the compatibility nlmsg_readpriv grant. Exclude configstore servers, whose Android 11 HAL contract prohibits network sockets; retain the grant for every other non-core domain."
+        }
+      ]
+    }
+  }
+}

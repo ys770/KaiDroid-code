@@ -1,0 +1,36 @@
+{
+  "scope": "Offline candidate: remove three legacy init execute_no_trans grants; preserve execution and domain transition rules. Service-specific labels/transitions require validation.",
+  "files": {
+    "vendor_sepolicy.cil": {
+      "input_sha256": "07e875982e834f8c276df54dd483e08e86859acb2bb00bda603cd8011233608a",
+      "edits": [
+        {
+          "old": "(allow init_29_0 system_file_29_0 (file (getattr map execute execute_no_trans)))",
+          "new": "(allow init_29_0 system_file_29_0 (file (getattr map execute)))",
+          "count": 1,
+          "reason": "Android 11 init.te forbids init execute_no_trans; service.cpp rejects computed service contexts remaining in init. Keep getattr/map/execute for proper domain transitions."
+        },
+        {
+          "old": "(allow init_29_0 vendor_toolbox_exec_29_0 (file (getattr map execute execute_no_trans)))",
+          "new": "(allow init_29_0 vendor_toolbox_exec_29_0 (file (getattr map execute)))",
+          "count": 1,
+          "reason": "Android 11 init.te forbids init execute_no_trans; service.cpp rejects computed service contexts remaining in init. Keep getattr/map/execute for proper domain transitions."
+        },
+        {
+          "old": "(allow init_29_0 vendor_file_29_0 (file (getattr map execute execute_no_trans)))",
+          "new": "(allow init_29_0 vendor_file_29_0 (file (getattr map execute)))",
+          "count": 1,
+          "reason": "Android 11 init.te forbids init execute_no_trans; service.cpp rejects computed service contexts remaining in init. Keep getattr/map/execute for proper domain transitions."
+        }
+      ]
+    },
+    "plat_pub_versioned.cil": {
+      "input_sha256": "f00223f48909294d3d2b9d1f62dd766f5efea9383ee44ee6179f1a7b915b34ab",
+      "edits": []
+    },
+    "29.0.compat.cil": {
+      "input_sha256": "0f3b926c8e2335f96fea8d3b70aa4ffc777bf0f168bc70a0036ffd02af50b841",
+      "edits": []
+    }
+  }
+}

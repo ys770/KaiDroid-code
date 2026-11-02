@@ -1,0 +1,20 @@
+{
+  "scope": "Offline candidate 004: avoid importing new apk_verity_prop into legacy core_property_type through default_prop_29_0 mapping. Preserve platform classification and mapping. Not build-wired.",
+  "files": {
+    "plat_pub_versioned.cil": {
+      "input_sha256": "727c4afa263081426541a0e7d9a46644bc8abcc9cc74a934a93330d0272189b4",
+      "edits": [
+        {
+          "old": "(typeattributeset core_property_type (audio_prop_29_0 config_prop_29_0 cppreopt_prop_29_0 dalvik_prop_29_0 debuggerd_prop_29_0 debug_prop_29_0 default_prop_29_0 dhcp_prop_29_0 dumpstate_prop_29_0 ffs_prop_29_0 fingerprint_prop_29_0 logd_prop_29_0 net_radio_prop_29_0 nfc_prop_29_0 pan_result_prop_29_0 persist_debug_prop_29_0 powerctl_prop_29_0 radio_prop_29_0 restorecon_prop_29_0 shell_prop_29_0 system_prop_29_0 system_radio_prop_29_0 vold_prop_29_0))",
+          "new": "(typeattributeset core_property_type (audio_prop_29_0 config_prop_29_0 cppreopt_prop_29_0 dalvik_prop_29_0 debuggerd_prop_29_0 debug_prop_29_0 default_prop dhcp_prop_29_0 dumpstate_prop_29_0 ffs_prop_29_0 fingerprint_prop_29_0 logd_prop_29_0 net_radio_prop_29_0 nfc_prop_29_0 pan_result_prop_29_0 persist_debug_prop_29_0 powerctl_prop_29_0 radio_prop_29_0 restorecon_prop_29_0 shell_prop_29_0 system_prop_29_0 system_radio_prop_29_0 vold_prop_29_0))",
+          "count": 1,
+          "reason": "Android 11 defines apk_verity_prop with system_vendor_config_prop and excludes new properties from legacy core_property_type. Keep actual default_prop membership without importing the split mapped type."
+        }
+      ]
+    },
+    "vendor_sepolicy.cil": {
+      "input_sha256": "bf08af5b3aa42f2810880c94c84e8de32ec80d9fef3934b9d3cbba8e5f39ae58",
+      "edits": []
+    }
+  }
+}

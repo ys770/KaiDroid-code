@@ -1,0 +1,94 @@
+{
+  "scope": "Collect observed donor window-extension references and pin source inputs.\n\nMethod-table references are not reachability proof. This bounded audit does\nnot discover all OEM methods, reflection, resource IDs or inlined constants.\n",
+  "reference_sha256": {
+    "FPContacts-method-refs.json": "90bc7892e2e4b7641144977c81eb265ef2431eb422d3c12d01bc435af230b87b",
+    "FPMessaging-method-refs.json": "0fc7792cfd10d8fc44b91ef615eeb163e21e9371da2094d8b50253c5e5ffc1e2",
+    "GcsDialer-method-refs.json": "a7926fe8fb6bed3aecfa0dc5eba78eab16c454a87c8fab027d443bc587c261bd",
+    "JoySystemUI-method-refs.json": "2b3a6a8d44f7ddddd0a05bd058ba6ecf8a309f44252cb1922048c23183289784",
+    "KikaIME_USCC-method-refs.json": "677736b6b066e191a70e8e824fe8afae3ac7c16a0cd61d02763ec0120a33c91b",
+    "Launcher3-method-refs.json": "393f63037b6578f7eb07b606d05b8060105b0cc2fb77f36e6e5f4bf25002e16f",
+    "TctGcsTeleService-method-refs.json": "a0ac0a822281b24cd1f2c51fcffba0a0336457aad4b14b9df6f0107a290f2561",
+    "TctSettings-method-refs.json": "97ee03c5ec1e210c313098448e242b6172aca17fd65221ce1ce9257a72d14cea"
+  },
+  "platform_source": {
+    "revision": "34a1b9c951c38537ab96b69bc308f6e0884823f5",
+    "files": [
+      {
+        "path": "core/java/android/app/Activity.java",
+        "sha256": "a4301d919d727bf24047b2a75f8127e6b1bd0d7f1abb3d5204171174c51284ca",
+        "url": "https://raw.githubusercontent.com/aosp-mirror/platform_frameworks_base/34a1b9c951c38537ab96b69bc308f6e0884823f5/core/java/android/app/Activity.java"
+      },
+      {
+        "path": "core/java/android/app/Dialog.java",
+        "sha256": "63fbc2dc0b64d45f75d5597d79d05974e0b2fdae62886f5129193cf3e85c8b86",
+        "url": "https://raw.githubusercontent.com/aosp-mirror/platform_frameworks_base/34a1b9c951c38537ab96b69bc308f6e0884823f5/core/java/android/app/Dialog.java"
+      },
+      {
+        "path": "core/java/android/view/Window.java",
+        "sha256": "8666a60b9e0c5c8b481696aa1aed398c8d131e65b64bee8e2d6d372cb4892351",
+        "url": "https://raw.githubusercontent.com/aosp-mirror/platform_frameworks_base/34a1b9c951c38537ab96b69bc308f6e0884823f5/core/java/android/view/Window.java"
+      },
+      {
+        "path": "core/java/com/android/internal/policy/DecorView.java",
+        "sha256": "3d0c226a6fc2d47f3ea77843fb445f9a8091370e6d3b64fa01ee92afbdb6c6cd",
+        "url": "https://raw.githubusercontent.com/aosp-mirror/platform_frameworks_base/34a1b9c951c38537ab96b69bc308f6e0884823f5/core/java/com/android/internal/policy/DecorView.java"
+      },
+      {
+        "path": "core/java/com/android/internal/policy/PhoneWindow.java",
+        "sha256": "13628b5f9815ff33b2edfb23e2a7735fb343c6bda8bedad182eee8445d24e158",
+        "url": "https://raw.githubusercontent.com/aosp-mirror/platform_frameworks_base/34a1b9c951c38537ab96b69bc308f6e0884823f5/core/java/com/android/internal/policy/PhoneWindow.java"
+      }
+    ]
+  },
+  "methods": [
+    {
+      "owner": "Landroid/app/Activity;",
+      "name": "getMenuBar",
+      "descriptor": "()Landroid/widget/MenuBar;",
+      "consumers": [
+        "FPContacts",
+        "GcsDialer",
+        "Launcher3",
+        "TctSettings"
+      ]
+    },
+    {
+      "owner": "Landroid/app/AlertDialog;",
+      "name": "getMenuBar",
+      "descriptor": "()Landroid/widget/MenuBar;",
+      "consumers": [
+        "FPContacts",
+        "FPMessaging",
+        "GcsDialer",
+        "TctSettings"
+      ]
+    },
+    {
+      "owner": "Landroid/app/Dialog;",
+      "name": "getMenuBar",
+      "descriptor": "()Landroid/widget/MenuBar;",
+      "consumers": [
+        "FPContacts",
+        "FPMessaging"
+      ]
+    },
+    {
+      "owner": "Landroid/app/Dialog;",
+      "name": "removeMenuBar",
+      "descriptor": "()V",
+      "consumers": [
+        "GcsDialer"
+      ]
+    },
+    {
+      "owner": "Lcom/android/internal/policy/DecorView;",
+      "name": "getMenuBar",
+      "descriptor": "()Landroid/widget/MenuBar;",
+      "consumers": [
+        "JoySystemUI",
+        "TctGcsTeleService",
+        "TctSettings"
+      ]
+    }
+  ]
+}

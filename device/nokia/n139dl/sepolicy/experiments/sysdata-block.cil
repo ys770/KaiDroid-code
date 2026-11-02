@@ -1,0 +1,5 @@
+; Original offline declaration restoring the captured sysdata block type.
+; Not a complete sysdata mount/format policy; not build-wired.
+(type sysdata_block_device)
+(typeattributeset dev_type (sysdata_block_device))
+(roletype object_r sysdata_block_device)

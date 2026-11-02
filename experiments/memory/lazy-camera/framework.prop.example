@@ -1,0 +1,2 @@
+# Must be paired with the lazy service; read at cameraserver initialization.
+ro.camera.enableLazyHal=true

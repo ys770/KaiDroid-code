@@ -1,0 +1,39 @@
+{
+  "scope": "Offline candidate 006: retire four registrations for components absent at captured vendor/system executable paths and absent from captured service labels. Applies only to verified retail2216 inputs; does not prove arbitrary firmware lacks alternate implementations. Not build-wired.",
+  "presence_evidence": "docs/evidence/vendor-binder-service-presence-expanded.json",
+  "files": {
+    "plat_pub_versioned.cil": {
+      "input_sha256": "cb76f48a47c41df425bd81e6f629d415059acca8ac2c976598446a53e78891aa",
+      "edits": []
+    },
+    "vendor_sepolicy.cil": {
+      "input_sha256": "bf08af5b3aa42f2810880c94c84e8de32ec80d9fef3934b9d3cbba8e5f39ae58",
+      "edits": [
+        {
+          "old": "(allow dtseagleservice dtseagleservice_service (service_manager (add)))",
+          "new": "",
+          "count": 1,
+          "reason": "Captured init/file-context path has no executable in vendor or alternate system/bin; no matching captured service label. Do not grant system Binder registration to this absent legacy component. Reassess if an implementation is supplied."
+        },
+        {
+          "old": "(allow fidodaemon fidodaemon_service (service_manager (add)))",
+          "new": "",
+          "count": 1,
+          "reason": "Captured init/file-context path has no executable in vendor or alternate system/bin; no matching captured service label. Do not grant system Binder registration to this absent legacy component. Reassess if an implementation is supplied."
+        },
+        {
+          "old": "(allow secotad secotad_service (service_manager (add)))",
+          "new": "",
+          "count": 1,
+          "reason": "Captured init/file-context path has no executable in vendor or alternate system/bin; no matching captured service label. Do not grant system Binder registration to this absent legacy component. Reassess if an implementation is supplied."
+        },
+        {
+          "old": "(allow seemp_health_daemon seemp_health_daemon_service (service_manager (add)))",
+          "new": "",
+          "count": 1,
+          "reason": "Captured init/file-context path has no executable in vendor or alternate system/bin; no matching captured service label. Do not grant system Binder registration to this absent legacy component. Reassess if an implementation is supplied."
+        }
+      ]
+    }
+  }
+}

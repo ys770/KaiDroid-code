@@ -1,0 +1,27 @@
+# KaiDroid candidate for the N139DL matrix_keypad input device.
+# Scan codes match engineering phone 3 live WND 2 tree and capabilities.
+# Android actions align the center/back keys with the TCL UI reference.
+# Not installed or physically validated; see ../README.md.
+
+key 2     1
+key 3     2
+key 4     3
+key 5     4
+key 6     5
+key 7     6
+key 8     7
+key 9     8
+key 10    9
+key 11    0
+key 103   DPAD_UP
+key 108   DPAD_DOWN
+key 105   DPAD_LEFT
+key 106   DPAD_RIGHT
+key 352   DPAD_CENTER
+key 357   SOFT_LEFT
+key 358   SOFT_RIGHT
+key 231   CALL
+key 158   BACK
+key 139   MENU
+key 522   STAR
+key 523   POUND

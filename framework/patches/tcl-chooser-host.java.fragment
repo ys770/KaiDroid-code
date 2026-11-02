@@ -1,0 +1,162 @@
+    // Narrow opt-in for the observed PJEP Gallery image-share contract.
+    private boolean mTclResolverRequested;
+    private TclResolverPresentation mTclResolverPresentation;
+    private final java.util.LinkedHashMap<String,Integer> mTclTargetPositions =
+            new java.util.LinkedHashMap<>();
+    private final java.util.LinkedHashMap<View,Integer> mTclHiddenContent =
+            new java.util.LinkedHashMap<>();
+    private ChooserListAdapter mTclObservedAdapter;
+    private android.database.DataSetObserver mTclTargetObserver;
+    private boolean mTclRefreshPosted;
+    private android.graphics.drawable.Drawable mTclOriginalBackground;
+    private int mTclOriginalSystemUi;
+    private float mTclOriginalDim;
+    private boolean mTclOriginalDimFlag;
+    private String mTclOriginalCenterLabel;
+    private int mTclOriginalBarVisibility;
+
+    private void setupTclResolver(CharSequence heading, String color) {
+        if (isFinishing() || isDestroyed() || mChooserMultiProfilePagerAdapter == null) {
+            mTclResolverRequested=false;
+            return;
+        }
+        if (mChooserMultiProfilePagerAdapter.getInactiveListAdapter() != null) {
+            mTclResolverRequested = false;
+            return; // Preserve the existing profile/empty-state UI until separately ported.
+        }
+        ViewGroup content = findViewById(android.R.id.content);
+        if (!(content instanceof android.widget.FrameLayout)) {
+            mTclResolverRequested = false;
+            return;
+        }
+        android.widget.MenuBar bar=getMenuBar();
+        if (bar == null) { mTclResolverRequested=false; return; }
+        mTclOriginalCenterLabel=bar.getSoftKeyName(android.widget.MenuBar.CENTER_SOFT_KEY);
+        mTclOriginalBarVisibility=bar.getVisibility();
+        for (int i=0;i<content.getChildCount();i++) {
+            View child=content.getChildAt(i);
+            mTclHiddenContent.put(child,child.getVisibility());
+            child.setVisibility(View.INVISIBLE);
+        }
+        mTclResolverPresentation = new TclResolverPresentation(this,
+                TclResolverPresentation.chooserHeading(getIntent(),
+                        getText(com.android.internal.R.string.chooseActivity)), Color.parseColor(color),
+                this::selectTclTarget);
+        mTclResolverPresentation.setVisibility(View.INVISIBLE);
+        content.addView(mTclResolverPresentation,
+                new android.widget.FrameLayout.LayoutParams(-1,-1));
+        mTclOriginalBackground=getWindow().getDecorView().getBackground();
+        mTclOriginalSystemUi=getWindow().getDecorView().getSystemUiVisibility();
+        mTclOriginalDim=getWindow().getAttributes().dimAmount;
+        mTclOriginalDimFlag=(getWindow().getAttributes().flags
+                & android.view.WindowManager.LayoutParams.FLAG_DIM_BEHIND)!=0;
+        getWindow().setBackgroundDrawable(new android.graphics.drawable.ColorDrawable(Color.TRANSPARENT));
+        getWindow().addFlags(android.view.WindowManager.LayoutParams.FLAG_DIM_BEHIND);
+        getWindow().setDimAmount(0.5f);
+        getWindow().getDecorView().setSystemUiVisibility(1282); // PJEP chooser flags.
+        int select=getResources().getIdentifier("menu_bar_select","string","android");
+        bar.setSoftKeyName(android.widget.MenuBar.CENTER_SOFT_KEY,
+                select != 0 ? getString(select) : "Select");
+        bar.setVisibility(View.VISIBLE);
+        bar.setMenuBarListener(new android.widget.MenuBar.MenuBarListener() {
+            public boolean onClickLSK() { return false; }
+            public boolean onClickRSK() { return false; }
+            public boolean onClickCSK() {
+                if (mTclResolverPresentation != null) mTclResolverPresentation.selectCurrent();
+                return true;
+            }
+            public void onOptionMenuClick(int id) {}
+            public void onOptionMenuDismiss() {}
+            public void onOptionMenuShow() {}
+        });
+        mTclObservedAdapter=mChooserMultiProfilePagerAdapter.getActiveListAdapter();
+        mTclTargetObserver=new android.database.DataSetObserver() {
+            @Override public void onChanged() { postTclResolverRefresh(); }
+            @Override public void onInvalidated() { restoreNativeResolver(); }
+        };
+        mTclObservedAdapter.registerDataSetObserver(mTclTargetObserver);
+        refreshTclResolver();
+    }
+
+    private void postTclResolverRefresh() {
+        if (mTclResolverPresentation == null || mTclRefreshPosted) return;
+        mTclRefreshPosted=true;
+        mTclResolverPresentation.post(() -> {
+            mTclRefreshPosted=false;
+            if (!isDestroyed() && mTclResolverPresentation != null) refreshTclResolver();
+        });
+    }
+
+    private String tclTargetKey(ChooserListAdapter adapter, TargetInfo target) {
+        ComponentName component=target.getResolvedComponentName();
+        return component == null ? null : adapter.getUserHandle().getIdentifier()+":"
+                +component.flattenToString();
+    }
+
+    private void refreshTclResolver() {
+        if (mTclResolverPresentation == null || isFinishing()) return;
+        ChooserListAdapter adapter=mChooserMultiProfilePagerAdapter.getActiveListAdapter();
+        if (adapter != mTclObservedAdapter) { restoreNativeResolver(); return; }
+        java.util.LinkedHashMap<String,Integer> positions=new java.util.LinkedHashMap<>();
+        java.util.ArrayList<TclResolverPresentation.Entry> rows=new java.util.ArrayList<>();
+        for (int i=0;i<adapter.getCount();i++) {
+            TargetInfo target=adapter.targetInfoForPosition(i,true);
+            if (target == null || target instanceof NotSelectableTargetInfo) continue;
+            if (!(target instanceof DisplayResolveInfo) || target instanceof MultiDisplayResolveInfo) {
+                restoreNativeResolver(); return;
+            }
+            String key=tclTargetKey(adapter,target);
+            if (key == null) { restoreNativeResolver(); return; }
+            if (positions.containsKey(key)) continue; // Same component in ranked and alpha sections.
+            CharSequence label=target.getDisplayLabel();
+            if (label == null) label=target.getResolvedComponentName().getPackageName();
+            positions.put(key,i);
+            rows.add(new TclResolverPresentation.Entry(key,label));
+        }
+        if (!adapter.isTabLoaded()) return;
+        if (rows.isEmpty()) { restoreNativeResolver(); return; }
+        mTclTargetPositions.clear();mTclTargetPositions.putAll(positions);
+        mTclResolverPresentation.setEntries(rows);
+        mTclResolverPresentation.setVisibility(View.VISIBLE);
+    }
+
+    private void selectTclTarget(String key) {
+        if (mTclResolverPresentation == null || isFinishing()) return;
+        Integer position=mTclTargetPositions.get(key);
+        ChooserListAdapter adapter=mChooserMultiProfilePagerAdapter.getActiveListAdapter();
+        if (position == null || adapter != mTclObservedAdapter || position>=adapter.getCount()) return;
+        TargetInfo target=adapter.targetInfoForPosition(position,true);
+        if (!(target instanceof DisplayResolveInfo) || target instanceof MultiDisplayResolveInfo
+                || !key.equals(tclTargetKey(adapter,target))) {
+            refreshTclResolver();return;
+        }
+        // Keep original refinement, stacked-target handling, URI grants,
+        // caller-identity forwarding, chosen-component notification and metrics.
+        startSelected(position,false,true);
+    }
+
+    private void clearTclResolverObserver() {
+        if (mTclObservedAdapter != null && mTclTargetObserver != null)
+            mTclObservedAdapter.unregisterDataSetObserver(mTclTargetObserver);
+        mTclObservedAdapter=null;mTclTargetObserver=null;mTclTargetPositions.clear();
+    }
+
+    private void restoreNativeResolver() {
+        clearTclResolverObserver();
+        TclResolverPresentation old=mTclResolverPresentation;
+        mTclResolverPresentation=null;mTclResolverRequested=false;
+        if (old != null && old.getParent() instanceof ViewGroup) ((ViewGroup)old.getParent()).removeView(old);
+        for (java.util.Map.Entry<View,Integer> entry:mTclHiddenContent.entrySet())
+            entry.getKey().setVisibility(entry.getValue());
+        mTclHiddenContent.clear();
+        getWindow().setBackgroundDrawable(mTclOriginalBackground);
+        getWindow().getDecorView().setSystemUiVisibility(mTclOriginalSystemUi);
+        getWindow().setDimAmount(mTclOriginalDim);
+        if (mTclOriginalDimFlag) getWindow().addFlags(android.view.WindowManager.LayoutParams.FLAG_DIM_BEHIND);
+        else getWindow().clearFlags(android.view.WindowManager.LayoutParams.FLAG_DIM_BEHIND);
+        mTclOriginalBackground=null;
+        android.widget.MenuBar bar=getMenuBar();
+        bar.setMenuBarListener(null);
+        bar.setSoftKeyName(android.widget.MenuBar.CENTER_SOFT_KEY,mTclOriginalCenterLabel);
+        bar.setVisibility(mTclOriginalBarVisibility);
+    }

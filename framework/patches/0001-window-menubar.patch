@@ -1,0 +1,209 @@
+--- a/core/java/android/app/Activity.java
++++ b/core/java/android/app/Activity.java
+@@ -3465,6 +3465,7 @@
+      * @see #setContentView(android.view.View, android.view.ViewGroup.LayoutParams)
+      */
+     public void setContentView(@LayoutRes int layoutResID) {
++        ((com.android.internal.policy.PhoneWindow) getWindow()).enableMenuBar(true);
+         getWindow().setContentView(layoutResID);
+         initWindowDecorActionBar();
+     }
+@@ -3485,6 +3486,7 @@
+      * @see #setContentView(android.view.View, android.view.ViewGroup.LayoutParams)
+      */
+     public void setContentView(View view) {
++        ((com.android.internal.policy.PhoneWindow) getWindow()).enableMenuBar(true);
+         getWindow().setContentView(view);
+         initWindowDecorActionBar();
+     }
+@@ -3501,6 +3503,7 @@
+      * @see #setContentView(int)
+      */
+     public void setContentView(View view, ViewGroup.LayoutParams params) {
++        ((com.android.internal.policy.PhoneWindow) getWindow()).enableMenuBar(true);
+         getWindow().setContentView(view, params);
+         initWindowDecorActionBar();
+     }
+@@ -8882,4 +8885,17 @@
+             return (w != null && w.peekDecorView() != null);
+         }
+     }
++
++    /** @hide */
++    public android.widget.MenuBar getMenuBar() {
++        return ((com.android.internal.policy.DecorView) getWindow().getDecorView()).getMenuBar();
++    }
++    /** @hide */
++    public void addMenuBar() {
++        ((com.android.internal.policy.DecorView) getWindow().getDecorView()).addMenuBar();
++    }
++    /** @hide */
++    public void removeMenuBar() {
++        ((com.android.internal.policy.DecorView) getWindow().getDecorView()).removeMenuBar();
++    }
+ }
+--- a/core/java/android/app/Dialog.java
++++ b/core/java/android/app/Dialog.java
+@@ -1411,4 +1411,17 @@
+             }
+         }
+     }
++
++    /** @hide */
++    public android.widget.MenuBar getMenuBar() {
++        return ((com.android.internal.policy.DecorView) getWindow().getDecorView()).getMenuBar();
++    }
++    /** @hide */
++    public void addMenuBar() {
++        ((com.android.internal.policy.DecorView) getWindow().getDecorView()).addMenuBar();
++    }
++    /** @hide */
++    public void removeMenuBar() {
++        ((com.android.internal.policy.DecorView) getWindow().getDecorView()).removeMenuBar();
++    }
+ }
+--- a/core/java/android/view/Window.java
++++ b/core/java/android/view/Window.java
+@@ -162,7 +162,12 @@
+      * @hide
+      */
+     @UnsupportedAppUsage
+-    public static final int FEATURE_MAX = FEATURE_ACTIVITY_TRANSITIONS;
++    public static final int FEATURE_MAX = 15;
++
++    /** @hide */
++    public static final int FEATURE_KAIDROID_MENU_BAR = 14;
++    /** @hide */
++    public static final int FEATURE_KAIDROID_NO_MENU_BAR = 15;
+ 
+     /**
+      * Flag for setting the progress bar's visibility to VISIBLE.
+--- a/core/java/com/android/internal/policy/DecorView.java
++++ b/core/java/com/android/internal/policy/DecorView.java
+@@ -241,6 +241,48 @@
+ 
+     ViewGroup mContentRoot;
+ 
++    private android.widget.MenuBar mKaiDroidMenuBar;
++    private int kaiDroidBarHeight() {
++        return Math.round(30 * getResources().getDisplayMetrics().density);
++    }
++    /** @hide */
++    public android.widget.MenuBar getMenuBar() { return mKaiDroidMenuBar; }
++    /** @hide */
++    public void addMenuBar() {
++        if (mKaiDroidMenuBar != null) return;
++        mKaiDroidMenuBar = new android.widget.MenuBar(getContext()) {
++            @Override protected void onVisibilityChanged(View changedView, int visibility) {
++                super.onVisibilityChanged(changedView, visibility);
++                // Ignore ancestor visibility and construction/attachment callbacks.
++                // Only this bar's own visibility changes its reserved content space.
++                if (changedView == this && mKaiDroidMenuBar == this
++                        && getParent() == DecorView.this) {
++                    DecorView.this.updateColorViews(null, false);
++                    DecorView.this.requestApplyInsets();
++                }
++            }
++        };
++        FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(
++                ViewGroup.LayoutParams.MATCH_PARENT, kaiDroidBarHeight(), Gravity.BOTTOM);
++        mKaiDroidMenuBar.setVisibility(View.VISIBLE);
++        mKaiDroidMenuBar.setFitsSystemWindows(false);
++        addView(mKaiDroidMenuBar, params);
++        updateColorViews(null, false);
++        requestApplyInsets();
++    }
++    /** @hide */
++    public void removeMenuBar() {
++        if (mKaiDroidMenuBar == null) return;
++        android.widget.MenuBar old = mKaiDroidMenuBar;
++        mKaiDroidMenuBar = null;
++        old.clearSoftKeyState();
++        old.dismissOptionMenu();
++        removeView(old);
++        updateColorViews(null, false);
++        requestApplyInsets();
++    }
++
++
+     private Rect mTempRect;
+ 
+     // This is the caption view for the window, containing the caption and window control
+@@ -390,8 +432,14 @@
+             final boolean handled = cb != null && mFeatureId < 0 ? cb.dispatchKeyEvent(event)
+                     : super.dispatchKeyEvent(event);
+             if (handled) {
++                if (mKaiDroidMenuBar != null) mKaiDroidMenuBar.clearSoftKeyState();
+                 return true;
+             }
++        }
++        if (mKaiDroidMenuBar != null) {
++            boolean barHandled = isDown ? mKaiDroidMenuBar.onKeyDown(keyCode, event)
++                    : event.getAction() == KeyEvent.ACTION_UP && mKaiDroidMenuBar.onKeyUp(keyCode, event);
++            if (barHandled) return true;
+         }
+ 
+         return isDown ? mWindow.onKeyDown(mFeatureId, event.getKeyCode(), event)
+@@ -1207,15 +1255,25 @@
+         int consumedRight = consumingNavBar ? mLastRightInset : 0;
+         int consumedBottom = consumingNavBar ? mLastBottomInset : 0;
+         int consumedLeft = consumingNavBar ? mLastLeftInset : 0;
++        final int contentBottom = consumedBottom + (mKaiDroidMenuBar != null
++                && mKaiDroidMenuBar.getVisibility() != GONE ? kaiDroidBarHeight() : 0);
++        if (mKaiDroidMenuBar != null) {
++            FrameLayout.LayoutParams barParams = (FrameLayout.LayoutParams) mKaiDroidMenuBar.getLayoutParams();
++            if (barParams.bottomMargin != consumedBottom) {
++                barParams.bottomMargin = consumedBottom;
++                mKaiDroidMenuBar.setLayoutParams(barParams);
++            }
++        }
++
+ 
+         if (mContentRoot != null
+                 && mContentRoot.getLayoutParams() instanceof MarginLayoutParams) {
+             MarginLayoutParams lp = (MarginLayoutParams) mContentRoot.getLayoutParams();
+             if (lp.topMargin != consumedTop || lp.rightMargin != consumedRight
+-                    || lp.bottomMargin != consumedBottom || lp.leftMargin != consumedLeft) {
++                    || lp.bottomMargin != contentBottom || lp.leftMargin != consumedLeft) {
+                 lp.topMargin = consumedTop;
+                 lp.rightMargin = consumedRight;
+-                lp.bottomMargin = consumedBottom;
++                lp.bottomMargin = contentBottom;
+                 lp.leftMargin = consumedLeft;
+                 mContentRoot.setLayoutParams(lp);
+ 
+--- a/core/java/com/android/internal/policy/PhoneWindow.java
++++ b/core/java/com/android/internal/policy/PhoneWindow.java
+@@ -436,6 +436,16 @@
+         return mContentScene;
+     }
+ 
++
++    private boolean mKaiDroidMenuEnabled;
++    /** @hide */
++    public void enableMenuBar(boolean enabled) { mKaiDroidMenuEnabled = enabled; }
++    private void updateKaiDroidMenuBar() {
++        if (hasFeature(FEATURE_KAIDROID_MENU_BAR)) mKaiDroidMenuEnabled = true;
++        else if (hasFeature(FEATURE_KAIDROID_NO_MENU_BAR)) mKaiDroidMenuEnabled = false;
++        if (mKaiDroidMenuEnabled) mDecor.addMenuBar();
++        else mDecor.removeMenuBar();
++    }
+     @Override
+     public void setContentView(int layoutResID) {
+         // Note: FEATURE_CONTENT_TRANSITIONS may be set in the process of installing the window
+@@ -446,6 +456,7 @@
+         } else if (!hasFeature(FEATURE_CONTENT_TRANSITIONS)) {
+             mContentParent.removeAllViews();
+         }
++        updateKaiDroidMenuBar();
+ 
+         if (hasFeature(FEATURE_CONTENT_TRANSITIONS)) {
+             final Scene newScene = Scene.getSceneForLayout(mContentParent, layoutResID,
+@@ -477,6 +488,7 @@
+         } else if (!hasFeature(FEATURE_CONTENT_TRANSITIONS)) {
+             mContentParent.removeAllViews();
+         }
++        updateKaiDroidMenuBar();
+ 
+         if (hasFeature(FEATURE_CONTENT_TRANSITIONS)) {
+             view.setLayoutParams(params);

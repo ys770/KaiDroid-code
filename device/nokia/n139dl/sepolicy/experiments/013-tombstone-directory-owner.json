@@ -1,0 +1,24 @@
+{
+  "scope": "Offline policy candidate paired with system-side directory setup. No vendor service grants removed. Not a complete policy or runtime diagnostic validation.",
+  "files": {
+    "vendor_sepolicy.cil": {
+      "input_sha256": "069e6cb2d645f8c850fcd01f67a3160de8eb2219a6836e85ffad1f86318762d6",
+      "edits": [
+        {
+          "old": "(allow vendor_init_29_0 tombstone_data_file_29_0 (dir (ioctl read write create getattr setattr lock rename add_name remove_name reparent search rmdir open)))",
+          "new": "",
+          "count": 1,
+          "reason": "Core tombstone creation belongs to system init. Device kaidroid-diagnostics.rc preserves four stock subsystem directory paths/modes; AOSP creates the encrypted parent. Stock duplicate vendor mkdir attempts can still be denied; runtime ordering/collection unverified."
+        }
+      ]
+    },
+    "plat_pub_versioned.cil": {
+      "input_sha256": "f00223f48909294d3d2b9d1f62dd766f5efea9383ee44ee6179f1a7b915b34ab",
+      "edits": []
+    },
+    "29.0.compat.cil": {
+      "input_sha256": "0f3b926c8e2335f96fea8d3b70aa4ffc777bf0f168bc70a0036ffd02af50b841",
+      "edits": []
+    }
+  }
+}

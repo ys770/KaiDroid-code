@@ -1,0 +1,100 @@
+--- a/core/java/com/android/internal/view/IInputMethodManager.aidl
++++ b/core/java/com/android/internal/view/IInputMethodManager.aidl
+@@ -77,4 +77,8 @@
+     void removeImeSurface();
+     /** Remove the IME surface. Requires passing the currently focused window. */
+     void removeImeSurfaceFromWindow(in IBinder windowToken);
++    /** Raw active/visible bits; callers must separately establish editor ownership. */
++    int getImeWindowStatus();
++    /** Active/visible bits only for the calling process owning the current IME client. */
++    int getImeClientWindowStatus();
+ }
+--- a/core/java/android/view/inputmethod/InputMethodManager.java
++++ b/core/java/android/view/inputmethod/InputMethodManager.java
+@@ -2799,6 +2799,29 @@
+     }
+ 
+     /**
++     * Returns the current IME active/visible status bits from the system service.
++     * This is a global status snapshot, not evidence that this window owns input.
++     * Callers must separately check editor and window focus and interactive state.
++     * @hide
++     */
++    public int getImeWindowStatus() {
++        try {
++            return mService.getImeWindowStatus();
++        } catch (RemoteException e) {
++            throw e.rethrowFromSystemServer();
++        }
++    }
++
++    /** Current-client-only status; editor, window and interactive checks still required. @hide */
++    public int getImeClientWindowStatus() {
++        try {
++            return mService.getImeClientWindowStatus();
++        } catch (RemoteException e) {
++            throw e.rethrowFromSystemServer();
++        }
++    }
++
++    /**
+      * A test API for CTS to make sure that {@link #showInputMethodPicker()} works as expected.
+      *
+      * <p>When customizing the implementation of {@link #showInputMethodPicker()} API, make sure
+--- a/services/core/java/com/android/server/inputmethod/InputMethodManagerService.java
++++ b/services/core/java/com/android/server/inputmethod/InputMethodManagerService.java
+@@ -3657,6 +3657,30 @@
+                 MSG_SHOW_IM_SUBTYPE_PICKER, auxiliarySubtypeMode, displayId));
+     }
+ 
++    @Override
++    @BinderThread
++    public int getImeWindowStatus() {
++        synchronized (mMethodMap) {
++            if (!calledFromValidUserLocked()) {
++                return 0;
++            }
++            return mImeWindowVis;
++        }
++    }
++
++    @Override
++    @BinderThread
++    public int getImeClientWindowStatus() {
++        synchronized (mMethodMap) {
++            if (!calledFromValidUserLocked() || mCurClient == null
++                    || mCurClient.uid != Binder.getCallingUid()
++                    || mCurClient.pid != Binder.getCallingPid()) {
++                return 0;
++            }
++            return mImeWindowVis;
++        }
++    }
++
+     public boolean isInputMethodPickerShownForTest() {
+         synchronized(mMethodMap) {
+             if (mSwitchingDialog == null) {
+--- a/services/core/java/com/android/server/inputmethod/MultiClientInputMethodManagerService.java
++++ b/services/core/java/com/android/server/inputmethod/MultiClientInputMethodManagerService.java
+@@ -1754,6 +1754,21 @@
+ 
+         @BinderThread
+         @Override
++        public int getImeWindowStatus() {
++            // This backend has no single global IME visibility state.
++            reportNotSupported();
++            return 0;
++        }
++
++        @BinderThread
++        @Override
++        public int getImeClientWindowStatus() {
++            reportNotSupported();
++            return 0;
++        }
++
++        @BinderThread
++        @Override
+         public int getInputMethodWindowVisibleHeight() {
+             reportNotSupported();
+             return 0;

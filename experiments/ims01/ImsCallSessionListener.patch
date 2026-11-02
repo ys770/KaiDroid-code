@@ -1,0 +1,18 @@
+--- a/frameworks/base/telephony/java/android/telephony/ims/ImsCallSessionListener.java
++++ b/frameworks/base/telephony/java/android/telephony/ims/ImsCallSessionListener.java
+@@ -684,4 +684,15 @@
+         }
+     }
++
++    /**
++     * Adapts the legacy Qualcomm RTT speech-property notification.
++     * The inspected IMS producer emits bit 0 for remote speech presence.
++     * @hide
++     */
++    public void callSessionPropertyChanged(int property) {
++        ImsStreamMediaProfile profile = new ImsStreamMediaProfile();
++        profile.setReceivingRttAudio((property & 1) != 0);
++        callSessionRttAudioIndicatorChanged(profile);
++    }
+ }
+ 

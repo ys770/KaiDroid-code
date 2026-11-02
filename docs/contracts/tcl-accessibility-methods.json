@@ -1,0 +1,35 @@
+{
+  "revision": "34a1b9c951c38537ab96b69bc308f6e0884823f5",
+  "files": [
+    {
+      "path": "core/java/android/view/accessibility/AccessibilityRecord.java",
+      "sha256": "7e911158e8c85d401e44048da2400ce9adfecc528b1df17f975556aebe525ec0"
+    },
+    {
+      "path": "core/java/android/view/accessibility/AccessibilityEvent.java",
+      "sha256": "56e6553c5f8971b7cf5e470e61ac93ca9b29819af2bd8eb504cd7b908446ee49"
+    }
+  ],
+  "donor_framework_sha256": "70cc25b51f2067508b7dfa415084440321359054a881377b093dfddecd97afe8",
+  "methods": [
+    {
+      "owner": "Landroid/view/accessibility/AccessibilityRecord;",
+      "name": "isSynthesized",
+      "descriptor": "()Z"
+    },
+    {
+      "owner": "Landroid/view/accessibility/AccessibilityRecord;",
+      "name": "setSynthesized",
+      "descriptor": "(Z)V"
+    }
+  ],
+  "contract": {
+    "declaring_class": "android.view.accessibility.AccessibilityRecord",
+    "getter": "isSynthesized()Z",
+    "setter": "setSynthesized(Z)V",
+    "property_bit": 1024,
+    "setter_requires_unsealed": true,
+    "copied_and_parcelled_via": "mBooleanProperties",
+    "cleared_on_recycle": true
+  }
+}

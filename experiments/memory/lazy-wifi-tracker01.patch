@@ -1,0 +1,110 @@
+--- a/frameworks/base/packages/SystemUI/src/com/android/systemui/statusbar/policy/AccessPointControllerImpl.java
++++ b/frameworks/base/packages/SystemUI/src/com/android/systemui/statusbar/policy/AccessPointControllerImpl.java
+@@ -46,7 +46,7 @@
+ 
+     private final Context mContext;
+     private final ArrayList<AccessPointCallback> mCallbacks = new ArrayList<AccessPointCallback>();
+-    private final WifiTracker mWifiTracker;
++    private volatile WifiTracker mWifiTracker;
+     private final UserManager mUserManager;
+ 
+     private int mCurrentUser;
+@@ -54,14 +54,23 @@
+     public AccessPointControllerImpl(Context context) {
+         mContext = context;
+         mUserManager = (UserManager) mContext.getSystemService(Context.USER_SERVICE);
+-        mWifiTracker = new WifiTracker(context, this, false, true);
+         mCurrentUser = ActivityManager.getCurrentUser();
+     }
+ 
+     @Override
+     protected void finalize() throws Throwable {
+         super.finalize();
+-        mWifiTracker.onDestroy();
++        WifiTracker tracker = mWifiTracker;
++        if (tracker != null) tracker.onDestroy();
++    }
++
++    // The access-point detail list is optional at startup. Keep the same tracker
++    // once requested so its cached scores and stop/start behavior are preserved.
++    private synchronized WifiTracker getWifiTracker() {
++        if (mWifiTracker == null) {
++            mWifiTracker = new WifiTracker(mContext, this, false, true);
++        }
++        return mWifiTracker;
+     }
+ 
+     public boolean canConfigWifi() {
+@@ -79,7 +88,7 @@
+         if (DEBUG) Log.d(TAG, "addCallback " + callback);
+         mCallbacks.add(callback);
+         if (mCallbacks.size() == 1) {
+-            mWifiTracker.onStart();
++            getWifiTracker().onStart();
+         }
+     }
+ 
+@@ -88,14 +97,14 @@
+         if (callback == null) return;
+         if (DEBUG) Log.d(TAG, "removeCallback " + callback);
+         mCallbacks.remove(callback);
+-        if (mCallbacks.isEmpty()) {
++        if (mCallbacks.isEmpty() && mWifiTracker != null) {
+             mWifiTracker.onStop();
+         }
+     }
+ 
+     @Override
+     public void scanForAccessPoints() {
+-        fireAcccessPointsCallback(mWifiTracker.getAccessPoints());
++        fireAcccessPointsCallback(getWifiTracker().getAccessPoints());
+     }
+ 
+     @Override
+@@ -108,7 +117,7 @@
+         if (ap == null) return false;
+         if (DEBUG) Log.d(TAG, "connect networkId=" + ap.getConfig().networkId);
+         if (ap.isSaved()) {
+-            mWifiTracker.getManager().connect(ap.getConfig().networkId, mConnectListener);
++            getWifiTracker().getManager().connect(ap.getConfig().networkId, mConnectListener);
+         } else {
+             // Unknown network, need to add it.
+             if (ap.getSecurity() != AccessPoint.SECURITY_NONE) {
+@@ -119,7 +128,7 @@
+                 return true;
+             } else {
+                 ap.generateOpenNetworkConfig();
+-                mWifiTracker.getManager().connect(ap.getConfig(), mConnectListener);
++                getWifiTracker().getManager().connect(ap.getConfig(), mConnectListener);
+             }
+         }
+         return false;
+@@ -138,7 +147,12 @@
+     }
+ 
+     public void dump(PrintWriter pw) {
+-        mWifiTracker.dump(pw);
++        WifiTracker tracker = mWifiTracker;
++        if (tracker == null) {
++            pw.println("WifiTracker: not requested");
++        } else {
++            tracker.dump(pw);
++        }
+     }
+ 
+     @Override
+@@ -147,12 +161,12 @@
+ 
+     @Override
+     public void onConnectedChanged() {
+-        fireAcccessPointsCallback(mWifiTracker.getAccessPoints());
++        fireAcccessPointsCallback(getWifiTracker().getAccessPoints());
+     }
+ 
+     @Override
+     public void onAccessPointsChanged() {
+-        fireAcccessPointsCallback(mWifiTracker.getAccessPoints());
++        fireAcccessPointsCallback(getWifiTracker().getAccessPoints());
+     }
+ 
+     private final ActionListener mConnectListener = new ActionListener() {

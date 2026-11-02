@@ -1,0 +1,38 @@
+{
+  "scope": "Offline candidate 005: exclude unlabeled Binder service fallback from broad diagnostic lookup grants and retire init Binder lookup. No new grants. Not build-wired.",
+  "files": {
+    "plat_pub_versioned.cil": {
+      "input_sha256": "76e7038387d0f8c832611a8319e02ca9a1b034ade0ad419ceb084caf9951abe4",
+      "edits": [
+        {
+          "old": "(allow init_29_0 apex_service_29_0 (service_manager (find)))",
+          "new": "",
+          "count": 1,
+          "reason": "Android 11 init cannot find or register Binder services. APEX lifecycle must use the current init/apexd integration, not a legacy init Binder grant."
+        },
+        {
+          "old": "(typeattributeset base_typeattr_492_29_0 ((and (service_manager_type) ((not (apex_service_29_0 dnsresolver_service_29_0 gatekeeper_service_29_0 iorapd_service_29_0 incident_service_29_0 installd_service_29_0 lpdump_service_29_0 netd_service_29_0 virtual_touchpad_service_29_0 vold_service_29_0 vr_hwc_service_29_0))))))",
+          "new": "(typeattributeset base_typeattr_492_29_0 ((and (service_manager_type) ((not (default_android_service apex_service_29_0 dnsresolver_service_29_0 gatekeeper_service_29_0 iorapd_service_29_0 incident_service_29_0 installd_service_29_0 lpdump_service_29_0 netd_service_29_0 virtual_touchpad_service_29_0 vold_service_29_0 vr_hwc_service_29_0))))))",
+          "count": 1,
+          "reason": "Android 11 forbids access to default_android_service. Preserve named service lookup while excluding the unlabeled fallback; mislabelled services require explicit labels."
+        },
+        {
+          "old": "(typeattributeset base_typeattr_487_29_0 ((and (service_manager_type) ((not (apex_service_29_0 dnsresolver_service_29_0 gatekeeper_service_29_0 iorapd_service_29_0 incident_service_29_0 installd_service_29_0 netd_service_29_0 system_suspend_control_service_29_0 virtual_touchpad_service_29_0 vold_service_29_0 vr_hwc_service_29_0))))))",
+          "new": "(typeattributeset base_typeattr_487_29_0 ((and (service_manager_type) ((not (default_android_service apex_service_29_0 dnsresolver_service_29_0 gatekeeper_service_29_0 iorapd_service_29_0 incident_service_29_0 installd_service_29_0 netd_service_29_0 system_suspend_control_service_29_0 virtual_touchpad_service_29_0 vold_service_29_0 vr_hwc_service_29_0))))))",
+          "count": 1,
+          "reason": "Android 11 forbids access to default_android_service. Preserve named service lookup while excluding the unlabeled fallback; mislabelled services require explicit labels."
+        },
+        {
+          "old": "(typeattributeset base_typeattr_297_29_0 ((and (service_manager_type) ((not (apex_service_29_0 dumpstate_service_29_0 gatekeeper_service_29_0 iorapd_service_29_0 virtual_touchpad_service_29_0 vold_service_29_0 vr_hwc_service_29_0))))))",
+          "new": "(typeattributeset base_typeattr_297_29_0 ((and (service_manager_type) ((not (default_android_service apex_service_29_0 dumpstate_service_29_0 gatekeeper_service_29_0 iorapd_service_29_0 virtual_touchpad_service_29_0 vold_service_29_0 vr_hwc_service_29_0))))))",
+          "count": 1,
+          "reason": "Android 11 forbids access to default_android_service. Preserve named service lookup while excluding the unlabeled fallback; mislabelled services require explicit labels."
+        }
+      ]
+    },
+    "vendor_sepolicy.cil": {
+      "input_sha256": "bf08af5b3aa42f2810880c94c84e8de32ec80d9fef3934b9d3cbba8e5f39ae58",
+      "edits": []
+    }
+  }
+}
