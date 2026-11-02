@@ -9,8 +9,9 @@ workstation paths, firmware dumps, signing keys, and proprietary application
 binaries are excluded.
 
 Vendor-specific UART binary patch generators and disassembly evidence are also
-withheld from this initial source snapshot. See [NOTICE](NOTICE) for attribution;
-a license for original KaiDroid additions is awaiting the owner's selection.
+withheld from this initial source snapshot. Original KaiDroid additions are
+unlicensed for now. See [NOTICE](NOTICE) for attribution and existing third-party
+terms.
 
 - `device/nokia/n139dl/`: product configuration, input mapping, initialization,
   overlays, memory tracking, display helpers, and SELinux policy inputs.

@@ -8,6 +8,7 @@ Android Open Source Project sources are referenced by the framework patches
 and source contracts. This snapshot does not include the complete upstream
 Android source tree.
 
-A project-wide license for original KaiDroid additions has not yet been
-selected. This attribution notice is not a substitute for that license and
-does not grant rights to omitted firmware, vendor binaries, or donor APKs.
+Original KaiDroid additions are left unlicensed at the owner's request.
+Existing third-party terms and notices remain in place. This attribution
+notice does not grant rights to omitted firmware, vendor binaries, or donor
+APKs.
