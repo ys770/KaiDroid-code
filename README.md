@@ -1,53 +1,43 @@
 # KaiDroid
 
-Android 11 port development for the Nokia 2760 Flip / N139DL, with a keypad
-interface modeled on TCL flip phones.
+KaiDroid is an Android 11 port for keypad flip phones, starting with the Nokia
+2760 Flip (N139DL). The project brings Android to hardware originally designed
+for KaiOS, with an interface and everyday navigation modeled on TCL flip phones.
 
-This is a public source snapshot with independently reviewed screenshots and
-fresh Git history. The private research history, device evidence, credentials,
-workstation paths, firmware dumps, signing keys, and proprietary application
-binaries are excluded.
+The goal is a phone that works naturally through its D-pad, number keys and
+physical buttons. That means adapting the Android framework as well as the
+apps: menus, dialogs, text entry, focus movement, shortcuts, lock screen, and
+flip-open/close behavior all need to work together. The intended design pairs
+TCL navigation with a Kyocera soft-key layout.
 
-Vendor-specific UART binary patch generators and disassembly evidence are also
-withheld from this initial source snapshot. Original KaiDroid additions are
-unlicensed for now. See [NOTICE](NOTICE) for attribution and existing third-party
-terms.
+## What is being developed
 
-- `device/nokia/n139dl/`: product configuration, input mapping, initialization,
-  overlays, memory tracking, display helpers, and SELinux policy inputs.
-- `framework/`: keypad widgets, soft keys, dialogs, title editing, SystemUI
-  adaptations, and framework patches.
-- `compat/`: Java compatibility adapters.
-- `tools/`: development, analysis, extraction, and patch-generation source.
-- `experiments/`: display, memory, messaging, and IMS experiment source.
-- `tests/`: a self-contained subset of synthetic regression tests.
-- `docs/contracts/`: source/API contracts needed by framework staging.
-- `screenshots/`: selected interface captures cleared for public sharing.
+- **Device support:** Android product configuration, startup services, keypad
+  mapping, display behavior, memory management, and hardware integration.
+- **Keypad interface:** framework widgets, three-button soft keys, dialogs,
+  title editors, input-method integration, and SystemUI changes.
+- **Application compatibility:** adapters and development tools for the TCL
+  application experience, including contacts, messaging, calendar and utilities.
+- **Visual reference:** screenshots of the TCL interface and successive Nokia
+  builds, used to compare layouts and follow the port's development.
 
-## Build scope
+## Screenshots
 
-This is an experimental source collection, not a complete Android checkout or
-a firmware release. Building requires the matching Android source and separately
-supplied device/vendor inputs. Proprietary donor APKs and firmware are not
-redistributed here. UI parity and full hardware support remain incomplete.
+| Nokia port | TCL Calendar reference | TCL Calculator reference |
+| --- | --- | --- |
+| ![Nokia launcher](screenshots/2026-10-27-image60-display/home.png) | ![TCL Calendar](screenshots/2026-10-27-tcl-app-editors/baseline-before.png) | ![TCL Calculator](screenshots/2026-10-27-tcl-calculator/calculator-equals.png) |
 
-Historical lab scripts retain their validation logic, but real device serials
-and boot IDs have been replaced with placeholders, and machine paths use generic
-roots. They require explicit adaptation and independently acquired inputs;
-they are not ready-made instructions for installing an image on another phone.
+[Browse the screenshot collections](screenshots/README.md).
 
-The Android product contains engineering/debug settings. Existing source
-copyright and license notices are retained; this snapshot does not grant rights
-to omitted third-party firmware or applications.
+## Development status
 
-## Local checks
+Experimental Android builds have booted on the N139DL. Full hardware support
+and matching the TCL UI and UX are still in development; screenshots include
+intermediate builds and known issues.
 
-The bundled Python tests require Python 3.10 or newer and no phone:
+This repository contains port source, patches, configuration and development
+tools. Building requires a matching Android source checkout and separately
+supplied device/vendor inputs. There is no installable firmware release here yet.
 
-```sh
-python -m unittest discover -s tests -p 'test_*.py' -v
-```
-
-They cover resource parsing/remapping, API resolution, memory accounting,
-DMA/ION parsing, and APK manifest guards. Hardware validation and private
-capture-dependent tests are not part of this public test subset.
+Original KaiDroid additions are currently unlicensed. Existing third-party
+attribution and terms are retained in [NOTICE](NOTICE) and the source files.

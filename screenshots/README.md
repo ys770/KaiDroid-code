@@ -1,13 +1,11 @@
 # Interface captures
 
-682 historical captures from TCL reference phones, Nokia port builds, and
-synthetic UI tests. These include intermediate failures and comparison maps;
-they do not establish complete UI/UX or hardware parity.
+Screenshots from TCL reference phones, Nokia port builds, and UI development.
+The collections show app screens, keypad menus, dialogs, text entry, and visual
+comparisons across builds. Some captures show intermediate layouts or known
+issues rather than the finished interface.
 
-Images passed local OCR and visual privacy review. Captures with identifying
-details, incidental photographs, network information, or private branding were
-withheld. PNG metadata was removed while preserving decoded pixels. The image
-inventory and SHA-256 hashes are in [index.json](index.json).
+The complete image inventory is in [index.json](index.json).
 
 ## Examples
 
